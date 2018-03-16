@@ -52,7 +52,7 @@ Every time a commit is made to the repository, our Jenkins job will build the ga
 
 The CAGE URL will be in the following format (replace the parts in curly braces with your game information):
 
-<pre>https://www.bbc.co.uk/cbeebies/embed/game/{game-id}?versionOverride={jenkins-build-number}&viewNonPublished=true**</pre>
+<pre>https://www.bbc.co.uk/cbeebies/embed/game/{game-id}?versionOverride={jenkins-build-number}&viewNonPublished=true</pre>
 
 You can also replace the **{jenkins-build-number}** with the string `latest` to see the latest build.
 
