@@ -1,0 +1,12 @@
+node_modules
+output
+coverage
+docs/api/
+
+npm-debug.log
+*.DS_Store
+.idea/
+childrens-games-genie.iml
+.vscode
+.awcache/
+
