@@ -6,9 +6,9 @@
 * [Individual component theme specification](#individual-component-theme-specification)
 * [What are the asset requirements?](#what-are-the-asset-requirements)
 * [How do I test my theme?](#how-do-i-test-my-theme)
-* [What are the applicable Children’s Games Standards that need to be followed?](#what-are-the-applicable-children’s-games-standards-that-need-to-be-followed)
-* [How do I get my game onto Children’s platforms?](#how-do-I-get-my-game-onto-children’s-platforms)
-* [How do I get my theme onto Children’s platforms?](#how-do-I-get-my-theme-onto-children’s-platforms)
+* [What are the applicable Children’s Games Standards that need to be followed?](#what-are-the-applicable-childrens-games-standards-that-need-to-be-followed)
+* [How do I get my game onto Children’s platforms?](#how-do-i-get-my-game-onto-childrens-platforms)
+* [How do I get my theme onto Children’s platforms?](#how-do-i-get-my-theme-onto-childrens-platforms)
 * [What acceptance tests will the BBC carry out?](#what-acceptance-tests-will-the-bbc-carry-out)
 * [How can I access support?](#how-can-i-access-support)
 * [Genie Gel (“GELIE”) Documentation](#genie-gel-gelie-documentation)
@@ -52,7 +52,9 @@ Every time a commit is made to the repository, our Jenkins job will build the ga
 
 The CAGE URL will be in the following format (replace the parts in curly braces with your game information):
 
-https://www.bbc.co.uk/cbeebies/embed/game/{game-id}?versionOverride={jenkins-build-number}&viewNonPublished=true
+<pre>https://www.bbc.co.uk/cbeebies/embed/game/{game-id}?versionOverride={jenkins-build-number}&viewNonPublished=true**</pre>
+
+You can also replace the **{jenkins-build-number}** with the string `latest` to see the latest build.
 
 ## How do I get my theme onto Children’s platforms?
 
