@@ -21,9 +21,15 @@ The game sequence can then be configured by editing: `src/main.js`. Require in t
 
 New screens (including the gameplay component) should be created in the `components` folder.
 
-You can view your game by running a simple HTTP server using Python: `python -m SimpleHTTPServer 8000`, and viewing it in a browser: http://localhost:8000/
+You can preview your game by running it in live server using `npm start`, and viewing it in a browser at http://localhost:8080/.
 
-The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true
+The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true.
+
+To build your game using Webpack, use `npm run build`.
+
+`npm run build-watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver.
+
+If you wish to build and run your game in a single command, you can use `npm run build-start`
 
 ## Genie Gel ("GELIE") Documentation
 

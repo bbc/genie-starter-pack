@@ -71,7 +71,7 @@
 
 <body>
     <div id="local-game-holder"></div>
-    <script src="./node_modules/requirejs/require.js"></script>
+    <!-- <script src="./node_modules/requirejs/require.js"></script> -->
     <script>
     (function() {
     var GMI = function(options, embedVars, gameDir) {
@@ -259,16 +259,16 @@
     }
 
     configureGmi("", "themes/");
-    requirejs.config({
-        paths: {
-            Game: "output/main"
-        }
-    });
-    require(["Game"], function() {});
+    // requirejs.config({
+    //     paths: {
+    //         Game: "src/main"
+    //     }
+    // });
+    // require(["Game"], function() {});
 })();
 </script>
-<!-- <script src="node_modules/phaser-ce/build/phaser.min.js"></script> -->
-<!-- <script type="module" src="src/main.js"></script> -->
+<script src="node_modules/phaser-ce/build/phaser.min.js"></script>
+<script type="module" src="src/main.js"></script>
 </body>
 
 </html>
