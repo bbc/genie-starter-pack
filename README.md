@@ -5,6 +5,7 @@
 * [Developing a Gameplay Component](./docs/gameplay-component.md)
 * [Creating a Theme](./docs/theming.md)
 * [Genie Gel (“GELIE”) Documentation](#genie-gel-gelie-documentation)
+* [How can I access support?](#how-can-i-access-support)
 
 ## What is Genie?
 
@@ -26,3 +27,5 @@ The qaMode query string may be added to the end to view the game in QA Mode. Thi
 
 ## Genie Gel ("GELIE") Documentation
 
+
+## How can I access support?
