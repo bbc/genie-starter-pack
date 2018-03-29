@@ -89,3 +89,4 @@ const transitions = [
     ...
 }
 ```
+[More examples of asset packs in Phaser](https://github.com/photonstorm/phaser-examples/blob/master/examples/assets/asset-pack1.json)
