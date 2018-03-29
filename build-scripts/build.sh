@@ -2,6 +2,5 @@
 set -e
 
 npm install
-# npm run eslint
-# npm run test:coverage
-# npm run build
+npm run build
+cp -r node_modules/genie/themes output/themes
