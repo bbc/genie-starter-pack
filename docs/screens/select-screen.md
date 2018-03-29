@@ -49,10 +49,6 @@ const transitions = [
                 {
                     "main": "barney",
                     "name": "barneyName"
-                },
-                {
-                    "main": "jamillah",
-                    "name": "jamillahName"
                 }
             ]
         }
@@ -72,38 +68,22 @@ const transitions = [
         {
             "type": "image",
             "key": "dangermouse",
-            "url": "options/dangermouse_sel.png",
-            "overwrite": false
+            "url": "options/dangermouse_sel.png"
         },
         {
             "type": "image",
             "key": "dangermouseName",
-            "url": "options/dangermouse_sel_name.png",
-            "overwrite": false
+            "url": "options/dangermouse_sel_name.png"
         },
         {
             "type": "image",
             "key": "barney",
-            "url": "options/barney_sel.png",
-            "overwrite": false
+            "url": "options/barney_sel.png"
         },
         {
             "type": "image",
             "key": "barneyName",
-            "url": "options/barney_sel_name.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "jamillah",
-            "url": "options/jamillah_sel.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "jamillahName",
-            "url": "options/jamillah_sel_name.png",
-            "overwrite": false
+            "url": "options/barney_sel_name.png"
         }
     ]
     ...
