@@ -3,20 +3,17 @@
         {
             "type": "image",
             "key": "title",
-            "url": "shared/title.png",
-            "overwrite": false
+            "url": "shared/title.png"
         },
         {
             "type": "image",
             "key": "background",
-            "url": "shared/background.png",
-            "overwrite": false
+            "url": "shared/background.png"
         },
         {
             "type": "image",
             "key": "basicButton",
-            "url": "shared/basic-button.png",
-            "overwrite": false
+            "url": "shared/basic-button.png"
         }
     ]
 }
