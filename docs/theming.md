@@ -11,6 +11,8 @@
 
 ## What is in and out of scope for theming?
 
+Audio, Animations, Sprites/Graphics are in scope for theming. Alterations to the code other than configuration changes to support new assets are currently out of scope.
+
 
 ## Individual component theme specification
 
