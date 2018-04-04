@@ -16,12 +16,12 @@ Genie is a modular framework which provides a set of reusable components (known 
 
 The current screens are:
 
-Title
-How to Play
-Pause
-Loading
-Select
-Results
+- Title
+- How to Play
+- Pause
+- Loading
+- Select
+- Results
 
 These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Title Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
 
