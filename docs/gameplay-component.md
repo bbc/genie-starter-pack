@@ -69,6 +69,8 @@ The qaMode query string may be added to the end to view the game in QA Mode. Thi
 
 To build your game using Webpack, use `npm run build`.
 
+To quickly view a specific theme, you can access it using the querystring 'theme': http://localhost:8080/?theme=<themeName>.
+
 
 ## Are there any areas of existing Children’s game delivery standards I need to apply?
 
