@@ -12,20 +12,69 @@
 
 ## How is Genie structured?
 
+Genie is a modular framework which provides a set of reusable components (known as "screens") which are common across all BBC games, as well as various core "engines", which handle GEL buttons, layout and accessibility.
+
+The current screens are:
+
+- Title
+- How to Play
+- Pause
+- Loading
+- Select
+- Results
+
+These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Title Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
+
+The game flow sequence can be configured by editing: `src/main.js`. Require in the desired screens and order them in the `transitions` JSON object. The `nextScreenName` method returns a string to indicate the name of the next screen to transition to. As this is a function, conditional logic can be included here to move to a different screen depending on the game state (e.g. a "win" screen or a "fail" screen). The Genie Sequencer will then take care of the sequencing of the screens.
+
 
 ## How do I use the core engines?
+
+Full API documentation for the engines can be found within the Genie core repository. A short overview follows.
+
+### Scaling Engine
+
+The scaling engine is already set up to adapt the game to all ratios and screen sizes used by our target devices. The game will automatically scale up and down without any additional input from you. Our coordinate system is set up with the origin point at the centre, so `0.0` refers to the centre of the screen.
+
+### Layout Engine
+
+The layout engine handles the positioning and layout of GUI elements. Standard GEL GUI elements are already known to the layout engine and can be set up and positioned correctly very simply. The Layout engine also instantiates the scaler and provides methods for adding display objects to foreground and background.  Buttons added using this method will automatically call the correct functions and be screen-reader and tab accessible.
+
+An example of the factory function for making gel layouts:
+
+`this.layoutFactory.addLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
+
+Whenever a new non GEL element is added to the screen, it will need to be added to the layout manager's background in order to work correctly with the Scaler. An example:
+
+`this.layoutFactory.addToBackground(titleText);`
 
 
 ## What coding and test standards do I need to apply?
 
+We use ESLint with a slightly edited ruleset, along with Prettier. For non-gameplay screens we require that this standard is adhered to, along with unit test coverage. Prettier and ESLint plugins are available for most IDEs, or can be run from the command line.
+
+For gameplay components themselves we allow greater flexibility and as long as the code meets the BBC standard requirements such as not producing console errors, most styles are allowed. Feel free to use our eslint standards, however. Our eslint configuration file can be found in the root of the project as `.eslintrc_`. Rename it to `.eslintrc` to use it.
+
 
 ## How does my component plug into Genie?
+
+All components extend the Genie "Screen" class. The `Screen` class extends `Phaser.State`, providing the `Context` to objects that extend from it. Once your game component extends Screen and has functionality, import your component into main as you would any other screen, and add it into the sequence at the desired point.
 
 
 ## How do I test my component in the Genie framework?
 
+You can preview your game without bundling it through Webpack by running it in a live server using `npm start`, and viewing it in a browser at http://localhost:8080/.
+
+The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true.
+
+To build your game using Webpack, use `npm run build`.
+
+To quickly view a specific theme, you can access it using the querystring 'theme': http://localhost:8080/?theme=<themeName>.
+
 
 ## Are there any areas of existing Children’s game delivery standards I need to apply?
+
+Please supply unminified/unfobfuscated source code with a working build process.
 
 
 ## How do I get my build onto Children’s platforms?
@@ -39,5 +88,8 @@ You can also replace the **{jenkins-build-number}** with the string `latest` to 
 
 ## What acceptance tests will the BBC carry out?
 
+The BBC will carry out the standard tests and compliance testing carried out on all games as outlined in the contracts. 
 
 ## What documentation do I need to supply?
+
+Documentation outlining how to reskin your gameplay component and how to replace the assets with new ones, as well as documentation outlining how to build and run your component from source code.
