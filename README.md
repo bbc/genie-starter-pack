@@ -36,4 +36,4 @@ If you wish to build your game and then run the bundle in a live server, you can
 
 ## How can I access support?
 
-There is additional in-depth documentation in the docs folder of this respository and in the Genie Core repository. For further support contact the BBC Project Manager or Tech Lead assigned to your game.
+There is additional in-depth documentation in the docs folder of this respository and in the Genie Core repository. For further support contact the BBC Project Manager assigned to your game.
