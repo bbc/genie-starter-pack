@@ -15,11 +15,11 @@ A theme is a set of assets that give a Genie component a certain look and feel, 
  
 ## What is in and out of scope for theming?
 
-Audio, Animations, Sprites, Graphics and Fonts are in scope for theming. Alterations to the code other than configuration changes to support new assets are currently out of scope.
+Audio, Animations, Sprites, Graphics and Fonts are in scope for theming. Alterations to the code other than configuration changes in JSON files to support new assets are currently out of scope.
 
 ## How does theming work?
 
-At this stage, theming is currently undertaken by performing a straight swap on assets, replacing images / audio / sprites like for like in order to create the desired theme. There will be a 'default' theme for components that can be used as a template.
+At this stage, theming is currently undertaken mostly by performing a straight swap on assets, replacing images / audio / sprites like for like in order to create the desired theme. Additional configuration of screens and assets is done by modifying JSON files. There will be a 'default' theme for components that can be used as a template.
 
 ## How do I test my theme?
 
@@ -35,4 +35,4 @@ This will also vary for each gameplay component.
 
 ## How do I get my theme onto Children’s platforms?
 
-Check out the component repo and add your theme in a directory, basing the themes structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our CMS which will allow the theme to be viewed on a BBC url.
+Check out the component repo and add your theme in a directory, basing the theme's structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our iSite CMS which will allow the theme to be viewed on a BBC url hosted in our CAGE platform.
