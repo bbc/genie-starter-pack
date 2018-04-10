@@ -35,4 +35,4 @@ This will also vary for each gameplay component.
 
 ## How do I get my theme onto Children’s platforms?
 
-Check out the component repo and add your theme in a directory, basing the themes structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our CMS which will allow the theme to be viewed on a BBC url.
+Check out the component repo and add your theme in a directory, basing the theme's structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our iSite CMS which will allow the theme to be viewed on a BBC url hosted in our CAGE platform.
