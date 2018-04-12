@@ -12,18 +12,20 @@
 ## What is a theme?
 
 A theme is a set of assets that give a Genie component a certain look and feel, and can be swapped out to 'reskin' the components. For example, a 'Danger Mouse' or a 'Worst Witch' theme could be applied to the same game to change the branding.
- 
+
 ## What is in and out of scope for theming?
 
 Audio, Animations, Sprites, Graphics and Fonts are in scope for theming. Alterations to the code other than configuration changes in JSON files to support new assets are currently out of scope.
 
 ## How does theming work?
 
-At this stage, theming is currently undertaken mostly by performing a straight swap on assets, replacing images / audio / sprites like for like in order to create the desired theme. Additional configuration of screens and assets is done by modifying JSON files. There will be a 'default' theme for components that can be used as a template.
+At this stage, theming is currently undertaken mostly by performing a straight swap on assets, replacing images / audio / sprites like for like in order to create the desired theme. The image paths are set in `themes/[name of theme]/assets-master-pack.json`.
+
+Additional configuration (for things like font size and colour) is done by modifying `themes/[name of theme]/config.json`. There is a 'default' theme for components that can be used as a template.
 
 ## How do I test my theme?
 
-To quickly view a specific theme, you can launch it using the querystring 'theme': http://localhost:8080/?theme=themeName, replacing themeName with the name of your theme.
+To quickly view a specific theme, you can launch it using the query string 'theme': http://localhost:8080/?theme=themeName, replacing themeName with the name of your theme. If none is specified, it will load the 'default' theme.
 
 ## Individual component theme specification
 
@@ -31,8 +33,8 @@ This will vary for each gameplay component.
 
 ## What are the asset requirements?
 
-This will also vary for each gameplay component.
+The assets for GEL buttons can be found in the folder: `themes/default/gel/`. These can be copied across directly. This other assets needed will also vary for each gameplay component.
 
 ## How do I get my theme onto Children’s platforms?
 
-Check out the component repo and add your theme in a directory, basing the theme's structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our iSite CMS which will allow the theme to be viewed on a BBC url hosted in our CAGE platform.
+Check out the starter pack Github repository and add your theme in a directory, basing the theme's structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our iSite CMS which will allow the theme to be viewed on a BBC url hosted in our CAGE platform.

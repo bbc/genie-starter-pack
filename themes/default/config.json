@@ -1,0 +1,73 @@
+{
+    "theme": {
+        "characterSelect": {
+            "choices": [
+                { "main": "carousel_1" },
+                { "main": "carousel_2" },
+                { "main": "carousel_3" }
+            ],
+            "leftButton": {
+                "content": "Left",
+                "style": {
+                    "font": "20px Arial",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            },
+            "rightButton": {
+                "content": "Right",
+                "style": {
+                    "font": "20px Arial",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            }
+        },
+        "game" : {
+            "button": {
+                "content": "Tap Here",
+                "style": {
+                    "font": "20px Arial",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            },
+            "text": {
+                "content": "Quick! Tap to pump up the balloon",
+                "style": {
+                    "font": "40px Arial",
+                    "fontWeight": "bold",
+                    "fill": "#FFFFFF"
+                }
+            },
+            "timer": {
+                "style": {
+                    "font": "30px Arial",
+                    "fontWeight": "bold",
+                    "fill": "#FFFFFF"
+                }
+            }
+        },
+        "results": {
+            "titleText": {
+                "content": "Results",
+                "style": {
+                    "font": "bold 40px 'Arial'",
+                    "align": "center",
+                    "fill": "#686868",
+                    "boundsAlignH": "center",
+                    "fontWeight": "bold"
+                }
+            },
+            "resultText": {
+                "style": {
+                    "font": "bold 40px 'Arial'",
+                    "align": "center",
+                    "fill": "#686868",
+                    "boundsAlignH": "center",
+                    "fontWeight": "bold"
+                }
+            }
+        }
+    }
+}
