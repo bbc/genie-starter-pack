@@ -13,7 +13,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "expose-loader": "^0.7.5",
-    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v0.0.3",
+    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v0.0.4",
     "npm": "^5.7.1",
     "phaser-ce": "^2.10"
   },
