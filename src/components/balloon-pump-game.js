@@ -49,7 +49,7 @@ export class BalloonPumpGame extends Screen {
     createTimer() {
         this.timer = this.game.time.create();
         this.timerEvent = this.timer.add(Phaser.Timer.SECOND * 15, this.gameLost, this);
-        this.timeLeftText = this.game.add.text(-340, 230, this.getTimeLeftString(), this.theme.timer.style);
+        this.timeLeftText = this.game.add.text(-270, 230, this.getTimeLeftString(), this.theme.timer.style);
         this.layoutFactory.addToBackground(this.timeLeftText);
         this.timer.start();
     }
