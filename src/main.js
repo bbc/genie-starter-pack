@@ -24,6 +24,10 @@ const transitions = [
                 state.transient.home = false;
                 return "home";
             }
+            if (state.transient.restart) {
+                state.transient.restart = false;
+                return "home";
+            }
             return "game";
         },
     },
@@ -48,6 +52,10 @@ const transitions = [
         nextScreenName: state => {
             if (state.transient.game) {
                 state.transient.game = false;
+                return "game";
+            }
+            if (state.transient.restart) {
+                state.transient.restart = false;
                 return "game";
             }
             return "home";
