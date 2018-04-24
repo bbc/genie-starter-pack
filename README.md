@@ -9,7 +9,7 @@
 
 ## What is Genie?
 
-Genie is a modular framework designed to simplify the construction of children's games. It uses [Phaser 2 CE](https://phaser.io/), a HTML5 game engine. 
+Genie is a modular framework designed to simplify the construction of children's games. It uses [Phaser 2 CE](https://phaser.io/), a HTML5 game engine.
 
 Genie provides a set of reusable components common to BBC games such as a load screen, select screen, pause, how to play, as well as an implementation of the standard BBC Games GEL UI. This means game developers can focus on creating the gameplay component, as much of the logic surrounding the game has been provided.
 
@@ -21,15 +21,13 @@ The game sequence can then be configured by editing: `src/main.js`. Require in t
 
 New screens (including the gameplay component) should be created in the `components` folder.
 
-You can preview your game without bundling it through Webpack by running it in a live server using `npm start`, and viewing it in a browser at http://localhost:8080/.
+You can preview your game by bundling it through Webpack and running it in a development server using `npm start`. It can then be viewed in a browser at http://localhost:8080/ or at the local network address printed in the console. Changes to the source will trigger a rebuild and refresh the page on all devices currently viewing the page.
 
 The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true.
 
 To build your game using Webpack, use `npm run build`.
 
-`npm run build-watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver.
-
-If you wish to build your game and then run the bundle in a live server, you can use `npm run build-start`
+`npm run build-watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver. Changes to the source will trigger a rebuild.
 
 ## Genie Gel ("GELIE") Documentation
 
