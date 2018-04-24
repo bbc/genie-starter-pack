@@ -1,0 +1,70 @@
+{
+    "theme": {
+        "game-button-select": {
+            "choices": [
+                { "main": "carousel_1" },
+                { "main": "carousel_2" }
+            ],
+            "leftButton": {
+                "content": "Left",
+                "style": {
+                    "font": "20px Arial",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            },
+            "rightButton": {
+                "content": "Right",
+                "style": {
+                    "font": "20px Arial",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            }
+        },
+        "game" : {
+            "text": {
+                "content": "Tap to pump up the balloon!",
+                "style": {
+                    "font": "30px Arial",
+                    "fontWeight": "bold",
+                    "fill": "#FFFFFF"
+                },
+                "position": { "x": -200, "y": -170 }
+            },
+            "timer": {
+                "style": {
+                    "font": "30px Arial",
+                    "fontWeight": "bold",
+                    "fill": "#FFFFFF"
+                },
+                "position": { "x": -270, "y": 230 }
+            },
+            "gameButton": {
+                "position": { "x": -10, "y": 110 },
+                "anchor" : { "x": 0.5, "y": 1 }
+            }
+        },
+        "results": {
+            "titleText": {
+                "content": "Results",
+                "style": {
+                    "font": "bold 40px 'Arial'",
+                    "align": "center",
+                    "fill": "#686868",
+                    "boundsAlignH": "center",
+                    "fontWeight": "bold"
+                }
+            },
+            "resultText": {
+                "style": {
+                    "font": "bold 40px 'Arial'",
+                    "align": "center",
+                    "fill": "#686868",
+                    "boundsAlignH": "center",
+                    "fontWeight": "bold"
+                }
+            }
+        }
+    }
+}

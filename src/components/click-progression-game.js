@@ -1,6 +1,6 @@
 import { Screen } from "../../node_modules/genie/src/core/screen.js";
 
-export class BalloonPumpGame extends Screen {
+export class ClickProgressionGame extends Screen {
     constructor() {
         super();
     }
@@ -13,27 +13,21 @@ export class BalloonPumpGame extends Screen {
         const centerX = this.game.world.centerX;
         const centerY = this.game.world.centerY;
         this.theme = this.context.config.theme[this.game.state.current];
+        this.selectedGameButton = this.context.inState.transient["game-button-select"];
+        this.timesButtonClicked = 0;
 
         this.addBackground();
         this.createTimer(centerX);
-        this.createGameFurniture(centerX, centerY);
-        this.createBalloon(centerX, centerY);
+        this.createTitleText(centerX, centerY);
+        this.createGameButton(centerX, centerY);
 
         this.layoutFactory.addLayout(["home", "pause", "audioOff", "settings"]);
+
     }
 
     render() {
         if (this.timer.running) {
             this.timeLeftText.setText(this.getTimeLeftString());
-        }
-    }
-
-    update() {
-        if (this.balloonButton.width >= 240) {
-            this.next({ transient: { resultsData: "Finished with " + this.getTimeLeft() + " seconds left!" } });
-        } else if (this.balloonButton.width > 74 && this.balloonButton.height > 122) {
-            this.balloonButton.width -= 1;
-            this.balloonButton.height -= 1;
         }
     }
 
@@ -49,30 +43,31 @@ export class BalloonPumpGame extends Screen {
     createTimer() {
         this.timer = this.game.time.create();
         this.timerEvent = this.timer.add(Phaser.Timer.SECOND * 15, this.gameLost, this);
-        this.timeLeftText = this.game.add.text(-270, 230, this.getTimeLeftString(), this.theme.timer.style);
+        this.timeLeftText = this.game.add.text(this.theme.timer.position.x, this.theme.timer.position.y, this.getTimeLeftString(), this.theme.timer.style);
         this.layoutFactory.addToBackground(this.timeLeftText);
         this.timer.start();
     }
 
-    createGameFurniture() {
-        const pumpSprite = this.game.add.sprite(-70, 190, this.keyLookup.pump);
-        this.layoutFactory.addToBackground(pumpSprite);
-
-        const text = this.game.add.text(0, -170, this.theme.text.content, this.theme.text.style);
+    createTitleText() {
+        const text = this.game.add.text(this.theme.text.position.x, this.theme.text.position.y, this.theme.text.content, this.theme.text.style);
         this.layoutFactory.addToBackground(text);
     }
 
-    createBalloon() {
-        this.balloonButton = this.game.add.button(-10, 110, this.keyLookup.balloon, this.balloonTapped, this, 2, 1, 0);
-        this.balloonButton.width = 74;
-        this.balloonButton.height = 122;
-        this.layoutFactory.addToBackground(this.balloonButton);
-        this.balloonButton.anchor.setTo(0.5, 1);
+    createGameButton() {
+        const buttonPos = this.theme.gameButton.position;
+        const buttonImage = this.keyLookup["game_button_" + this.selectedGameButton +"_0"];
+        this.gameButton = this.game.add.button(buttonPos.x, buttonPos.y, buttonImage, this.gameButtonClicked, this, 2, 1, 0);
+        this.layoutFactory.addToBackground(this.gameButton);
+        this.gameButton.anchor.setTo(this.theme.gameButton.anchor.x, this.theme.gameButton.anchor.y);
     }
 
-    balloonTapped() {
-        this.balloonButton.width += 20;
-        this.balloonButton.height += 20;
+    gameButtonClicked() {
+        this.timesButtonClicked += 1;
+        if (this.timesButtonClicked === 10) {
+            this.next({ transient: { resultsData: "Finished with " + this.getTimeLeft() + " seconds left!" } });
+        } else {
+            this.gameButton.loadTexture(this.keyLookup["game_button_" + this.selectedGameButton +"_" + this.timesButtonClicked], 0);
+        }
     }
 
     getTimeLeft() {

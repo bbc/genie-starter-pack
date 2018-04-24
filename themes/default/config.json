@@ -1,10 +1,9 @@
 {
     "theme": {
-        "characterSelect": {
+        "game-button-select": {
             "choices": [
                 { "main": "carousel_1" },
-                { "main": "carousel_2" },
-                { "main": "carousel_3" }
+                { "main": "carousel_2" }
             ],
             "leftButton": {
                 "content": "Left",
@@ -24,28 +23,26 @@
             }
         },
         "game" : {
-            "button": {
-                "content": "Tap Here",
-                "style": {
-                    "font": "20px Arial",
-                    "fontWeight": "bold",
-                    "fill": "white"
-                }
-            },
             "text": {
-                "content": "Quick! Tap to pump up the balloon",
+                "content": "Hatch the egg!",
                 "style": {
                     "font": "40px Arial",
                     "fontWeight": "bold",
                     "fill": "#FFFFFF"
-                }
+                },
+                "position": { "x": -250, "y": -170 }
             },
             "timer": {
                 "style": {
                     "font": "30px Arial",
                     "fontWeight": "bold",
                     "fill": "#FFFFFF"
-                }
+                },
+                "position": { "x": -270, "y": 230 }
+            },
+            "gameButton": {
+                "position": { "x": -5, "y": 200 },
+                "anchor" : { "x": 0.5, "y": 1 }
             }
         },
         "results": {

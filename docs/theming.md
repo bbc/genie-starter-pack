@@ -19,13 +19,18 @@ Audio, Animations, Sprites, Graphics and Fonts are in scope for theming. Alterat
 
 ## How does theming work?
 
-At this stage, theming is currently undertaken mostly by performing a straight swap on assets, replacing images / audio / sprites like for like in order to create the desired theme. The image paths are set in `themes/[name of theme]/assets-master-pack.json`.
+There is a `default` theme for components in the `themes` folder that can be copied and renamed with the name of your skin to use as a template. There is also a `balloon` theme to use for comparison. The links to view them locally are here (you will first need to `cd` to the folder and run `npm install` and `npm run start` in a terminal):
 
-Additional configuration (for things like font size and colour) is done by modifying `themes/[name of theme]/config.json`. There is a 'default' theme for components that can be used as a template.
+http://localhost:8080/?theme=default
+http://localhost:8080/?theme=balloon
+
+Theming is currently undertaken mainly by performing a straight swap on assets, replacing images / audio / sprites like for like in order to create the desired theme. There are several JSON files that contain the asset packs. The common ones may be found in `themes/[name of theme]/assets-master-pack.json`. Inside this file, the assets are divided up by screen (the screen names are determined in `main.js`). Any screen names not listed here will have their own JSON asset files. For example, in the `default` theme, the `game.json` and `game-button-select.json` config files are set, as the `game` and `game-button-select` keys are not listed in `assets-master-pack.json`.
+
+Additional configuration not related to assets (for things like font size and colour) is done by modifying `themes/[name of theme]/config.json`.
 
 ## How do I test my theme?
 
-To quickly view a specific theme, you can launch it using the query string 'theme': http://localhost:8080/?theme=themeName, replacing themeName with the name of your theme. If none is specified, it will load the 'default' theme.
+To quickly view a specific theme, you can launch it using the query string 'theme': http://localhost:8080/?theme=themeName, replacing themeName with the name of your theme. If none is specified, it will load the `default` theme.
 
 ## Individual component theme specification
 
