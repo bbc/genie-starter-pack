@@ -18,6 +18,7 @@ module.exports = {
     module: {
         rules: [
             { test: /\.js$/, use: ["babel-loader"], include: path.resolve("src") },
+            { test: /\.js$/, use: ["babel-loader"], include: path.resolve("node_modules/genie/src") },
             { test: /pixi\.js/, use: ["expose-loader?PIXI"] },
             { test: /phaser-split\.js$/, use: ["expose-loader?Phaser"] },
             { test: /p2\.js/, use: ["expose-loader?p2"] },
