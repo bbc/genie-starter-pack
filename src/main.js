@@ -100,4 +100,4 @@ const transitions = [
     },
 ];
 
-startup(transitions);
+startup(transitions, {}, settingsConfig);
