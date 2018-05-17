@@ -36,17 +36,18 @@ Full API documentation for the engines can be found within the Genie core reposi
 
 The scaling engine is already set up to adapt the game to all ratios and screen sizes used by our target devices. The game will automatically scale up and down without any additional input from you. Our coordinate system is set up with the origin point at the centre, so `0.0` refers to the centre of the screen.
 
-### Layout Engine
+### Scene
 
-The layout engine handles the positioning and layout of GUI elements. Standard GEL GUI elements are already known to the layout engine and can be set up and positioned correctly very simply. The Layout engine also instantiates the scaler and provides methods for adding display objects to foreground and background.  Buttons added using this method will automatically call the correct functions and be screen-reader and tab accessible.
+The scene module handles the positioning and layout of GUI elements. Standard GEL GUI elements are already known to the scene module and can be set up and positioned correctly very simply. The scene module also instantiates the scaler and provides methods for adding display objects to foreground and background (It is expected that most of a game would be added to the background group and any overlays /
+ * HUD would go in the foreground group). Buttons added using this method will automatically call the correct functions and be screen-reader and tab accessible.
 
 An example of the factory function for making gel layouts:
 
-`this.layoutFactory.addLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
+`this.scene.addLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
 
 Whenever a new non GEL element is added to the screen, it will need to be added to the layout manager's background in order to work correctly with the Scaler. An example:
 
-`this.layoutFactory.addToBackground(titleText);`
+`this.scene.addToBackground(titleText);`
 
 
 ## What coding and test standards do I need to apply?
