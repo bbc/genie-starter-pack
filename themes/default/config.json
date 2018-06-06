@@ -1,6 +1,6 @@
 {
     "theme": {
-        "game-button-select": {
+        "characterSelect": {
             "choices": [
                 { "main": "carousel_1" },
                 { "main": "carousel_2" }
