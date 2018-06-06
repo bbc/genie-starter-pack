@@ -5,6 +5,7 @@ import { ClickProgressionGame } from "./components/click-progression-game.js";
 import { Results } from "../node_modules/genie/src/components/results.js";
 import { startup } from "../node_modules/genie/src/core/startup.js";
 import { settings } from "../node_modules/genie/src/core/settings.js";
+import * as signal from "../node_modules/genie/src/core/signal-bus.js";
 
 settings.setCloseCallback(() => {
     //Called when settings screen has been closed
@@ -33,71 +34,59 @@ const settingsConfig = {
     ],
 };
 
-settings.add("custom1", value => {
-    //Example of custom setting callback
-    console.log("custom 1 setting changed to: " + value);
+signal.bus.subscribe({
+    channel: settingsChannel,
+    name: "custom1",
+    callback: value => {
+        console.log("Custom 1 setting changed to " + value);
+    },
 });
 
-const transitions = [
-    {
-        name: "loadscreen",
-        state: new Loadscreen(),
-        nextScreenName: () => "home",
-    },
-    {
-        name: "home",
-        state: new Home(),
-        nextScreenName: () => "game-button-select",
-    },
-    {
-        name: "game-button-select",
-        state: new Select(),
-        nextScreenName: state => {
-            if (state.transient.home) {
-                state.transient.home = false;
-                return "home";
-            }
-            if (state.transient.restart) {
-                state.transient.restart = false;
-                return "home";
-            }
-            return "game";
-        },
-    },
-    {
-        name: "game",
-        state: new ClickProgressionGame(),
-        nextScreenName: state => {
-            if (state.transient.home) {
-                state.transient.home = false;
-                return "home";
-            }
-            if (state.transient.restart) {
-                state.transient.restart = false;
-                return "game";
-            }
-            return "results";
-        },
-    },
-    {
-        name: "results",
-        state: new Results(),
-        nextScreenName: state => {
-            if (state.transient.game) {
-                state.transient.game = false;
-                return "game";
-            }
-            if (state.transient.home) {
-                state.transient.home = false;
-                return "home";
-            }
-            if (state.transient.restart) {
-                state.transient.restart = false;
-                return "game";
-            }
-            return "home";
-        },
-    },
-];
+const navigationConfig = goToScreen => {
+    const goToHome = data => goToScreen("home", data);
+    const goToCharacterSelect = data => goToScreen("character-select", data);
+    const goToGame = data => goToScreen("game", data);
+    const goToResults = data => goToScreen("results", data);
 
-startup(transitions, {}, settingsConfig);
+    return {
+        loadscreen: {
+            state: Loadscreen,
+            routes: {
+                next: goToHome,
+            },
+        },
+        home: {
+            state: Home,
+            routes: {
+                next: goToCharacterSelect,
+            },
+        },
+        "character-select": {
+            state: Select,
+            routes: {
+                next: goToGame,
+                home: goToHome,
+                restart: goToHome,
+            },
+        },
+        game: {
+            state: GameTest,
+            routes: {
+                next: goToResults,
+                home: goToHome,
+                restart: goToHome,
+            },
+        },
+        results: {
+            state: Results,
+            routes: {
+                next: goToHome,
+                game: goToGame,
+                restart: goToGame,
+                home: goToHome,
+            },
+        },
+    };
+};
+
+startup(settingsConfig, navigationConfig);
