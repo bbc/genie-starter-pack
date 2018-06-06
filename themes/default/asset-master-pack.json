@@ -30,6 +30,12 @@
     "results": [
         {
             "type": "image",
+            "key": "title",
+            "url": "results/title.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
             "key": "background",
             "url": "shared/background.png",
             "overwrite": false

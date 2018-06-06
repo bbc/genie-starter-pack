@@ -2,6 +2,12 @@
     "characterSelect":[
         {
             "type": "image",
+            "key": "title",
+            "url": "select/title.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
             "key": "background",
             "url": "shared/background.png",
             "overwrite": false
