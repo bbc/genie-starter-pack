@@ -65,7 +65,7 @@ const navigationConfig = goToScreen => {
             },
         },
         game: {
-            state: GameTest,
+            state: ClickProgressionGame,
             routes: {
                 next: goToResults,
                 home: goToHome,
