@@ -5,15 +5,11 @@ export class ClickProgressionGame extends Screen {
         super();
     }
 
-    preload() {
-        this.keyLookup = this.layoutFactory.keyLookups[this.game.state.current];
-    }
-
     create() {
         const centerX = this.game.world.centerX;
         const centerY = this.game.world.centerY;
         this.theme = this.context.config.theme[this.game.state.current];
-        this.selectedGameButton = this.context.inState.transient["game-button-select"];
+        this.selectedGameButton = this.transientData.characterSelected;
         this.timesButtonClicked = 0;
 
         this.addBackground();
@@ -21,7 +17,7 @@ export class ClickProgressionGame extends Screen {
         this.createTitleText(centerX, centerY);
         this.createGameButton(centerX, centerY);
 
-        this.layoutFactory.addLayout(["home", "pause", "audioOff", "settings"]);
+        this.scene.addLayout(["home", "pause", "audioOff", "settings"]);
 
     }
 
@@ -32,41 +28,41 @@ export class ClickProgressionGame extends Screen {
     }
 
     gameLost() {
-        this.next({ transient: { resultsData: "Game over - You lost!" } });
+        this.navigation.next({ transient: { resultsData: "Game over - You lost!" } });
     }
 
     addBackground() {
-        const backgroundImage = this.game.add.image(0, 0, this.keyLookup.background);
-        return this.layoutFactory.addToBackground(backgroundImage);
+        const backgroundImage = this.game.add.image(0, 0, "game.background");
+        return this.scene.addToBackground(backgroundImage);
     }
 
     createTimer() {
         this.timer = this.game.time.create();
         this.timerEvent = this.timer.add(Phaser.Timer.SECOND * 15, this.gameLost, this);
         this.timeLeftText = this.game.add.text(this.theme.timer.position.x, this.theme.timer.position.y, this.getTimeLeftString(), this.theme.timer.style);
-        this.layoutFactory.addToBackground(this.timeLeftText);
+        this.scene.addToBackground(this.timeLeftText);
         this.timer.start();
     }
 
     createTitleText() {
         const text = this.game.add.text(this.theme.text.position.x, this.theme.text.position.y, this.theme.text.content, this.theme.text.style);
-        this.layoutFactory.addToBackground(text);
+        this.scene.addToBackground(text);
     }
 
     createGameButton() {
         const buttonPos = this.theme.gameButton.position;
-        const buttonImage = this.keyLookup["game_button_" + this.selectedGameButton +"_0"];
+        const buttonImage = "game." + "game_button_" + this.selectedGameButton + "_0";
         this.gameButton = this.game.add.button(buttonPos.x, buttonPos.y, buttonImage, this.gameButtonClicked, this, 2, 1, 0);
-        this.layoutFactory.addToBackground(this.gameButton);
+        this.scene.addToBackground(this.gameButton);
         this.gameButton.anchor.setTo(this.theme.gameButton.anchor.x, this.theme.gameButton.anchor.y);
     }
 
     gameButtonClicked() {
         this.timesButtonClicked += 1;
         if (this.timesButtonClicked === 10) {
-            this.next({ transient: { resultsData: "Finished with " + this.getTimeLeft() + " seconds left!" } });
+            this.navigation.next({ transient: { resultsData: "Finished with " + this.getTimeLeft() + " seconds left!" } });
         } else {
-            this.gameButton.loadTexture(this.keyLookup["game_button_" + this.selectedGameButton +"_" + this.timesButtonClicked], 0);
+            this.gameButton.loadTexture("game." + "game_button_" + this.selectedGameButton + "_" + this.timesButtonClicked, 0);
         }
     }
 
