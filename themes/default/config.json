@@ -1,5 +1,8 @@
 {
     "theme": {
+        "how-to-play": {
+            "panels": ["panel1", "panel2", "panel3"]
+        },
         "characterSelect": {
             "choices": [
                 { "main": "carousel_1" },
