@@ -69,7 +69,7 @@ const navigationConfig = goToScreen => {
             routes: {
                 next: goToResults,
                 home: goToHome,
-                restart: goToHome,
+                restart: goToGame,
             },
         },
         results: {
