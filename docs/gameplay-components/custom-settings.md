@@ -29,10 +29,10 @@ const settingsConfig = {
 ```
 
 A new setting can be created by adding an additional object to the `settings` array and giving it the following properties: 
-- `key` -> A key value used to identify the setting. 
-- `type` -> Determines the format of the setting. For instance, a `toggle` setting can be toggled between `on` and `off`.
-- `title` -> The name of the setting, as it will appear in CAGE.
-- `description` -> A short description of what the setting does. This will appear under the settings title in CAGE.
+- `key`: A key value used to identify the setting. 
+- `type`: Determines the format of the setting. For instance, a `toggle` setting can be toggled between `on` and `off`.
+- `title`:The name of the setting, as it will appear in CAGE.
+- `description`: A short description of what the setting does. This will appear under the settings title in CAGE.
 
 ## How do I access the value of a setting within the gameplay component?
 Import Genie's settings module and then call its `getAllSettings()` function. Under the hood this will retrieve the settings from the GMI.
@@ -54,9 +54,9 @@ const customSettingOneValue = allSettings.custom1;
 ## How do I configure a callback for my setting?
 
 In `src/main.js` add a call to subsribe the settings channel of the signal bus by calling `signal.bus.subscribe(subscription)` where `subscription` is an object with the following properties:
-- `channel` -> This should be set to settingsChannel.  <!-- TODO: This shouldn't really be exposed in this case as all settings should use the settings channel  -->
-- `name` -> This should correspond to the key of the setting that the callback is being set for.
-- `callback` -> A callback function for the setting that will execute whenever the setting is changed by the player.
+- `channel`: This should be set to settingsChannel.  <!-- TODO: This shouldn't really be exposed in this case as all settings should use the settings channel  -->
+- `name`: This should correspond to the key of the setting that the callback is being set for.
+- `callback`: A callback function for the setting that will execute whenever the setting is changed by the player.
 
 ```javascript
 signal.bus.subscribe({
