@@ -58,8 +58,6 @@ In `src/main.js` add a call to subsribe the settings channel of the signal bus b
 - `name` -> This should correspond to the key of the setting that the callback is being set for.
 - `callback` -> A callback function for the setting that will execute whenever the setting is changed by the player.
 
-For example:
-
 ```javascript
 signal.bus.subscribe({
     channel: settingsChannel,
