@@ -2,7 +2,7 @@
 
 ## How do I add custom settings to my game?
 
-The setting config for the game can be found in `src/main.js`.
+The settings config for the game can be found in `src/main.js`.
 
 ```javascript
 const settingsConfig = {
@@ -28,35 +28,38 @@ const settingsConfig = {
 };
 ```
 
-A new setting can be created by adding an additional object to the `settings` array and giving it the following properties: 
-- `key`: A key value used to identify the setting. 
-- `type`: Determines the format of the setting. For instance, a `toggle` setting can be toggled between `on` and `off`.
-- `title`:The name of the setting, as it will appear in CAGE.
-- `description`: A short description of what the setting does. This will appear under the settings title in CAGE.
+A new setting can be created by adding an additional object to the `settings` array and giving it the following properties:
+- `key`: A key value used to identify the setting.
+- `type`: Determines the format of the setting. Only `"toggle"` is supported currently.
+- `title`:The name of the setting as it will appear in the settings dialog box.
+- `description`: A short description of what the setting does. This will appear under the settings title in the settings dialog box.
 
 ## How do I access the value of a setting within the gameplay component?
 Import Genie's settings module and then call its `getAllSettings()` function. Under the hood this will retrieve the settings from the GMI.
 
+Example usage:
+
 ```javascript
-// Import Genie's settings module
 import { settings } from "../node_modules/genie/src/core/settings.js";
 
-// Retrieve all the settings - under the hood this will call the GMI
 const allSettings = settings.getAllSettings();
+// => { audio: true, custom1: false, gameData: {} }
 
-// You can then extract the settings values you need by their key
-const audioSettingValue = allSettings.audio;
+allSettings.audio;
+// => true
 
-// Values for your custom settings will also be available
-const customSettingOneValue = allSettings.custom1;
+allSettings.custom1;
+// => false
 ```
 
 ## How do I configure a callback for my setting?
 
-In `src/main.js` add a call to subsribe the settings channel of the signal bus by calling `signal.bus.subscribe(subscription)` where `subscription` is an object with the following properties:
-- `channel`: This should be set to settingsChannel.  <!-- TODO: This shouldn't really be exposed in this case as all settings should use the settings channel  -->
+In `src/main.js` subscribe to the settings channel by calling `signal.bus.subscribe(subscription)` where `subscription` is an object with the following properties:
+- `channel`: This should be set to settingsChannel which is imported at the top of `src/main.js`.
 - `name`: This should correspond to the key of the setting that the callback is being set for.
-- `callback`: A callback function for the setting that will execute whenever the setting is changed by the player.
+- `callback`: A callback function that will execute whenever the setting is changed from the settings dialog box.
+
+Example usage:
 
 ```javascript
 signal.bus.subscribe({
