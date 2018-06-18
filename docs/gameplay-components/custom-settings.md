@@ -35,7 +35,7 @@ A new setting can be created by adding an additional object to the `settings` ar
 - `description`: A short description of what the setting does. This will appear under the settings title in the settings dialog box.
 
 ## How do I access the value of a setting within the gameplay component?
-Import Genie's settings module and then call its `getAllSettings()` function. Under the hood this will retrieve the settings from the GMI.
+Import Genie's settings module and then call its `getAllSettings()` function.
 
 Example usage:
 
