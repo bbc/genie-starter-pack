@@ -4,6 +4,8 @@
 * [How do I set up my local dev environment?](#how-do-i-set-up-my-local-dev-environment)
 * [Developing a Gameplay Component](./docs/gameplay-component.md)
 * [Creating a Theme](./docs/theming.md)
+* [The Signal Bus](./docs/signal-bus.md)
+* [Phaser Terminology](./docs/phaser-terminology.md)
 * [Genie Gel (“GELIE”) Documentation](#genie-gel-gelie-documentation)
 * [How can I access support?](#how-can-i-access-support)
 
@@ -30,7 +32,6 @@ To build your game using Webpack, use `npm run build`.
 `npm run build-watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver. Changes to the source will trigger a rebuild.
 
 ## Genie Gel ("GELIE") Documentation
-
 
 ## How can I access support?
 
