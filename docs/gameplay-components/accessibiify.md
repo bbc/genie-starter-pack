@@ -6,7 +6,7 @@ Accessibilify is a utility function that is provided by Genie which can be used 
 ## How do I use accessibilify?
 First, you will need to import the `accessibilify` function from GENIE. The `accessibilify` function accepts two arguments:
 - `button`: The Phaser button that will be made accessible.
-- `config`: An object that contains the configuration that will be used to create an accessible div element for the button. the config should have the following properties.
+- `config`: An object that contains the configuration that will be used to create an accessible div element for the button. The config should have the following properties:
     - `id`: The ID that will be assigned to the DOM element.
     - `ariaLabel`: The ariaLabel that will be assigned to the DOM element.
 
