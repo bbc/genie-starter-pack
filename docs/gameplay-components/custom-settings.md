@@ -1,5 +1,7 @@
 # Configuring Custom Settings
 
+BBC platforms make use of a platform-wide settings screen. Genie games will need to interface with this screen and pass options data to and from the global settings screen.
+
 ## How do I add custom settings to my game?
 
 The settings config for the game can be found in `src/main.js`.
