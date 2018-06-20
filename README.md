@@ -2,8 +2,8 @@
 
 * [What is Genie?](#what-is-genie)
 * [How do I set up my local dev environment?](#how-do-i-set-up-my-local-dev-environment)
-* [Developing a Gameplay Component](./docs/gameplay-component.md)
-* [Creating a Theme](./docs/theming.md)
+* [Developing a Gameplay Component](./docs/gameplay-components/gameplay-component.md)
+* [Creating a Theme](./docs/theming/theming.md)
 * [The Signal Bus](./docs/signal-bus.md)
 * [Phaser Terminology](./docs/phaser-terminology.md)
 * [Genie Gel (“GELIE”) Documentation](#genie-gel-gelie-documentation)
