@@ -40,7 +40,7 @@ Import Genie's settings module and then call its `getAllSettings()` function.
 Example usage:
 
 ```javascript
-import { settings } from "../node_modules/genie/src/core/settings.js";
+import { settings } from "../../node_modules/genie/src/core/settings.js";
 
 const allSettings = settings.getAllSettings();
 // => { audio: true, custom1: false, gameData: {} }

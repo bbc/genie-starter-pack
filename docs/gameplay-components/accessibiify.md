@@ -11,7 +11,7 @@ First, you will need to import the `accessibilify` function from GENIE. The `acc
     - `ariaLabel`: The ariaLabel that will be assigned to the DOM element.
 
 ```javascript
-import { accessibilify } from "../../../core/accessibilify/accessibilify.js";
+import { accessibilify } from "../../node_modules/genie/src/core/accessibilify/accessibilify.js";
 
 export class GameScreen extends Screen {
     constructor() {
