@@ -34,7 +34,7 @@ Full API documentation for the engines can be found within the Genie core reposi
 
 ### Scaling Engine
 
-The scaling engine is already set up to adapt the game to all ratios and screen sizes used by our target devices. The game will automatically scale up and down without any additional input from you. Our coordinate system is set up with the origin point at the centre, so `0.0` refers to the centre of the screen.
+The scaling engine is already set up to adapt the game to all ratios and screen sizes used by our target devices. The game will automatically scale up and down without any additional input from you. Our coordinate system is set up with the origin point at the centre, so `(0,0)` refers to the centre of the screen.
 
 ### Scene
 
