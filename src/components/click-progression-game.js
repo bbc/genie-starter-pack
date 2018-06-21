@@ -17,7 +17,7 @@ export class ClickProgressionGame extends Screen {
         this.createTitleText(centerX, centerY);
         this.createGameButton(centerX, centerY);
 
-        this.scene.addLayout(["home", "pause", "audioOff", "settings"]);
+        this.scene.addLayout(["pause"]);
 
     }
 
@@ -30,7 +30,7 @@ export class ClickProgressionGame extends Screen {
     gameLost() {
         this.navigation.next({
             results: "Game over - You lost!",
-            characterSelected: this.transientData.characterSelected,  
+            characterSelected: this.transientData.characterSelected,
         });
     }
 
@@ -65,7 +65,7 @@ export class ClickProgressionGame extends Screen {
         if (this.timesButtonClicked === 10) {
             this.navigation.next({
                 results: "Finished with " + this.getTimeLeft() + " seconds left!",
-                characterSelected: this.transientData.characterSelected,  
+                characterSelected: this.transientData.characterSelected,
             });
         } else {
             this.gameButton.loadTexture("game." + "game_button_" + this.selectedGameButton + "_" + this.timesButtonClicked, 0);
