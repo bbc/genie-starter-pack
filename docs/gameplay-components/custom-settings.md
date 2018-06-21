@@ -1,6 +1,6 @@
 # Configuring Custom Settings
 
-BBC platforms make use of a platform-wide settings screen. Genie games will need to interface with this screen and pass options data to and from the global settings screen.
+BBC platforms make use of a platform-wide settings screen. Genie games will need to interface with this screen and pass options data to and from the global settings screen, for example to mute the audio, disable motion effects or any customs settings the game may require.
 
 ## How do I add custom settings to my game?
 
