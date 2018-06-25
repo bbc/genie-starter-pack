@@ -87,9 +87,11 @@ The CAGE URL will be in the following format (replace the parts in curly braces 
 
 You can also replace the **{jenkins-build-number}** with the string `latest` to see the latest build.
 
+There will be a separate game id for each theme (this will need to be set up by a member of our team here at the BBC).
+
 ## What acceptance tests will the BBC carry out?
 
-The BBC will carry out the standard tests and compliance testing carried out on all games as outlined in the contracts. 
+The BBC will carry out the standard tests and compliance testing carried out on all games as outlined in the contracts.
 
 ## What documentation do I need to supply?
 
