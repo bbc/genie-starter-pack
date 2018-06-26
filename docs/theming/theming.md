@@ -40,6 +40,8 @@ This will vary for each gameplay component.
 
 The assets for GEL buttons can be found in the folder: `themes/default/gel/`. These can be copied across directly. This other assets needed will also vary for each gameplay component.
 
+Audio will need to be provided in two formats to in order to support all devices: MP3 and OGG.
+
 ## How do I get my theme onto Children’s platforms?
 
 Check out the starter pack Github repository and add your theme in a directory, basing the theme's structure on the existing default theme. Push to the remote repository and the BBC team will create an entry on our iSite CMS which will allow the theme to be viewed on a BBC url hosted in our CAGE platform.
