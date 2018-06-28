@@ -19,7 +19,7 @@ Genie provides a set of reusable components common to BBC games such as a load s
 
 A skeleton set-up has been included in this starter pack. To install, run `npm install` in the command line. This will pull in the Genie framework.
 
-The game sequence can then be configured by editing: `src/main.js`. Require in the desired screens and order them in the `transitions` JSON object. The `nextScreenName` method returns a string to indicate the name of the next screen to transition to. As this is a function, conditional logic can be included here to move to a different screen depending on the game state (e.g. a "win" screen or a "fail" screen).
+The game sequence can then be configured by editing: `src/main.js`. Inside `main.js`, Import the desired screens and order them in the `transitions` Array. The `nextScreenName` method returns a string to indicate the name of the next screen to transition to. As this is a function, conditional logic can be included here to move to a different screen depending on the game state (e.g. a "win" screen or a "fail" screen).
 
 New screens (including the gameplay component) should be created in the `components` folder.
 
