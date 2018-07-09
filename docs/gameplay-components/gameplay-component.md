@@ -10,6 +10,7 @@
 * [What acceptance tests will the BBC carry out?](#what-acceptance-tests-will-the-bbc-carry-out)
 * [What documentation do I need to supply?](#what-documentation-do-i-need-to-supply)
 
+
 ## How is Genie structured?
 
 Genie is a modular framework which provides a set of reusable components (known as "screens") which are common across all BBC games, as well as various core "engines", which handle GEL buttons, layout and accessibility.
@@ -25,12 +26,11 @@ The current screens are:
 
 These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Title Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
 
-The game flow sequence can be configured by editing: `src/main.js`. Require in the desired screens and order them in the `transitions` JSON object. The `nextScreenName` method returns a string to indicate the name of the next screen to transition to. As this is a function, conditional logic can be included here to move to a different screen depending on the game state (e.g. a "win" screen or a "fail" screen). The Genie Sequencer will then take care of the sequencing of the screens.
-
+The game flow sequence can be configured by editing: `src/main.js`. Import the desired screens and list them in the `navigationConfig` object. The `routes` object for each gives a list of possible onward journeys.
 
 ## How do I use the core engines?
 
-Full API documentation for the engines can be found within the Genie core repository. A short overview follows.
+Full API documentation for the engines can be found within the Genie core repository. Any files in Genie core should be used as provided, and must not be copied or modified in any way. A short overview of their functionality follows.
 
 ### Scaling Engine
 
@@ -72,6 +72,7 @@ To build your game using Webpack, use `npm run build`.
 
 To quickly view a specific theme, you can access it using the querystring 'theme': http://localhost:8080/?theme=<themeName>.
 
+Please note that an `index.html` file has been provided for local development. This will not be used in production.
 
 ## Are there any areas of existing Children’s game delivery standards I need to apply?
 
@@ -95,4 +96,5 @@ The BBC will carry out the standard tests and compliance testing carried out on 
 
 ## What documentation do I need to supply?
 
-Documentation outlining how to reskin your gameplay component and how to replace the assets with new ones, as well as documentation outlining how to build and run your component from source code.
+You will need to provide us with documentation outlining how to re-theme your gameplay component, how to replace the assets with new ones, and how to build and run your component from source code.
+

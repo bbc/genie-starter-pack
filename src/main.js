@@ -10,19 +10,13 @@ import * as signal from "../node_modules/genie/src/core/signal-bus.js";
 const settingsConfig = {
     pages: [
         {
-            title: "Global Settings",
+            title: "Custom Settings",
             settings: [
                 {
-                    key: "audio",
+                    key: "colourblind",
                     type: "toggle",
-                    title: "Audio",
-                    description: "Turn off/on sound and music",
-                },
-                {
-                    key: "custom1",
-                    type: "toggle",
-                    title: "Custom 1",
-                    description: "Switch custom message",
+                    title: "Colourblind mode",
+                    description: "Turn off/on colour palatte with increased constrast",
                 },
             ],
         },
