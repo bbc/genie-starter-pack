@@ -56,7 +56,7 @@ We use ESLint with a slightly edited ruleset, along with Prettier. For non-gamep
 
 For gameplay components themselves we allow greater flexibility and as long as the code meets the BBC standard requirements such as not producing console errors, most styles are allowed. Feel free to use our eslint standards, however. Our eslint configuration file can be found in the root of the project as `.eslintrc_`. Rename it to `.eslintrc` to use it.
 
-We will also use the [Tech Review Tool](tech-review-tool.md) to ensure your game is BBC compliant.
+We will also use the [Tech Review Tool](../tech-review-tool.md) to ensure your game is BBC compliant.
 
 
 ## How does my component plug into Genie?

@@ -66,7 +66,7 @@ See [data storage: loading data](data-storage.md#loading-data) for more informat
 
 ### Setting Changed Callback
 
-To add a callback when a setting is changed, you can use the [signal bus subscription](./signal-bus.md#subscription-example) like so:
+To add a callback when a setting is changed, you can use the [signal bus subscription](signal-bus.md#subscription-example) like so:
 
 ```javascript
 
