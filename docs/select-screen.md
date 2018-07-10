@@ -62,7 +62,7 @@ const transitions = [
 - Locate the file `asset-pack-master.json` located inside `themes/your-theme/` (where `your-theme` is the name of your theme).
 - Add your sprite locations and preferred key names to this file.
 
-```json
+```javascript
 {
     ...
     "characterSelect": [
