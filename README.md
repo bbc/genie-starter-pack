@@ -7,11 +7,11 @@
 
 ## Gameplay Development Specifics
 
-* [Select Screen](./docs/select-screen.md)
-* [The Signal Bus](./docs/signal-bus.md)
-* [Accessibilify](./docs/accessibilify.md)
 * [Games Messaging Interface (GMI)](./docs/gmi.md)
 * [Using Local Storage and Cookies](./docs/data-storage.md)
 * [Game Settings](./docs/settings.md)
+* [The Signal Bus](./docs/signal-bus.md)
+* [Select Screen](./docs/select-screen.md)
+* [Accessibilify](./docs/accessibilify.md)
 * [Phaser Terminology](./docs/phaser-terminology.md)
 * [Stats](./docs/stats.md)
