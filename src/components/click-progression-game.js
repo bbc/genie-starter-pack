@@ -1,4 +1,5 @@
 import { Screen } from "../../node_modules/genie/src/core/screen.js";
+import { gmi } from "../../node_modules/genie/src/core/gmi.js";
 
 export class ClickProgressionGame extends Screen {
     constructor() {
@@ -18,6 +19,9 @@ export class ClickProgressionGame extends Screen {
         this.createGameButton(centerX, centerY);
 
         this.scene.addLayout(["pause"]);
+
+        gmi.setGameData("characterSelected", this.transientData.characterSelected);
+        console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
 
     }
 
