@@ -13,10 +13,10 @@ const settingsConfig = {
             title: "Custom Settings",
             settings: [
                 {
-                    key: "colourblind",
+                    key: "custom1",
                     type: "toggle",
-                    title: "Colourblind mode",
-                    description: "Turn off/on colour palatte with increased constrast",
+                    title: "Custom setting",
+                    description: "Description of custom setting",
                 },
             ],
         },
