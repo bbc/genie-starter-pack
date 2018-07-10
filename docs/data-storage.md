@@ -7,7 +7,7 @@ Saving data must go through the [GMI](gmi.md). This ensures all data access comp
 In the event a user has disabled cookies/local storage, any attempt to save data will be ignored, and any attempt to retrieve data will
 return the global settings with default values.
 
-Games also adhere to the BBC 'Functional' Cookie so a user can opt out of these features. Users can manage preferences here: [Manage Cookie Settings (Live)](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings).
+Games also adhere to the BBC 'Functional' Cookie so a user can opt out of these features. Users can manage preferences here: [Manage Cookie Settings](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings).
 
 *All games must be prepared to handle this scenario.*
 
@@ -19,59 +19,37 @@ gmi.setGameData(key, value);
 
 Stores a JSON key-value pair that can then be retrieved with `getAllSettings()`.
 
-The exceptions to this are the [global settings](gmi.md#global-game-settings): audio, subtitles, and motion:
-
-````
-gmi.setAudio(true/false)
-gmi.setSubtitles(true/false)
-gmi.setMotion(true/false)
-````
-
 ## Loading data
 
-````
+```javascript
 gmi.getAllSettings();
-````
+```
 
-Returns a JSON object with [global settings](gmi.md#global-game-settings) and specific gameData.
+Returns a JSON object with [global settings](settings.md#global-settings) and specific game data.
 
-Specific game data is stored under gameData:
+Specific game data is stored under `gameData`:
 
-````
-gmi.getAllSettings().gameData
-````
+```javascript
+gmi.getAllSettings().gameData;
+```
 
-This object will contain all of the properties set by this game using setGameData.
+This object will contain all of the properties set by this game using `setGameData`.
 
-[Global settings](gmi.md#global-game-settings) can be accessed like so:
+[Global settings](settings.md#global-settings) can be accessed like so:
 
-````
-gmi.getAllSettings().audio
-gmi.getAllSettings().subtitles
-gmi.getAllSettings().motion
-````
+```javascript
+gmi.getAllSettings().audio;
+gmi.getAllSettings().motion;
+gmi.getAllSettings().subtitles;
 
-## Example
-[Code Example](../src/main.js) - open [index.html](../src/index.html) in your browser to see this in action.
-
-This is also available to see in [CAGE](https://www.bbc.co.uk/cbeebies/embed/game/childrens-games-starter-pack).
+```
 
 ## Testing
 
 ### CAGE
-Change your 'Functional' cookie preferences at [Manage Cookie Settings (Live)] to see the [CAGE demo](https://www.bbc.co.uk/cbeebies/embed/game/childrens-games-starter-pack)
-behave differently.
+
+Once your game is built to CAGE, you can change your 'Functional' cookie preferences at [Manage Cookie Settings](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings) to see the game behave differently with different cookie settings.
 
 ### Local
-Edit your index.html so that gmi.areCookiesAllowed() returns true/false to observe how your game behaves.
+Edit your index.html so that `gmi.areCookiesAllowed()` returns true/false to observe how your game behaves.
 
-
-[Manage Cookie Settings (TEST)]: http://www.test.bbc.co.uk/privacy/cookies/managing/cookie-settings
-[Manage Cookie Settings (LIVE)]: http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings
-
-* [Home](../README.md)
-    * [Working with GMI](working-with-gmi.md)
-    * [API Reference](gmi.md)
-    * [Settings](settings.md)
-    * [Stats](stats.md#stats)
-    * [Using Local Storage/Cookies](data-storage.md#using-local-storagecookies)
