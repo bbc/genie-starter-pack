@@ -18,7 +18,7 @@
             "leftButton": {
                 "content": "Left",
                 "style": {
-                    "font": "20px Arial",
+                    "font": "20px ReithSans",
                     "fontWeight": "bold",
                     "fill": "white"
                 }
@@ -26,7 +26,7 @@
             "rightButton": {
                 "content": "Right",
                 "style": {
-                    "font": "20px Arial",
+                    "font": "20px ReithSans",
                     "fontWeight": "bold",
                     "fill": "white"
                 }
@@ -36,7 +36,7 @@
             "text": {
                 "content": "Hatch the egg!",
                 "style": {
-                    "font": "40px Arial",
+                    "font": "40px ReithSans",
                     "fontWeight": "bold",
                     "fill": "#FFFFFF"
                 },
@@ -44,7 +44,7 @@
             },
             "timer": {
                 "style": {
-                    "font": "30px Arial",
+                    "font": "30px ReithSans",
                     "fontWeight": "bold",
                     "fill": "#FFFFFF"
                 },
@@ -56,19 +56,9 @@
             }
         },
         "results": {
-            "titleText": {
-                "content": "Results",
-                "style": {
-                    "font": "bold 40px 'Arial'",
-                    "align": "center",
-                    "fill": "#686868",
-                    "boundsAlignH": "center",
-                    "fontWeight": "bold"
-                }
-            },
             "resultText": {
                 "style": {
-                    "font": "bold 40px 'Arial'",
+                    "font": "bold 40px ReithSans",
                     "align": "center",
                     "fill": "#686868",
                     "boundsAlignH": "center",

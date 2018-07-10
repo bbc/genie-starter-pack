@@ -57,7 +57,7 @@
         "results": {
             "resultText": {
                 "style": {
-                    "font": "bold 40px Arial",
+                    "font": "bold 40px ReithSans",
                     "align": "center",
                     "fill": "#686868",
                     "boundsAlignH": "center",
