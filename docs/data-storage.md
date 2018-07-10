@@ -1,6 +1,8 @@
 # Using Local Storage and Cookies
 
-Saving data must go through the [GMI](gmi.md). This ensures all data access complies with BBC data policies.
+Ideally, data should not be stored. If it is stored, data must not be personal and should adhere to the cookie policy of the browser. If the game contains sign in, it must respect the privacy settings on the user's account.
+
+Data must be saved through the [GMI](gmi.md). This ensures all data access complies with BBC data policies.
 
 ## Cookies/Local Storage disabled
 

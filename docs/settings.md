@@ -52,8 +52,17 @@ const settingsConfig = {
 };
 ```
 
+A new setting can be created by adding an additional object to the `settings` array and giving it the following properties:
+- `key`: A key value used to identify the setting.
+- `type`: Determines the format of the setting. Only `"toggle"` is supported currently.
+- `title`: The name of the setting as it will appear in the settings dialog box.
+- `description`: A short description of what the setting does. This will appear under the settings title in the settings dialog box.
+
 More than one page of custom settings may be given, and they can all be given titles of your choosing.
 
+### How do I access the value of a setting within the gameplay component?
+
+See [data storage: loading data](data-storage.md#loading-data) for more information.
 
 ### Setting Changed Callback
 

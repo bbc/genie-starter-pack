@@ -1,4 +1,4 @@
-# Children's BBC - Genie Theming
+# Creating a Theme
 
 * [What is in and out of scope for theming?](#what-is-in-and-out-of-scope-for-theming)
 * [Individual component theme specification](#individual-component-theme-specification)

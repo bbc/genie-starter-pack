@@ -1,4 +1,4 @@
-# Children's BBC - Screens - Select Screen
+# Select Screen
 
 * [How do I add a select screen to the game?](#how-do-i-add-a-select-screen-to-the-game)
 * [How do I add items to the select screen carousel?](#how-do-i-add-items-to-the-select-screen-carousel)
@@ -11,7 +11,7 @@
 import { Select } from "../node_modules/genie/src/components/select.js";
 ```
 
-- Then, in `src/main.js` add the select screen to the `transitions array`. 
+- Then, in `src/main.js` add the select screen to the `transitions array`.
 
 ```javascript
 const transitions = [
