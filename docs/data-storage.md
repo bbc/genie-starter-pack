@@ -1,4 +1,4 @@
-# Using Local Storage/Cookies
+# Using Local Storage and Cookies
 
 Saving data must go through the [GMI](gmi.md). This ensures all data access complies with BBC data policies.
 

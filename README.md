@@ -6,6 +6,7 @@
 * [Creating a Theme](./docs/theming.md)
 * [The Signal Bus](./docs/signal-bus.md)
 * [The Games Messaging Interface (GMI)](./docs/gmi.md)
+* [Using Local Storage and Cookies](./docs/data-storage.md)
 * [Game Settings](./docs/settings.md)
 * [Phaser Terminology](./docs/phaser-terminology.md)
 * [Genie Gel (“GELIE”) Documentation](#genie-gel-gelie-documentation)

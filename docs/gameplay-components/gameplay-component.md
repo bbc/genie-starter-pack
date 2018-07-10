@@ -56,6 +56,8 @@ We use ESLint with a slightly edited ruleset, along with Prettier. For non-gamep
 
 For gameplay components themselves we allow greater flexibility and as long as the code meets the BBC standard requirements such as not producing console errors, most styles are allowed. Feel free to use our eslint standards, however. Our eslint configuration file can be found in the root of the project as `.eslintrc_`. Rename it to `.eslintrc` to use it.
 
+We will also use the [Tech Review Tool](../tech-review-tool.md) to ensure your game is BBC compliant.
+
 
 ## How does my component plug into Genie?
 
@@ -78,6 +80,25 @@ Please note that an `index.html` file has been provided for local development. T
 
 Please supply unminified/unfobfuscated source code with a working build process.
 
+All paths everywhere in the project must be relative so that the project compiles on any machine.
+
+The game should not contain commented out code or TODOs. If something is marked as "TODO" then it either legitimately needs doing in which case the project isn't finished, or it's non-essential and should be removed.
+
+Libraries used should be versioned and not modified. Assets containing text/sentences/paragraphs should be avoided except for cases where single characters or digits are used (e.g. for titles).
+
+No assets or CSS should fail to load.
+
+The console should contain no console.log or errors from the game. It should also suppress any logs from libraries.
+
+The project shouldn't contain any hidden files (`.DS_STORE` or similar).
+
+The game must load in under 15 seconds when emulating the average 3G connection with custom 3G emulation. The throttling values should be set to: Throughput: 5120Kb/s (=5Mb/s), Latency: 64ms.
+
+The project should contain no unused files or backups, including:
+  * Unused files e.g. "test_level.js"
+  * Backups e.g. "loading.js.BU"
+  * Versioned files e.g. "boy_v2_final.png"
+  * Arbitrarily-named files e.g. "assets_dan.json"
 
 ## How do I get my build onto Children’s platforms?
 Every time a commit is made to the repository, our Jenkins job will build the game to our Children's Game Embed (CAGE) page. You will get email notifications with status reports on success/failure of any automated builds. In the event of a failure you should get an error report with debug information.
