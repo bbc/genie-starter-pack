@@ -3,10 +3,17 @@
         "how-to-play": {
             "panels": ["panel1", "panel2", "panel3"]
         },
+        
         "characterSelect": {
             "choices": [
-                { "main": "carousel_1" },
-                { "main": "carousel_2" }
+                {
+                    "asset": "carousel_1",
+                    "accessibilityText": "Character 1"
+                },
+                {
+                    "asset": "carousel_2",
+                    "accessibilityText": "Character 2"
+                }
             ],
             "leftButton": {
                 "content": "Left",
@@ -68,6 +75,10 @@
                     "fontWeight": "bold"
                 }
             }
+        },
+        "button-overrides": {
+            "gelDesktop.play": { "y": 100 },
+            "gelMobile.play": { "y": 0 }
         }
     }
 }
