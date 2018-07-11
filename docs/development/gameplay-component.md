@@ -30,7 +30,7 @@ The game flow sequence can be configured by editing: `src/main.js`. Import the d
 
 ## How do I use the core engines?
 
-Full API documentation for the engines can be found within the Genie core repository. Any files in Genie core should be used as provided, and must not be copied or modified in any way. A short overview of their functionality follows.
+Full API documentation for the engines can be found within the Genie core repository. **Any files in Genie core should be used as provided, and must not be copied or modified in any way.** A short overview of their functionality follows.
 
 ### Scaling Engine
 
@@ -74,7 +74,7 @@ To build your game using Webpack, use `npm run build`.
 
 To quickly view a specific theme, you can access it using the querystring 'theme': http://localhost:8080/?theme=<themeName>.
 
-Please note that an `index.html` file has been provided for local development. This will not be used in production.
+**Please note that an `index.html` file has been provided for local development. This will not be used in production.**
 
 ## Are there any areas of existing Children’s game delivery standards I need to apply?
 
