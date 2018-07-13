@@ -9,7 +9,7 @@ var p2 = path.join(phaserModule, "build/custom/p2.js");
 module.exports = {
     mode: "production",
     performance: { hints: false },
-    entry: ["babel-polyfill", "pixi", "p2", "phaser", path.resolve("src/main.js")],
+    entry: ["babel-polyfill", "pixi", "p2", "phaser", "webfontloader", path.resolve("src/main.js")],
     output: {
         path: path.resolve("output"),
         publicPath: "output",
@@ -22,6 +22,7 @@ module.exports = {
             { test: /pixi\.js/, use: ["expose-loader?PIXI"] },
             { test: /phaser-split\.js$/, use: ["expose-loader?Phaser"] },
             { test: /p2\.js/, use: ["expose-loader?p2"] },
+            { test: /webfontloader\.js/, use: ["expose-loader?WebFont"] },
         ],
     },
     resolve: {
