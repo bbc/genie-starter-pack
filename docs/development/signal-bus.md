@@ -1,11 +1,11 @@
 # Signal Bus
-The signal bus provides a lightweight wrapper to [Phaser signals](https://phaser.io/docs/2.6.2/Phaser.Signal.html). 
+The signal bus provides a lightweight wrapper to [Phaser signals](https://phaser.io/docs/2.6.2/Phaser.Signal.html).
 
 Rather than passing around the individual signals we can just import the message bus and listen for a named signal.
 By importing the bus any signal can be subscribed to or published.
 A signal is automatically created when the publish or subscribe methods are called if the signal doesn't exist.
 
-##Examples
+## Examples
 
 Import to your module with the following code:
 ```javascript

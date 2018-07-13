@@ -1,8 +1,8 @@
-#Phaser Terminology
+# Phaser Terminology
 
 ## Phaser States
 
-Genie Screens extend Phaser states and are automatically used by the gameflow set up in navigation. 
+Genie Screens extend Phaser states and are automatically used by the gameflow set up in navigation.
 
 ## Signals
 
