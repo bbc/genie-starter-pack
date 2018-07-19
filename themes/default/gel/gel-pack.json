@@ -42,16 +42,6 @@
         },
         {
             "type": "spritesheet",
-            "key": "audio-off",
-            "url": "gel/desktop/audio-off.png",
-            "frameWidth": 64,
-            "frameHeight": 64,
-            "frameMax": 2,
-            "margin": 0,
-            "spacing": 4
-        },
-        {
-            "type": "spritesheet",
             "key": "settings",
             "url": "gel/desktop/settings.png",
             "frameWidth": 64,
@@ -158,7 +148,17 @@
             "frameHeight": 120,
             "frameMax": 2,
             "margin": 0,
-            "spacing": 5
+            "spacing": 4
+        },
+        {
+            "type": "image",
+            "key": "audio-off-icon",
+            "url": "gel/desktop/audio-off-icon.png"
+        },
+        {
+            "type": "image",
+            "key": "fx-off-icon",
+            "url": "gel/desktop/fx-off-icon.png"
         }
     ],
     "gelMobile": [
@@ -204,16 +204,6 @@
         },
         {
             "type": "spritesheet",
-            "key": "audio-off",
-            "url": "gel/mobile/audio-off.png",
-            "frameWidth": 42,
-            "frameHeight": 42,
-            "frameMax": 2,
-            "margin": 0,
-            "spacing": 4
-        },
-        {
-            "type": "spritesheet",
             "key": "settings",
             "url": "gel/mobile/settings.png",
             "frameWidth": 42,
@@ -222,7 +212,7 @@
             "margin": 0,
             "spacing": 4
         },
-            {
+        {
             "type": "spritesheet",
             "key": "home",
             "url": "gel/mobile/home.png",
@@ -321,6 +311,18 @@
             "frameMax": 2,
             "margin": 0,
             "spacing": 4
+        },
+        {
+            "type": "image",
+            "key": "audio-off-icon",
+            "url": "gel/mobile/audio-off-icon.png"
+        },
+        {
+            "type": "image",
+            "key": "fx-off-icon",
+            "url": "gel/mobile/fx-off-icon.png",
+            "margin": 24,
+            "spacing": 24
         }
     ]
 }
