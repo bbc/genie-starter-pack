@@ -1,9 +1,13 @@
 {
     "theme": {
+        "home": {
+            "music": "loadscreen.backgroundMusic"
+        },
         "how-to-play": {
             "panels": ["panel1", "panel2", "panel3"]
         },
         "characterSelect": {
+            "music": "loadscreen.backgroundMusic",
             "choices": [
                 {
                     "asset": "carousel_1",
@@ -32,6 +36,7 @@
             }
         },
         "game" : {
+            "music": "loadscreen.backgroundMusicTwo",
             "text": {
                 "content": "Tap to pump up the balloon!",
                 "style": {
@@ -55,6 +60,7 @@
             }
         },
         "results": {
+            "music": "loadscreen.backgroundMusicTwo",
             "resultText": {
                 "style": {
                     "font": "bold 40px ReithSans",
