@@ -9,6 +9,7 @@ Statistics consist of key-value pairs called labels that are sent on certain eve
 To send a statistic:
 
 ```javascript
+import { gmi } from "../node_modules/genie/src/core/gmi/gmi.js";
 gmi.sendStatsEvent(actionName, actionType, additionalLabels);
 ```
 
@@ -76,11 +77,11 @@ Games tracking consists of action names, action types and labels.
 
 ## Mandatory events and labels
 
-There are some events that are common across ALL games. The below names should be used to ensure consistency for reporting. These are all 'hidden events' so do not contribute to page view stats.
+There are some events that are common across ALL games. They have already been implemented for you in Genie, so you will not need to implement them yourself.
 
 ### Mandatory to every event
 
-The below labels are sent through with *every* event, the values should be appropriate to the product:
+The labels below are sent through with *every* event, the values should be appropriate to the product:
 
 |        |  |
 | ------------- |:-----:|
@@ -90,7 +91,7 @@ The below labels are sent through with *every* event, the values should be appro
 
 ### Mandatory to every game
 
-These should feature in every game:
+These events already occur in Genie:
 
 | Mandatory Event Description | Action Name | Action Type | Additional Labels (in addition to Mandatory, see below) | Available Values (in addition to Mandatory, see below) | Notes |
 | ------------- |:-----:|:-----:|:-----:|:-----:|:-----:|
@@ -112,15 +113,15 @@ These should be sent with every event:
 
 ## Common Events and Labels
 
-The following events are common to most games. In addition to the mandatory labels outlined above, they may have other specific labels.
+The following events are common to most games, and you may need to implement some of these yourself. In addition to the mandatory labels outlined above, they may have additional specific labels (depending on the game).
 
 | Description | Action Name | Action Type | Additional Labels (in addition to Mandatory, see below) | Available Values (in addition to Mandatory, see below) |
 | ------------- |:-----:|:-----:|:-----:|:-----:|
 | Fires when a level is selected from the menu | game_level | selected |
 | Fires when a level has loaded and gameplay can commence | game_level | started |
-| Fires when a level is completed | game_level | complete | game_score,  game_level_time. stars_awarded, game_level_result |
-| Fires when continue button is clicked having completed a level | game_level | continue |
-| Fires when play again is clicked having completed a level | game_level | playagain |
+| Fires when a level is completed **(this exists already in Genie)** | game_level | complete | game_score,  game_level_time. stars_awarded, game_level_result |
+| Fires when continue button is clicked having completed a level **(this exists already in Genie)** | game_level | continue |
+| Fires when play again is clicked having completed a level **(this exists already in Genie)** | game_level | playagain |
 | Fires when an interactive element (incidental) is interacted with | game_click | interaction | game_interaction | *interaction name* |
 
 ## Custom Events & Labels
