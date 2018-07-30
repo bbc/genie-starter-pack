@@ -5,7 +5,7 @@
 * [What coding and test standards do I need to apply?](#what-coding-and-test-standards-do-i-need-to-apply)
 * [How does my component plug into Genie?](#how-does-my-component-plug-into-genie)
 * [How do I test my component in the Genie framework?](#how-do-i-test-my-component-in-the-genie-framework)
-* [Are there any areas of existing Children’s game delivery standards I need to apply?](#are-there-any-areas-of-existing-children’s-game-delivery-standards-i-need-to-apply)
+* [Are there any areas of existing Children’s game delivery standards I need to apply?](#user-content-are-there-any-areas-of-existing-childrens-game-delivery-standards-i-need-to-apply)
 * [How do I get my build onto Children’s platforms?](#how-do-i-get-my-build-onto-children’s-platforms)
 * [What acceptance tests will the BBC carry out?](#what-acceptance-tests-will-the-bbc-carry-out)
 * [What documentation do I need to supply?](#what-documentation-do-i-need-to-supply)
