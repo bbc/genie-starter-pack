@@ -38,7 +38,9 @@ This will vary for each gameplay component.
 
 ## What are the asset requirements?
 
-The assets for GEL buttons can be found in the folder: `themes/default/gel/`. These can be copied across directly. This other assets needed will also vary for each gameplay component.
+The assets for GEL buttons can be found in the folder: `themes/default/gel/`. These can be copied across directly. The other assets needed will also vary for each gameplay component.
+
+A reference file for the [Sketch](https://sketchapp.com/) application is also provided in this folder and named *"GEL_UI_EXAMPLE.sketch".*
 
 Audio will need to be provided in two formats to in order to support all devices: MP3 and OGG.
 
