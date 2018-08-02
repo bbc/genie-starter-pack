@@ -22,6 +22,21 @@ To build your game using Webpack, use `npm run build`.
 
 `npm run build-watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver. Changes to the source will trigger a rebuild.
 
+## ES6 Modules
+
+Code should be packaged as ES6 modules.
+See `src\click-progression-game.js` as an example starting point for a game.
+
+## Global Script
+
+Any required global scripts (tools / libs etc) should be loaded via the `globals.json` file in the root.
+See `globals.json.example` for how this works.
+
+They can be loaded from `node_modules` folder or otherwise should be placed in a `vendor` folder.
+
+Note that during development the global scripts are loaded on the fly in the index page.
+The index page should not be edited to include any scripts as it is not used in the final build process.
+
 ## Genie Gel ("GELIE") Documentation
 
 ## How can I access support?

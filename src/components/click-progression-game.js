@@ -1,5 +1,5 @@
 import { Screen } from "../../node_modules/genie/src/core/screen.js";
-import { gmi } from "../../node_modules/genie/src/core/gmi.js";
+import { gmi } from "../../node_modules/genie/src/core/gmi/gmi.js";
 
 export class ClickProgressionGame extends Screen {
     constructor() {
