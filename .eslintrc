@@ -1,0 +1,13 @@
+{
+    "env": { "es6": true },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "plugins": [
+        "local-rules"
+    ],
+    "rules": {
+        "local-rules/disallow-timers": 2
+    }
+}
