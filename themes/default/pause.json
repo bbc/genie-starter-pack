@@ -1,0 +1,10 @@
+{
+    "pause": [
+        {
+            "type": "image",
+            "key": "pauseBackground",
+            "url": "pause/pause-background.png",
+            "overwrite": false
+        }
+    ]
+}
