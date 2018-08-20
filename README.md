@@ -4,6 +4,7 @@
 * [Developing a Gameplay Component](./docs/development/gameplay-component.md)
 * [Creating a Theme](./docs/theming.md)
 * [Tech Review Tool](./docs/tech-review-tool.md)
+* [Testing](./docs/testing.md)
 
 ## Gameplay Development Specifics
 

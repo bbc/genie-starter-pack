@@ -115,6 +115,8 @@ There will be a separate game id for each theme (this will need to be set up by 
 
 The BBC will carry out the standard tests and compliance testing carried out on all games as outlined in the contracts.
 
+Please see the [Genie Testing Guide](../testing.md)
+
 ## What documentation do I need to supply?
 
 You will need to provide us with documentation outlining how to re-theme your gameplay component, how to replace the assets with new ones, and how to build and run your component from source code.
