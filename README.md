@@ -13,5 +13,6 @@
 * [The Signal Bus](./docs/development/signal-bus.md)
 * [Select Screen](./docs/development/select-screen.md)
 * [Accessibilify](./docs/development/accessibilify.md)
+* [Brim](./docs/development/brim.md)
 * [Phaser Terminology](./docs/development/phaser-terminology.md)
 * [Stats](./docs/development/stats.md)
