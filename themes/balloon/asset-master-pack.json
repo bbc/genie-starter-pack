@@ -62,5 +62,13 @@
             "url": "how-to-play/pip_off.png",
             "overwrite": false
         }
+    ],
+    "pause": [
+        {
+            "type": "image",
+            "key": "pauseBackground",
+            "url": "pause/pause-background.png",
+            "overwrite": false
+        }
     ]
 }
