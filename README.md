@@ -8,11 +8,14 @@
 
 ## Gameplay Development Specifics
 
+* [Code Restrictions](./docs/development/code-restrictions.md)
 * [Games Messaging Interface (GMI)](./docs/development/gmi.md)
 * [Using Local Storage and Cookies](./docs/development/data-storage.md)
 * [Game Settings](./docs/development/settings.md)
 * [The Signal Bus](./docs/development/signal-bus.md)
 * [Select Screen](./docs/development/select-screen.md)
+* [Settings](./docs/development/settings.md)
 * [Accessibilify](./docs/development/accessibilify.md)
+* [Brim](./docs/development/brim.md)
 * [Phaser Terminology](./docs/development/phaser-terminology.md)
 * [Stats](./docs/development/stats.md)
