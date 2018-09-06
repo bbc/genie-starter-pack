@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "ws --static.index node_modules/genie/dev/index.dev.html",
-    "start:qa": "webpack-dev-server --config node_modules/genie/build-scripts/webpack.config.js",
+    "start:pack": "webpack-dev-server --config node_modules/genie/build-scripts/webpack.config.js",
     "build": "webpack --config node_modules/genie/build-scripts/webpack.config.js",
     "build-watch": "webpack --config node_modules/genie/build-scripts/webpack.config.js --watch",
     "eslint": "eslint . --ignore-pattern lodash --ignore-path .gitignore"
