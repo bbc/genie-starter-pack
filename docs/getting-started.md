@@ -14,7 +14,9 @@ The game sequence can then be configured by editing: `src/main.js`. Inside `main
 
 New screens (including the gameplay component) should be created in the `components` folder.
 
-You can preview your game by bundling it through Webpack and running it in a development server using `npm start`. It can then be viewed in a browser at http://localhost:8080/ or at the local network address printed in the console. Changes to the source will trigger a rebuild and refresh the page on all devices currently viewing the page.
+You can preview your game by running a server using `npm start`. It can then be viewed in a browser at http://localhost:8080/ or at the local network address printed in the console. Changes to the source will trigger a rebuild and will refresh the page on all devices currently viewing the page. This command runs the code directly without webpacking it first.
+
+To webpack the code and then run a server, use `npm start:pack`. Please note to preview your game in IE11 you will need to webpack it first.
 
 The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true.
 

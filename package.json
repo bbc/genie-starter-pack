@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/bbc/childrens-games-genie-starter-pack#readme",
   "dependencies": {
-    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v1.0.1"
+    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v1.0.2"
   },
   "devDependencies": {
     "eslint": "^5.4.0",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "ws --static.index node_modules/genie/dev/index.dev.html",
-    "start:qa": "webpack-dev-server --config node_modules/genie/build-scripts/webpack.config.js",
+    "start:pack": "webpack-dev-server --config node_modules/genie/build-scripts/webpack.config.js",
     "build": "webpack --config node_modules/genie/build-scripts/webpack.config.js",
     "build-watch": "webpack --config node_modules/genie/build-scripts/webpack.config.js --watch",
     "eslint": "eslint . --ignore-pattern lodash --ignore-path .gitignore"
