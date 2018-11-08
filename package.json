@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/bbc/childrens-games-genie-starter-pack#readme",
   "dependencies": {
-    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v1.0.2"
+    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v1.0.3"
   },
   "devDependencies": {
     "eslint": "^5.4.0",
