@@ -22,7 +22,7 @@ The qaMode query string may be added to the end to view the game in QA Mode. Thi
 
 To build your game using Webpack, use `npm run build`.
 
-`npm run build-watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver. Changes to the source will trigger a rebuild.
+`npm run build:watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver. Changes to the source will trigger a rebuild.
 
 ## ES6 Modules
 
