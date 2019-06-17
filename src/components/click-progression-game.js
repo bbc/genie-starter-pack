@@ -1,5 +1,6 @@
 import { Screen } from "../../node_modules/genie/src/core/screen.js";
 import { gmi } from "../../node_modules/genie/src/core/gmi/gmi.js";
+import { settingsChannel } from "../../node_modules/genie/src/core/settings.js";
 import * as signal from "../../node_modules/genie/src/core/signal-bus.js";
 
 
