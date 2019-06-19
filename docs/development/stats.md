@@ -22,6 +22,8 @@ Both `actionName` and `actionType` should be provided in string format. `eventLa
 gmi.sendStatsEvent("sublevel", "start", { metadata: "SBL=2~XPL=3~GSI=123456789~LAU=First", source: "Level ID" });
 ````
 
+Note the example `sendStatEvent` calls in the click progression game. While button stat calls are implemented for you in Genie, you will need to construct the game specific  calls (eg level complete) yourself.
+
 ### Possible eventLabels
 
 | eventLabel | Description | Example |
