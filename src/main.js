@@ -23,8 +23,6 @@ const settingsConfig = {
     ],
 };
 
-const Achievements = Home
-
 signal.bus.subscribe({
     channel: settingsChannel,
     name: "custom1",
@@ -79,8 +77,8 @@ const navigationConfig = goToScreen => {
                 home: goToHome,
             },
         },
-        "achievements": {
-            state: Achievements,
+        achievements: {
+            state: Home, // This will need to be removed when achievements implemented in Genie.
             routes: {
                 next: goToCharacterSelect,
             }
