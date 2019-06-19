@@ -25,6 +25,7 @@ export class ClickProgressionGame extends Screen {
 
         gmi.setGameData("characterSelected", this.transientData.characterSelected);
         console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
+        gmi.sendStatsEvent("level", "start", {levelID: 0});
     }
 
     render() {
@@ -34,6 +35,11 @@ export class ClickProgressionGame extends Screen {
     }
 
     gameLost() {
+        gmi.sendStatsEvent("game_level", "complete", {
+            SCO: 0,
+            LVR: "lose",
+            levelID: 0
+        });
         this.navigation.next({
             results: "Game over - You lost!",
             characterSelected: this.transientData.characterSelected,
@@ -69,9 +75,16 @@ export class ClickProgressionGame extends Screen {
     gameButtonClicked() {
         this.timesButtonClicked += 1;
         if (this.timesButtonClicked === 10) {
+            const remaining = this.getTimeLeft();
+            gmi.sendStatsEvent("game_level", "complete", {
+                SCO: remaining,
+                LVR: "win",
+                levelID: 0
+            });
             this.navigation.next({
-                results: "Finished with " + this.getTimeLeft() + " seconds left!",
+                results: "Finished with " + remaining + " seconds left!",
                 characterSelected: this.transientData.characterSelected,
+                SCO: remaining,
             });
         } else {
             this.gameButton.loadTexture("game." + "game_button_" + this.selectedGameButton + "_" + this.timesButtonClicked, 0);

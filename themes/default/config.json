@@ -41,6 +41,7 @@
             }
         },
         "game" : {
+            "achievements": true,
             "music": "loadscreen.backgroundMusicTwo",
             "text": {
                 "content": "Hatch the egg!",
