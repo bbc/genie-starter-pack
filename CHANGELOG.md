@@ -1,6 +1,7 @@
 
 | Version |                                          Change                                           |
 |---------|-------------------------------------------------------------------------------------------|
+| 0.0.8   | Bump Genie core and include example stat calls. |
 | 0.0.7   | Bump Genie core. |
 | 0.0.6   | Bump Genie core. Updates for Babel 7 |
 | 0.0.5   | Bump version of Genie core. |
