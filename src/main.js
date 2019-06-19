@@ -77,8 +77,8 @@ const navigationConfig = goToScreen => {
                 home: goToHome,
             },
         },
-        achievements: {
-            state: Home, // This will need to be removed when achievements implemented in Genie.
+        achievements: { // This will need to be removed when achievements implemented in Genie.
+            state: Home, 
             routes: {
                 next: goToCharacterSelect,
             }
