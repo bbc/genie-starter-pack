@@ -82,10 +82,7 @@ const navigationConfig = goToScreen => {
         "achievements": {
             state: Achievements,
             routes: {
-                home: goToHome,
-                next: goToHome,
-                restart: goToHome,
-                game: goToHome,
+                next: goToCharacterSelect,
             }
         }
     };
