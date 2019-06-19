@@ -1,6 +1,7 @@
 import { Screen } from "../../node_modules/genie/src/core/screen.js";
 import { gmi } from "../../node_modules/genie/src/core/gmi/gmi.js";
 
+
 export class ClickProgressionGame extends Screen {
     constructor() {
         super();
@@ -22,7 +23,7 @@ export class ClickProgressionGame extends Screen {
 
         gmi.setGameData("characterSelected", this.transientData.characterSelected);
         console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
-
+        gmi.sendStatsEvent("level", "start", {metadata:`SRC=[0]`});
     }
 
     render() {
@@ -32,6 +33,7 @@ export class ClickProgressionGame extends Screen {
     }
 
     gameLost() {
+        gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[0]~LVR=[LOSE]~SRC=[0]`});
         this.navigation.next({
             results: "Game over - You lost!",
             characterSelected: this.transientData.characterSelected,
@@ -67,8 +69,10 @@ export class ClickProgressionGame extends Screen {
     gameButtonClicked() {
         this.timesButtonClicked += 1;
         if (this.timesButtonClicked === 10) {
+            const remaining = this.getTimeLeft();
+            gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[${remaining}]~LVR=[WIN]~SRC=[0]`});
             this.navigation.next({
-                results: "Finished with " + this.getTimeLeft() + " seconds left!",
+                results: "Finished with " + remaining + " seconds left!",
                 characterSelected: this.transientData.characterSelected,
             });
         } else {
