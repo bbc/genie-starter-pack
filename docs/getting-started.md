@@ -16,13 +16,11 @@ New screens (including the gameplay component) should be created in the `compone
 
 You can preview your game by running a server using `npm start`. It can then be viewed in a browser at http://localhost:8080/ or at the local network address printed in the console. Changes to the source will trigger a rebuild and will refresh the page on all devices currently viewing the page. This command runs the code directly without webpacking it first.
 
-To webpack the code and then run a server, use `npm start:pack`. Please note to preview your game in IE11 you will need to webpack it first.
+To webpack the code and then run a server, use `npm start:pack`. This command will also add inline sourcemaps (when using Genie 1.0.12 or later). Please note to preview your game in IE11 you will need to webpack it first.
 
 The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true.
 
 To build your game using Webpack, use `npm run build`.
-
-`npm run build:watch` runs the compiler and creates a bundle. This means you can view index.html in a browser without having to run a webserver. Changes to the source will trigger a rebuild.
 
 ## ES6 Modules
 
