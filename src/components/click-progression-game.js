@@ -37,8 +37,7 @@ export class ClickProgressionGame extends Screen {
     gameLost() {
         gmi.sendStatsEvent("game_level", "complete", {
             SCO: 0,
-            LVR: "lose",
-            levelID: 0
+            LVR: "lose"
         });
         this.navigation.next({
             results: "Game over - You lost!",
@@ -79,8 +78,6 @@ export class ClickProgressionGame extends Screen {
             gmi.sendStatsEvent("game_level", "complete", {
                 SCO: remaining,
                 LVR: "win",
-                levelID: 0,
-                SRC: 0
             });
             this.navigation.next({
                 results: "Finished with " + remaining + " seconds left!",
