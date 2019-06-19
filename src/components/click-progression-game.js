@@ -79,7 +79,8 @@ export class ClickProgressionGame extends Screen {
             gmi.sendStatsEvent("game_level", "complete", {
                 SCO: remaining,
                 LVR: "win",
-                levelID: 0
+                levelID: 0,
+                SRC: 0
             });
             this.navigation.next({
                 results: "Finished with " + remaining + " seconds left!",
