@@ -35,7 +35,7 @@ export class ClickProgressionGame extends Screen {
     gameLost() {
         gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[0]~LVR=[LOSE]~SRC=[0]`});
         this.navigation.next({
-            results: "Game over - You lost!",
+            results: "You scored 0, game over - You lost!",
             characterSelected: this.transientData.characterSelected,
         });
     }
