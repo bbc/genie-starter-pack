@@ -1,4 +1,4 @@
-# Children's BBC - Genie Starter Pack
+# BBC Games - Genie Starter Pack
 
 * [Genie - Getting Started](./docs/getting-started.md)
 * [Developing a Gameplay Component](./docs/development/gameplay-component.md)
