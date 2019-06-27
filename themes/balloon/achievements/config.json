@@ -1,0 +1,52 @@
+[
+    {
+        "key": "double_trouble",
+        "name": "Double Trouble",
+        "description": "Played with both options.",
+        "points": 100,
+        "maxProgress": 2
+    },
+    {
+        "key": "first_win",
+        "name": "Just Getting Started",
+        "description": "You managed to crack your first egg in time.",
+        "points": 100
+    },
+    {
+        "key": "many_wins",
+        "name": "Top of the Pop",
+        "description": "Popped over 20 balloons",
+        "points": 100,
+        "maxProgress": 20
+    },
+    {
+        "key": "fast_4",
+        "name": "Luftballons",
+        "description": "You popped a balloon with 4 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_6",
+        "name": "Balloon Animals",
+        "description": "You popped a ballon with 6 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_8",
+        "name": "Hot Air",
+        "description": "You popped a ballon with 8 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_10",
+        "name": "Helium",
+        "description": "You popped a ballon with 10 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_12",
+        "name": "Zeppelin",
+        "description": "You popped a ballon with 12 seconds left",
+        "points": 100
+    }
+]

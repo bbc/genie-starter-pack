@@ -1,0 +1,52 @@
+[
+    {
+        "key": "double_trouble",
+        "name": "Double Trouble",
+        "description": "Played with both options.",
+        "points": 100,
+        "maxProgress": 2
+    },
+    {
+        "key": "first_win",
+        "name": "Just Getting Started",
+        "description": "You managed to crack your first egg in time.",
+        "points": 100
+    },
+    {
+        "key": "many_wins",
+        "name": "Cracking Crazy",
+        "description": "Cracked over 20 Eggs",
+        "points": 100,
+        "maxProgress": 20
+    },
+    {
+        "key": "fast_4",
+        "name": "Egg Race",
+        "description": "You cracked an egg with 4 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_6",
+        "name": "Get a Yolk On",
+        "description": "You cracked an egg with 6 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_8",
+        "name": "Scrambled Egg",
+        "description": "You cracked an egg with 8 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_10",
+        "name": "Poached Egg",
+        "description": "You cracked an egg with 10 seconds left",
+        "points": 100
+    },
+    {
+        "key": "fast_12",
+        "name": "Burnt Egg",
+        "description": "You cracked an egg with 12 seconds left",
+        "points": 100
+    }
+]
