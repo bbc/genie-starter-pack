@@ -28,25 +28,25 @@
     {
         "key": "fast_6",
         "name": "Balloon Animals",
-        "description": "You popped a ballon with 6 seconds left",
+        "description": "You popped a balloon with 6 seconds left",
         "points": 100
     },
     {
         "key": "fast_8",
         "name": "Hot Air",
-        "description": "You popped a ballon with 8 seconds left",
+        "description": "You popped a balloon with 8 seconds left",
         "points": 100
     },
     {
         "key": "fast_10",
         "name": "Helium",
-        "description": "You popped a ballon with 10 seconds left",
+        "description": "You popped a balloon with 10 seconds left",
         "points": 100
     },
     {
         "key": "fast_12",
         "name": "Zeppelin",
-        "description": "You popped a ballon with 12 seconds left",
+        "description": "You popped a balloon with 12 seconds left",
         "points": 100
     }
 ]
