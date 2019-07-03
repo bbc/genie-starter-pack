@@ -22,7 +22,7 @@ export class ClickProgressionGame extends Screen {
         this.scene.addLayout(["pause"]);
 
         gmi.setGameData("characterSelected", this.transientData.characterSelected);
-        //console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
+        console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
         gmi.sendStatsEvent("level", "start", {metadata:`SRC=[0]`});
     }
 
