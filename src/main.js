@@ -36,7 +36,6 @@ const navigationConfig = goToScreen => {
     const goToCharacterSelect = data => goToScreen("characterSelect", data);
     const goToGame = data => goToScreen("game", data);
     const goToResults = data => goToScreen("results", data);
-    const goToAchievements = data => goToScreen("achievements", data);
 
     return {
         loadscreen: {
@@ -48,8 +47,7 @@ const navigationConfig = goToScreen => {
         home: {
             state: Home,
             routes: {
-                next: goToCharacterSelect,
-                achievements: goToAchievements,
+                next: goToCharacterSelect
             },
         },
         characterSelect: {
@@ -76,12 +74,6 @@ const navigationConfig = goToScreen => {
                 restart: goToGame,
                 home: goToHome,
             },
-        },
-        achievements: { // This will need to be removed when achievements implemented in Genie.
-            state: Home, 
-            routes: {
-                next: goToCharacterSelect,
-            }
         }
     };
 };
