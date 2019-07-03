@@ -1,12 +1,5 @@
 [
     {
-        "key": "double_trouble",
-        "name": "Double Trouble",
-        "description": "Played with both options.",
-        "points": 100,
-        "maxProgress": 2
-    },
-    {
         "key": "first_win",
         "name": "Just Getting Started",
         "description": "You managed to crack your first egg in time.",
@@ -15,9 +8,9 @@
     {
         "key": "many_wins",
         "name": "Cracking Crazy",
-        "description": "Cracked over 20 Eggs",
+        "description": "Cracked 4 Eggs",
         "points": 100,
-        "maxProgress": 20
+        "maxProgress": 4
     },
     {
         "key": "fast_4",

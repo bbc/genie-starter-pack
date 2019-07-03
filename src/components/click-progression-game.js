@@ -22,7 +22,7 @@ export class ClickProgressionGame extends Screen {
         this.scene.addLayout(["pause"]);
 
         gmi.setGameData("characterSelected", this.transientData.characterSelected);
-        console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
+        //console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
         gmi.sendStatsEvent("level", "start", {metadata:`SRC=[0]`});
     }
 
@@ -71,6 +71,7 @@ export class ClickProgressionGame extends Screen {
         if (this.timesButtonClicked === 10) {
             const remaining = this.getTimeLeft();
             gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[${remaining}]~LVR=[WIN]~SRC=[0]`});
+            this.calculateAchievements(remaining);
             this.navigation.next({
                 results: "Finished with " + remaining + " seconds left!",
                 characterSelected: this.transientData.characterSelected,
@@ -82,6 +83,33 @@ export class ClickProgressionGame extends Screen {
 
     getTimeLeft() {
         return Math.round((this.timerEvent.delay - this.timer.ms) / 1000);
+    }
+
+    calculateAchievements(remaining) {
+        gmi.achievements.set({key: "first_win"});
+        if (remaining >= 12) {
+            gmi.achievements.set({key: "fast_12"});
+        }
+        if (remaining >= 10) {
+            gmi.achievements.set({key: "fast_10"});
+        }
+        if (remaining >= 8) {
+            gmi.achievements.set({key: "fast_8"});
+        }
+        if (remaining >= 6) {
+            gmi.achievements.set({key: "fast_6"});
+        }
+        if (remaining >= 4) {
+            gmi.achievements.set({key: "fast_4"});
+        }
+        var gameData = gmi.getAllSettings().gameData;
+        if (!gameData.timesCracked) {
+            gmi.setGameData("timesCracked", 0);
+        }
+        var timesCracked = gameData.timesCracked;
+        timesCracked = timesCracked + 1;
+        gmi.setGameData("timesCracked", timesCracked);
+        gmi.achievements.set({key: "many_wins", progress: timesCracked}); 
     }
 
     getTimeLeftString() {
