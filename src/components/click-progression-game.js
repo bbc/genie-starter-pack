@@ -109,7 +109,9 @@ export class ClickProgressionGame extends Screen {
         var timesCracked = gameData.timesCracked;
         timesCracked = timesCracked + 1;
         gmi.setGameData("timesCracked", timesCracked);
-        gmi.achievements.set({key: "many_wins", progress: timesCracked}); 
+        gmi.achievements.set({key: "many_wins", progress: timesCracked});
+        gmi.achievements.set({key: "many_wins_2", progress: timesCracked});
+        gmi.achievements.set({key: "many_wins_3", progress: timesCracked});
     }
 
     getTimeLeftString() {

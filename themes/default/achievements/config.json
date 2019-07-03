@@ -13,6 +13,20 @@
         "maxProgress": 4
     },
     {
+        "key": "many_wins_2",
+        "name": "Cracking Crazy Plus",
+        "description": "Cracked 8 Eggs",
+        "points": 100,
+        "maxProgress": 8
+    },
+    {
+        "key": "many_wins_3",
+        "name": "Cracking Crazy Ultra",
+        "description": "Cracked 12 Eggs",
+        "points": 100,
+        "maxProgress": 12
+    },
+    {
         "key": "fast_4",
         "name": "Egg Race",
         "description": "You cracked an egg with 4 seconds left",
