@@ -17,7 +17,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-local-rules": "^0.1.0",
     "local-web-server": "^2.6.0",
-    "webpack": "^4.16.5",
+    "webpack": "^4.35.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.4.1"
   },
