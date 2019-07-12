@@ -1,8 +1,9 @@
 
 | Version |                                          Change                                           |
 |---------|-------------------------------------------------------------------------------------------|
-| 0.0.12  | Add achievements |
-| 0.0.11  | Add achievement files |
+| 0.0.13  | Add achievements documentation. |
+| 0.0.12  | Add achievements. |
+| 0.0.11  | Add achievement files. |
 | 0.0.10  | Include a numeral in the result score so score is reported in stats. |
 | 0.0.9   | Prune scripts, add sourcemaps support to start:pack. |
 | 0.0.8   | Bump Genie core and include example stat calls. |

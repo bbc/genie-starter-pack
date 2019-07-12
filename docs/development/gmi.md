@@ -135,4 +135,7 @@ gmi.showPrompt(resumeGame)
 
 Inform the app that it should display its prompt/interstitial screen. Takes a `resumeGame` callback.
 
+#### Achievements
+See (achievements.md) for information on the achievements system and related gmi calls.
+
 
