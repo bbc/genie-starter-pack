@@ -27,12 +27,12 @@ The config.json should be an array of achievement description objects:
 }
 ```
 **Required Parameters:**
-* **key** [string a-z0-9_] a unique identifier, lowercase alphanumeric with underscore
-* **name** [string] This is the himan readable name that will be displayed in the achievements list.
+* **key** [string a-z0-9_] a unique (per game) identifier, lowercase alphanumeric with underscore
+* **name** [string] This is the human readable name that will be displayed in the achievements list.
 * **description** [string] Description that will be displayed in the achievements list.
-* **points** [integer] Currently unused but required for future use. Should add up to 1000 points per game but otherwise can be weighted for difficulty or designer's preference.
+* **points** [integer] Currently unused but required for future use. Should add up to 1000 points per game but otherwise can be weighted for difficulty or designer preference.
 
-**Optional Parameters
+## Optional Parameters
 * **maxProgress** [integer] Enables the progress bar and sets its limit.
 * **additional** {prefix [string], text [string]} Add a secondary text element to the description.
 The prefix of this will be in bold. e.g:
@@ -46,7 +46,7 @@ will add: "**hint:** You can find these items on your travels" to the descriptio
 Further examples can be found in the [starter pack achievements config](../../themes/default/achievements/config.json)
 
 ## Updating achievement status
-To update an achievement use the `gmi.achievements.set()` method.
+To update an achievement use the `gmi.achievements.set({data object})` method.
 The gmi is best imported into a game component from genie core (this will avoid legacy problems using window.getGMI())
 
 ```js
@@ -70,7 +70,7 @@ All achievements data is automatically stored in local storage.
 A call to `gmi.achievements.get()` will return an array matching the achievements config with any additional data from local storage ( e.g: achieved status or current progress value)
 
 ## Button styling and indicator
-The following theme files should not be edited as they need to stay consistent across games:
+The following theme files should not be edited. It is a requirement that they remain consistent across games:
 
 * _themes/#####/gel/desktop/notification.mp3_
 * _themes/#####/gel/desktop/notification.png_
