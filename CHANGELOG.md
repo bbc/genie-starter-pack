@@ -1,6 +1,7 @@
 
 | Version |                                          Change                                           |
 |---------|-------------------------------------------------------------------------------------------|
+| 0.0.14  | Bump Genie Core. Update Docs. |
 | 0.0.13  | Add achievements documentation. |
 | 0.0.12  | Add achievements. |
 | 0.0.11  | Add achievement files. |
