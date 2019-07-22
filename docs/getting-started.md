@@ -22,6 +22,8 @@ The qaMode query string may be added to the end to view the game in QA Mode. Thi
 
 To build your game using Webpack, use `npm run build`.
 
+To check achievements config against the correct scheme use `npm run validate`.
+
 ## ES6 Modules
 
 Code should be packaged as ES6 modules.

@@ -70,3 +70,6 @@ Go to Settings > domains and add: `a1.api.bbc.co.uk`
 | Level completes per level |  |
 | Platform split |  |
 | Previous/next pages |  |
+
+## Level ID
+If required by the game component, level id will be automatically appended to needed stats if `context.transientData.levelId` is set on a screen.
