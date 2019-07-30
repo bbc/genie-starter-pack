@@ -50,14 +50,14 @@ export class ClickProgressionGame extends Screen {
         const centerX = this.game.world.centerX;
         const centerY = this.game.world.centerY;
         this.theme = this.context.config.theme[this.game.state.current];
-        this.selectedGameButton = this.transientData["character-select"].index;
+        this.selectedGameButton = this.transientData["character-select"].index + 1;
         this.timesButtonClicked = 0;
 
         this.addBackground();
         this.createTimer(centerX);
         this.createTitleText(centerX, centerY);
 
-        const level = this.transientData["level-select"].index;
+        const level = this.transientData["level-select"];
 
         const buttonPos = this.theme.gameButton.position;
         const positions = [
@@ -69,7 +69,7 @@ export class ClickProgressionGame extends Screen {
             { x: buttonPos.x - 210, y: buttonPos.y },
         ]
 
-        const buttonPositions = positions.slice(0, level);
+        const buttonPositions = positions.slice(0, level.index + 1);
 
         this.gameButtons = buttonPositions.map(pos => this.createGameButton(pos.x, pos.y))
 
@@ -77,7 +77,7 @@ export class ClickProgressionGame extends Screen {
 
         gmi.setGameData("characterSelected", this.transientData["character-select"]);
         console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
-        gmi.sendStatsEvent("level", "start", {metadata:`SRC=[0]`});
+        gmi.sendStatsEvent("level", "start", { source: level.choice.title });
     }
 
     render() {
