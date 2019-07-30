@@ -72,4 +72,4 @@ Go to Settings > domains and add: `a1.api.bbc.co.uk`
 | Previous/next pages |  |
 
 ## Level ID
-If required by the game component, level id will be automatically appended to needed stats if `context.transientData.levelId` is set on a screen.
+If required by the game component, level id will be automatically appended to needed stats if `context.transientData.level-select.choice.title` is set on a screen.

@@ -33,7 +33,8 @@ signal.bus.subscribe({
 
 const navigationConfig = goToScreen => {
     const goToHome = data => goToScreen("home", data);
-    const goToCharacterSelect = data => goToScreen("characterSelect", data);
+    const goToCharacterSelect = data => goToScreen("character-select", data);
+    const goTolevelSelect = data => goToScreen("level-select", data);
     const goToGame = data => goToScreen("game", data);
     const goToResults = data => goToScreen("results", data);
 
@@ -50,7 +51,15 @@ const navigationConfig = goToScreen => {
                 next: goToCharacterSelect
             },
         },
-        characterSelect: {
+        "character-select": {
+            state: Select,
+            routes: {
+                next: goTolevelSelect,
+                home: goToHome,
+                restart: goToHome,
+            },
+        },
+        "level-select": {
             state: Select,
             routes: {
                 next: goToGame,

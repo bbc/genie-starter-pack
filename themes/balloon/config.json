@@ -1,7 +1,12 @@
 {
     "theme": {
         "home": {
-            "music": "loadscreen.backgroundMusic"
+            "music": "loadscreen.backgroundMusic",
+            "button-overrides": {
+                "play": {
+                    "shiftY": 80
+                }
+            }
         },
         "how-to-play": {
             "panels": ["panel1", "panel2", "panel3"],
@@ -11,8 +16,8 @@
                 { "accessibilityText": "Final instructions on playing the game"}
             ]
         },
-        "characterSelect": {
-            "music": "loadscreen.backgroundMusic",
+        "character-select": {
+            "music": "loadscreen.backgroundMusicTwo",
             "choices": [
                 {
                     "asset": "carousel_1",
@@ -40,16 +45,67 @@
                 }
             }
         },
+        "level-select": {
+            "music": "loadscreen.backgroundMusic",
+            "choices": [
+                {
+                    "asset": "carousel1",
+                    "accessibilityText": "Level 1: All Cracked Up",
+                    "title": "All Cracked Up"
+                },
+                {
+                    "asset": "carousel2",
+                    "accessibilityText": "Level 2: Don't Get Beaten",
+                    "title": "Don't Get Beaten"
+                },
+                {
+                    "asset": "carousel3",
+                    "accessibilityText": "Level 3: Pass the Eggs-am",
+                    "title": "Pass the Eggs-am"
+                },
+                {
+                    "asset": "carousel4",
+                    "accessibilityText": "Level 4: Don't Be Chicken",
+                    "title": "Don't Be Chicken"
+                },
+                {
+                    "asset": "carousel5",
+                    "accessibilityText": "Level 5: Tough Eggs-ercise",
+                    "title": "Tough Eggs-ercise"
+                },
+                {
+                    "asset": "carousel6",
+                    "accessibilityText": "Level 6: MEGA-EGGS!!!!!!",
+                    "title": "MEGGA-EGGS!!!!!!"
+                }
+            ],
+            "leftButton": {
+                "content": "Left",
+                "style": {
+                    "font": "20px ReithSans",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            },
+            "rightButton": {
+                "content": "Right",
+                "style": {
+                    "font": "20px ReithSans",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            }
+        },
         "game" : {
             "music": "loadscreen.backgroundMusicTwo",
             "text": {
-                "content": "Tap to pump up the balloon!",
+                "content": "Tap balloons to pump them up!",
                 "style": {
                     "font": "30px ReithSans",
                     "fontWeight": "bold",
                     "fill": "#FFFFFF"
                 },
-                "position": { "x": -200, "y": -170 }
+                "position": { "x": 165, "y": 160 }
             },
             "timer": {
                 "style": {
@@ -75,10 +131,6 @@
                     "fontWeight": "bold"
                 }
             }
-        },
-        "button-overrides": {
-            "gelDesktop.play": { "y": 100 },
-            "gelMobile.play": { "y": 0 }
         }
     }
 }

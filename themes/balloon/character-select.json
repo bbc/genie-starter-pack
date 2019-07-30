@@ -1,9 +1,9 @@
 {
-    "characterSelect":[
+    "character-select": [
         {
             "type": "image",
             "key": "title",
-            "url": "select/title.png",
+            "url": "select/character-title.png",
             "overwrite": false
         },
         {
@@ -15,13 +15,13 @@
         {
             "type": "image",
             "key": "carousel_1",
-            "url": "options/carousel_1.png",
+            "url": "options/character-select-1.png",
             "overwrite": false
         },
         {
             "type": "image",
             "key": "carousel_2",
-            "url": "options/carousel_2.png",
+            "url": "options/character-select-2.png",
             "overwrite": false
         }
     ]
