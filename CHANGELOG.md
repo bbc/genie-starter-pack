@@ -1,6 +1,7 @@
 
 | Version |                                          Change                                           |
 |---------|-------------------------------------------------------------------------------------------|
+| 0.0.16  | Remove achievement audio.|
 | 0.0.15  | Add level id stats docs. Add validate docs and script.|
 | 0.0.14  | Bump Genie Core. Update Docs. |
 | 0.0.13  | Add achievements documentation. |
