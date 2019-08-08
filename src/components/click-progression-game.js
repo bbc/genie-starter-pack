@@ -95,8 +95,9 @@ export class ClickProgressionGame extends Screen {
         const complete = this.gameButtons.every(button => button.data.timesClicked >= 9 );
 
         if (complete) {
+            const level = this.transientData["level-select"];
             const remaining = this.getTimeLeft();
-            gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[${remaining}]~LVR=[WIN]~SRC=[0]`});
+            gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[${remaining}]~LVR=[WIN]~SRC=[0]`, source: level.choice.title});
             calculateAchievements(remaining);
 
             this.transientData.results = "Finished with " + remaining + " seconds left!";
@@ -105,7 +106,8 @@ export class ClickProgressionGame extends Screen {
     }
 
     gameLost() {
-        gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[0]~LVR=[LOSE]~SRC=[0]`});
+        const level = this.transientData["level-select"];
+        gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[0]~LVR=[LOSE]~SRC=[0]`, source: level.choice.title});
         this.transientData.results = "You scored 0, game over - You lost!";
         this.navigation.next();
     }
