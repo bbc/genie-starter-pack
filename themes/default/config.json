@@ -21,11 +21,13 @@
             "choices": [
                 {
                     "asset": "carousel_1",
-                    "accessibilityText": "Character 1"
+                    "accessibilityText": "Character 1",
+                    "title": "Egbert"
                 },
                 {
                     "asset": "carousel_2",
-                    "accessibilityText": "Character 2"
+                    "accessibilityText": "Character 2",
+                    "title": "Dark Egbert"
                 }
             ],
             "leftButton": {
