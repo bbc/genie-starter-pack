@@ -1,6 +1,7 @@
 
 | Version |                                          Change                                           |
 |---------|-------------------------------------------------------------------------------------------|
+| 0.0.18  | Bump Genie Core. |
 | 0.0.17  | Send level ID in level~complete stat.|
 | 0.0.16  | Remove achievement audio.|
 | 0.0.15  | Add level id stats docs. Add validate docs and script.|
