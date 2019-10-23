@@ -50,9 +50,9 @@ Genie both uses and exposes some built in signals. The channel ***gel-buttons***
 
 Gel signals automatically add the property *game* to their message's data packet. This is a reference to the current Phaser game object.
 
-**Example of subscribing to a gel ui home button:**
+**Example of subscribing to a gel ui continue button:**
 ```javascript
-signal.bus.subscribe({channel: "gel-buttons", name: "home", callback: () => {/*function to call*/}})
+signal.bus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {/*function to call*/}})
 ```
 
 ### genie-settings
@@ -69,5 +69,24 @@ When the game's viewport is resized a message of the format is published:
 {
 	"channel" : "scaler",
 	"name" : "sizeChange"
+}
+```
+
+## Clearing up Genie signals between Screens
+
+On navigating to a new screen, any subscriptions to the `gel-buttons` channel are automatically removed.
+
+Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up. These should be tidied up by calling `unsubscribe()` on a reference to the signal.
+
+This can be done in a `shutdown()` method, which is called when a Phaser State is being navigated away from (see [Phaser CE docs](https://photonstorm.github.io/phaser-ce/Phaser.State.html#shutdown)).
+
+**Example of clearing up a scaler subscription:**
+```javascript
+create() {
+	this.signal = signal.bus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
+}
+
+shutdown() {
+	this.signal.unsubscribe();
 }
 ```
