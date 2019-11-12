@@ -3,7 +3,8 @@
         "key": "first_win",
         "name": "Just Getting Started",
         "description": "You managed to crack your first egg in time.",
-        "points": 100
+        "points": 100,
+        "position": "top"
     },
     {
         "key": "many_wins",
