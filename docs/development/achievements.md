@@ -34,6 +34,7 @@ The config.json should be an array of achievement description objects:
 
 ## Optional Parameters
 * **maxProgress** [integer] Enables the progress bar and sets its limit.
+* **position** [string] This is the position that specifies where the achievements notification should show. Can be either "top" or "bottom" - defaults to "bottom".
 * **additional** {prefix [string], text [string]} Add a secondary text element to the description.
 The prefix of this will be in bold. e.g:
 ```json
