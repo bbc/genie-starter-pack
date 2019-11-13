@@ -4,7 +4,7 @@
         "name": "Just Getting Started",
         "description": "You managed to crack your first egg in time.",
         "points": 100,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "many_wins",
@@ -12,7 +12,7 @@
         "description": "Cracked 4 Eggs",
         "points": 100,
         "maxProgress": 4,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "many_wins_2",
@@ -20,7 +20,7 @@
         "description": "Cracked 8 Eggs",
         "points": 100,
         "maxProgress": 8,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "many_wins_3",
@@ -28,41 +28,41 @@
         "description": "Cracked 12 Eggs",
         "points": 100,
         "maxProgress": 12,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "fast_4",
         "name": "Egg Race",
         "description": "You cracked an egg with 4 seconds left",
         "points": 100,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "fast_6",
         "name": "Get a Yolk On",
         "description": "You cracked an egg with 6 seconds left",
         "points": 100,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "fast_8",
         "name": "Scrambled Egg",
         "description": "You cracked an egg with 8 seconds left",
         "points": 100,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "fast_10",
         "name": "Poached Egg",
         "description": "You cracked an egg with 10 seconds left",
         "points": 100,
-        "position": "top"
+        "position": "bottom"
     },
     {
         "key": "fast_12",
         "name": "Burnt Egg",
         "description": "You cracked an egg with 12 seconds left",
         "points": 100,
-        "position": "top"
+        "position": "bottom"
     }
 ]
