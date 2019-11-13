@@ -12,7 +12,7 @@
         "description": "Cracked 4 Eggs",
         "points": 100,
         "maxProgress": 4,
-        "position": "bottom"
+        "position": "top"
     },
     {
         "key": "many_wins_2",
@@ -28,7 +28,7 @@
         "description": "Cracked 12 Eggs",
         "points": 100,
         "maxProgress": 12,
-        "position": "bottom"
+        "position": "top"
     },
     {
         "key": "fast_4",
@@ -42,7 +42,7 @@
         "name": "Get a Yolk On",
         "description": "You cracked an egg with 6 seconds left",
         "points": 100,
-        "position": "bottom"
+        "position": "top"
     },
     {
         "key": "fast_8",
@@ -56,7 +56,7 @@
         "name": "Poached Egg",
         "description": "You cracked an egg with 10 seconds left",
         "points": 100,
-        "position": "bottom"
+        "position": "top"
     },
     {
         "key": "fast_12",
