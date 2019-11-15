@@ -1,17 +1,17 @@
 {
-  "name": "childrens-games-genie-starter-pack",
-  "version": "0.0.20",
+  "name": "genie-starter-pack",
+  "version": "0.0.1",
   "description": "Children's BBC - Genie Starter Pack",
   "license": "UNLICENSED",
   "private": false,
   "author": "BBC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bbc/childrens-games-genie-starter-pack"
+    "url": "https://github.com/bbc/genie-starter-pack"
   },
-  "homepage": "https://github.com/bbc/childrens-games-genie-starter-pack#readme",
+  "homepage": "https://github.com/bbc/genie-starter-pack#readme",
   "dependencies": {
-    "genie": "git+ssh://git@github.com/bbc/childrens-games-genie.git#v2.0.8"
+    "genie": "git+ssh://git@github.com/bbc/genie.git#v3.0.0-pre"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
