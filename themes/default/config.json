@@ -1,7 +1,7 @@
 {
     "theme": {
         "home": {
-            "music": "loadscreen.backgroundMusic",
+            "music": "loader.backgroundMusic",
             "button-overrides": {
                 "play": {
                     "shiftY": 80
@@ -17,7 +17,7 @@
             ]
         },
         "character-select": {
-            "music": "loadscreen.backgroundMusicTwo",
+            "music": "loader.backgroundMusicTwo",
             "choices": [
                 {
                     "asset": "carousel_1",
@@ -48,7 +48,7 @@
             }
         },
         "level-select": {
-            "music": "loadscreen.backgroundMusic",
+            "music": "loader.backgroundMusic",
             "choices": [
                 {
                     "asset": "carousel1",
@@ -100,9 +100,9 @@
         },
         "game" : {
             "achievements": true,
-            "music": "loadscreen.backgroundMusicTwo",
+            "music": "loader.backgroundMusicTwo",
             "text": {
-                "content": "Click egs to hatch them!",
+                "content": "Click eggs to hatch them!",
                 "style": {
                     "font": "40px ReithSans",
                     "fontWeight": "bold",
@@ -124,7 +124,7 @@
             }
         },
         "results": {
-            "music": "loadscreen.backgroundMusicTwo",
+            "music": "loader.backgroundMusicTwo",
             "resultText": {
                 "style": {
                     "font": "bold 40px ReithSans",
