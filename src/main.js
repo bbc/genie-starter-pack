@@ -5,7 +5,7 @@ import { ClickProgressionGame } from "./components/click-progression-game.js";
 import { Results } from "../node_modules/genie/src/components/results.js";
 import { startup } from "../node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
-import * as signal from "../node_modules/genie/src/core/signal-bus.js";
+import * as event from "../node_modules/genie/src/core/event-bus.js";
 
 const settingsConfig = {
     pages: [
@@ -23,7 +23,7 @@ const settingsConfig = {
     ],
 };
 
-signal.bus.subscribe({
+event.bus.subscribe({
     channel: settingsChannel,
     name: "custom1",
     callback: value => {
