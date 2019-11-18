@@ -17,16 +17,18 @@ Genie is a modular framework which provides a set of reusable components (known 
 
 The current screens are:
 
-- Title
+- Home
 - How to Play
 - Pause
-- Loading
+- Loader
 - Select
 - Results
 
-These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Title Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
+These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Home Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
 
-The game flow sequence can be configured by editing: `src/main.js`. Import the desired screens and list them in the `navigationConfig` object. The `routes` object for each gives a list of possible onward journeys.
+The game flow sequence can be configured by editing: `src/main.js`.  
+Import the desired screens and list them in the `screenConfig` object.  
+The `routes` object for each gives a list of possible onward journeys.
 
 ## How do I use the core engines?
 
@@ -36,19 +38,13 @@ Full API documentation for the engines can be found within the Genie core reposi
 
 The scaling engine is already set up to adapt the game to all ratios and screen sizes used by our target devices. The game will automatically scale up and down without any additional input from you. Our coordinate system is set up with the origin point at the centre, so `(0,0)` refers to the centre of the screen.
 
-### Scene
+### Screen
 
-The scene module handles the positioning and layout of GUI elements. Standard GEL GUI elements are already known to the scene module and can be set up and positioned correctly very simply. The scene module also instantiates the scaler and provides methods for adding display objects to foreground and background (It is expected that most of a game would be added to the background group and any overlays /
- * HUD would go in the foreground group). Buttons added using this method will automatically call the correct functions and be screen-reader and tab accessible.
+The screen module handles the positioning and layout of GUI elements. Standard GEL GUI elements are already known to the screen module and can be set up and positioned correctly very simply. The screen module also instantiates the scaler and provides methods for adding display objects to foreground and background (It is expected that most of a game would be added to the background group and any overlays, HUD would go in the foreground group). Buttons added using this method will automatically call the correct functions and be screen-reader and tab accessible.
 
 An example of the factory function for making gel layouts:
 
-`this.scene.addLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
-
-Whenever a new non GEL element is added to the screen, it will need to be added to the layout manager's background in order to work correctly with the Scaler. An example:
-
-`this.scene.addToBackground(titleText);`
-
+`this.setLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
 
 ## What coding and test standards do I need to apply?
 
@@ -61,7 +57,7 @@ We will also use the [Tech Review Tool](../tech-review-tool.md) to ensure your g
 
 ## How does my component plug into Genie?
 
-All components extend the Genie "Screen" class. The `Screen` class extends `Phaser.State`, providing the `Context` to objects that extend from it. Once your game component extends Screen and has functionality, import your component into main as you would any other screen, and add it into the sequence at the desired point.
+All components extend the Genie "Screen" class. The `Screen` class extends `Phaser.Scene`, providing the `Context` to objects that extend from it. Once your game component extends Screen and has functionality, import your component into main as you would any other screen, and add it into the sequence at the desired point.
 
 
 ## How do I test my component in the Genie framework?

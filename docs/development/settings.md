@@ -66,11 +66,11 @@ See [data storage: loading data](data-storage.md#loading-data) for more informat
 
 ### Setting Changed Callback
 
-To add a callback when a setting is changed, you can use the [signal bus subscription](signal-bus.md#subscription-example) like so:
+To add a callback when a setting is changed, you can use the [event bus subscription](event-bus.md#subscription-example) like so:
 
 ```javascript
 
-signal.bus.subscribe({
+event.bus.subscribe({
     channel: "genie-settings",
     name: "setting-changed-colourblind", //suffix is the key given in settingsConfig object above
     callback: (data) => {
@@ -92,7 +92,7 @@ To add a callback when the setting panel is closed, you can use subscribe to the
 
 ```javascript
 
-signal.bus.subscribe({
+event.bus.subscribe({
     channel: "genie-settings",
     name: "settings-closed",
     callback: () => {

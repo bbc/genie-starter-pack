@@ -18,7 +18,7 @@ The included `index.html` file uses a fake GMI that you can use for local develo
 The GMI can only be created once. If multiple instances are created, the game will fail certification. We have already created the GMI for you in the `gmi.js` module in Genie core, so you can import this module where needed and call it directly. This file should never be copied or modified.
 
 ```javascript
-import { gmi } from "../../node_modules/genie/src/core/gmi.js";
+import { gmi } from "../../node_modules/genie/src/core/gmi/gmi.js";
 
 ```
 

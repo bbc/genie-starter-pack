@@ -11,23 +11,26 @@
 import { Select } from "../node_modules/genie/src/components/select.js";
 ```
 
-- Then, in `src/main.js` add the select screen to the `transitions array`.
+- Then, in `src/main.js` add the select screen to the `screenConfig object`.
 
 ```javascript
-const transitions = [
+const screenConfig = {
     ...
-    {
-        name: "home",
-        state: new Home(),
-        nextScreenName: () => "characterSelect",
+    home: {
+        scene: Home,
+        routes: {
+            next: "character-select",
+        },
     },
-    {
-        name: "characterSelect",
-        state: new Select(),
-        nextScreenName: () => "game",
+    "character-select": {
+        scene: Select,
+        routes: {
+            next: "level-select",
+            home: "home",
+        },
     },
     ...
-];
+};
 ```
 
 - When running the game, progressing from the home screen should now take the player to the character select screen.
@@ -41,7 +44,7 @@ const transitions = [
 ```json
 {
     "theme": {
-        "characterSelect": {
+        "character-select": {
             "choices": [
                 {
                     "main": "dangermouse",
@@ -65,30 +68,33 @@ const transitions = [
 ```javascript
 {
     ...
-    "characterSelect": [
-        {
-            "type": "image",
-            "key": "dangermouse",
-            "url": "options/dangermouse_sel.png"
-        },
-        {
-            "type": "image",
-            "key": "dangermouseName",
-            "url": "options/dangermouse_sel_name.png"
-        },
-        {
-            "type": "image",
-            "key": "barney",
-            "url": "options/barney_sel.png"
-        },
-        {
-            "type": "image",
-            "key": "barneyName",
-            "url": "options/barney_sel_name.png"
-        }
-    ]
+    "character-select": {
+        "prefix": "character-select.",
+        "files": [
+            {
+                "type": "image",
+                "key": "dangermouse",
+                "url": "options/dangermouse_sel.png"
+            },
+            {
+                "type": "image",
+                "key": "dangermouseName",
+                "url": "options/dangermouse_sel_name.png"
+            },
+            {
+                "type": "image",
+                "key": "barney",
+                "url": "options/barney_sel.png"
+            },
+            {
+                "type": "image",
+                "key": "barneyName",
+                "url": "options/barney_sel_name.png"
+            }
+        ]
+    }
     ...
 }
 ```
 
-[More examples of asset packs in Phaser](https://github.com/photonstorm/phaser-examples/blob/master/examples/assets/asset-pack1.json)
+[More examples of asset packs in Phaser](https://photonstorm.github.io/phaser3-docs/Phaser.Loader.LoaderPlugin.html#pack__anchor)
