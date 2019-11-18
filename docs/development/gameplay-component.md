@@ -17,16 +17,18 @@ Genie is a modular framework which provides a set of reusable components (known 
 
 The current screens are:
 
-- Title
+- Home
 - How to Play
 - Pause
 - Loader
 - Select
 - Results
 
-These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Title Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
+These screens can be selected and used in any order, with your gameplay component sitting between the built in screens. An example flow may be a Home Screen that leads to a level Select screen, which then leads to your gameplay component, which finally outputs scores in a Results screen.
 
-The game flow sequence can be configured by editing: `src/main.js`. Import the desired screens and list them in the `navigationConfig` object. The `routes` object for each gives a list of possible onward journeys.
+The game flow sequence can be configured by editing: `src/main.js`.  
+Import the desired screens and list them in the `screenConfig` object.  
+The `routes` object for each gives a list of possible onward journeys.
 
 ## How do I use the core engines?
 
@@ -42,7 +44,7 @@ The screen module handles the positioning and layout of GUI elements. Standard G
 
 An example of the factory function for making gel layouts:
 
-`this.screen.setLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
+`this.setLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
 
 ## What coding and test standards do I need to apply?
 
