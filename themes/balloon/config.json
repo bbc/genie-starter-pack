@@ -1,7 +1,7 @@
 {
     "theme": {
         "home": {
-            "music": "loadscreen.backgroundMusic",
+            "music": "loader.backgroundMusic",
             "button-overrides": {
                 "play": {
                     "shiftY": 80
@@ -9,15 +9,49 @@
             }
         },
         "how-to-play": {
-            "panels": ["panel1", "panel2", "panel3"],
+            "isOverlay": true,
+            "howToPlay": true,
+            "choices": [
+                {
+                    "asset": "carousel1",
+                    "accessibilityText": "Instructions on playing the game",
+                    "title": "Instructions on playing the game"
+                },
+                {
+                    "asset": "carousel2",
+                    "accessibilityText": "More on how to play",
+                    "title": "More on how to play"
+                },
+                {
+                    "asset": "carousel3",
+                    "accessibilityText": "Final instructions on playing",
+                    "title": "Final instructions on playing"
+                }
+            ],
+            "leftButton": {
+                "content": "Left",
+                "style": {
+                    "font": "20px ReithSans",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            },
+            "rightButton": {
+                "content": "Right",
+                "style": {
+                    "font": "20px ReithSans",
+                    "fontWeight": "bold",
+                    "fill": "white"
+                }
+            },
             "panelText": [
-                { "accessibilityText": "Instructions on playing the game"},
-                { "accessibilityText": "More on how to play"},
-                { "accessibilityText": "Final instructions on playing the game"}
+                { "accessibilityText": "Instructions on playing the game" },
+                { "accessibilityText": "More on how to play" },
+                { "accessibilityText": "Final instructions on playing" }
             ]
         },
         "character-select": {
-            "music": "loadscreen.backgroundMusicTwo",
+            "music": "loader.backgroundMusicTwo",
             "choices": [
                 {
                     "asset": "carousel_1",
@@ -48,7 +82,7 @@
             }
         },
         "level-select": {
-            "music": "loadscreen.backgroundMusic",
+            "music": "loader.backgroundMusic",
             "choices": [
                 {
                     "asset": "carousel1",
@@ -99,7 +133,7 @@
             }
         },
         "game" : {
-            "music": "loadscreen.backgroundMusicTwo",
+            "music": "loader.backgroundMusicTwo",
             "text": {
                 "content": "Tap balloons to pump them up!",
                 "style": {
@@ -123,7 +157,7 @@
             }
         },
         "results": {
-            "music": "loadscreen.backgroundMusicTwo",
+            "music": "loader.backgroundMusicTwo",
             "resultText": {
                 "style": {
                     "font": "bold 40px ReithSans",
@@ -133,6 +167,9 @@
                     "fontWeight": "bold"
                 }
             }
+        },
+        "pause": {
+            "isOverlay": true
         }
     }
 }
