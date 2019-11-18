@@ -1,52 +1,55 @@
 {
-    "level-select": [
-        {
-            "type": "image",
-            "key": "title",
-            "url": "select/level-title.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "background",
-            "url": "shared/background.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "carousel1",
-            "url": "options/level-select-1.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "carousel2",
-            "url": "options/level-select-2.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "carousel3",
-            "url": "options/level-select-3.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "carousel4",
-            "url": "options/level-select-4.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "carousel5",
-            "url": "options/level-select-5.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "carousel6",
-            "url": "options/level-select-6.png",
-            "overwrite": false
-        }
+  "level-select": {
+    "prefix": "level-select.",
+    "files": [
+      {
+        "type": "image",
+        "key": "title",
+        "url": "select/level-title.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "background",
+        "url": "shared/background.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "carousel1",
+        "url": "options/level-select-1.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "carousel2",
+        "url": "options/level-select-2.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "carousel3",
+        "url": "options/level-select-3.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "carousel4",
+        "url": "options/level-select-4.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "carousel5",
+        "url": "options/level-select-5.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "carousel6",
+        "url": "options/level-select-6.png",
+        "overwrite": false
+      }
     ]
+  }
 }

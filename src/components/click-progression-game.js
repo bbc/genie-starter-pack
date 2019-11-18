@@ -42,20 +42,14 @@ const formatTime = secs => {
 }
 
 export class ClickProgressionGame extends Screen {
-    constructor() {
-        super();
-    }
 
     create() {
-        const centerX = this.game.world.centerX;
-        const centerY = this.game.world.centerY;
-        this.theme = this.context.config.theme[this.game.state.current];
+        this.theme = this.context.config.theme[this.scene.key];
         this.selectedGameButton = this.transientData["character-select"].index + 1;
-        this.timesButtonClicked = 0;
 
         this.addBackground();
-        this.createTimer(centerX);
-        this.createTitleText(centerX, centerY);
+        this.createTimer();
+        this.add.text(this.theme.text.position.x, this.theme.text.position.y, this.theme.text.content, this.theme.text.style);
 
         const level = this.transientData["level-select"];
 
@@ -73,26 +67,25 @@ export class ClickProgressionGame extends Screen {
 
         this.gameButtons = buttonPositions.map(pos => this.createGameButton(pos.x, pos.y))
 
-        this.scene.addLayout(["pause"]);
+        this.setLayout(["pause"]);
 
         gmi.setGameData("characterSelected", this.transientData["character-select"]);
         console.log("Data saved to GMI:", gmi.getAllSettings().gameData); // eslint-disable-line no-console
         gmi.sendStatsEvent("level", "start", { source: level.choice.title });
     }
 
-    render() {
-        if (this.timer.running) {
-            this.timeLeftText.setText(this.getTimeLeftString());
-        }
+    update() {
+        this.timeLeftText.setText(this.getTimeLeftString());
     }
 
     gameButtonClicked(button) {
-        if ( button.data.timesClicked < 9 ) {
-            button.data.timesClicked += 1;
-            button.loadTexture("game." + "game_button_" + this.selectedGameButton + "_" + button.data.timesClicked, 0);
+        if ( button.getData("timesClicked") < 9 ) {
+            button.data.values.timesClicked += 1;
+            button.setTexture("game." + "game_button_" + this.selectedGameButton + "_" + button.getData("timesClicked"));
+            this.input.setHitArea(button);
         }
 
-        const complete = this.gameButtons.every(button => button.data.timesClicked >= 9 );
+        const complete = this.gameButtons.every(button => button.getData("timesClicked") >= 9 );
 
         if (complete) {
             const level = this.transientData["level-select"];
@@ -113,31 +106,20 @@ export class ClickProgressionGame extends Screen {
     }
 
     addBackground() {
-        const backgroundImage = this.game.add.image(0, 0, "game.background");
-        return this.scene.addToBackground(backgroundImage);
+        return this.add.image(0, 0, "game.background");
     }
 
     createTimer() {
-        this.timer = this.game.time.create();
-        this.timerEvent = this.timer.add(Phaser.Timer.SECOND * 15, this.gameLost, this);
-        this.timeLeftText = this.game.add.text(this.theme.timer.position.x, this.theme.timer.position.y, this.getTimeLeftString(), this.theme.timer.style);
-        this.scene.addToBackground(this.timeLeftText);
-        this.timer.start();
+        this.timerEvent = this.scene.scene.time.addEvent({delay: 15000, callback: this.gameLost, callbackScope: this });
+        this.timeLeftText = this.add.text(this.theme.timer.position.x, this.theme.timer.position.y, this.getTimeLeftString(), this.theme.timer.style);
     }
 
-    createTitleText() {
-        const text = this.game.add.text(this.theme.text.position.x, this.theme.text.position.y, this.theme.text.content, this.theme.text.style);
-        this.scene.addToBackground(text);
-    }
 
     createGameButton(x, y) {
         const buttonImage = "game." + "game_button_" + this.selectedGameButton + "_0";
-        const gameButton = this.game.add.button(x, y, buttonImage, this.gameButtonClicked, this, 2, 1, 0)
-        gameButton.data.timesClicked = 0
-
-
-        this.scene.addToBackground(gameButton);
-        gameButton.anchor.setTo(this.theme.gameButton.anchor.x, this.theme.gameButton.anchor.y);
+        const gameButton = this.add.image(x, y, buttonImage);
+        gameButton.setInteractive().on("pointerdown", () => this.gameButtonClicked(gameButton));
+        gameButton.setData("timesClicked", 0);
 
         return gameButton
     }
@@ -145,7 +127,7 @@ export class ClickProgressionGame extends Screen {
 
 
     getTimeLeft() {
-        return Math.round((this.timerEvent.delay - this.timer.ms) / 1000);
+        return Math.round((this.timerEvent.delay - this.timerEvent.elapsed) / 1000);
     }
 
     getTimeLeftString() {

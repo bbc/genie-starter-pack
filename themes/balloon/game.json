@@ -1,130 +1,133 @@
 {
-    "game": [
-        {
-            "type": "image",
-            "key": "background",
-            "url": "game/background_hills.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_0",
-            "url": "game/balloon_1_0.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_1",
-            "url": "game/balloon_1_1.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_2",
-            "url": "game/balloon_1_2.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_3",
-            "url": "game/balloon_1_3.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_4",
-            "url": "game/balloon_1_4.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_5",
-            "url": "game/balloon_1_5.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_6",
-            "url": "game/balloon_1_6.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_7",
-            "url": "game/balloon_1_7.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_8",
-            "url": "game/balloon_1_8.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_1_9",
-            "url": "game/balloon_1_9.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_0",
-            "url": "game/balloon_2_0.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_1",
-            "url": "game/balloon_2_1.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_2",
-            "url": "game/balloon_2_2.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_3",
-            "url": "game/balloon_2_3.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_4",
-            "url": "game/balloon_2_4.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_5",
-            "url": "game/balloon_2_5.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_6",
-            "url": "game/balloon_2_6.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_7",
-            "url": "game/balloon_2_7.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_8",
-            "url": "game/balloon_2_8.png",
-            "overwrite": false
-        },
-        {
-            "type": "image",
-            "key": "game_button_2_9",
-            "url": "game/balloon_2_9.png",
-            "overwrite": false
-        }
+  "game": {
+    "prefix": "game.",
+    "files": [
+      {
+        "type": "image",
+        "key": "background",
+        "url": "game/background_hills.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_0",
+        "url": "game/balloon_1_0.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_1",
+        "url": "game/balloon_1_1.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_2",
+        "url": "game/balloon_1_2.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_3",
+        "url": "game/balloon_1_3.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_4",
+        "url": "game/balloon_1_4.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_5",
+        "url": "game/balloon_1_5.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_6",
+        "url": "game/balloon_1_6.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_7",
+        "url": "game/balloon_1_7.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_8",
+        "url": "game/balloon_1_8.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_1_9",
+        "url": "game/balloon_1_9.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_0",
+        "url": "game/balloon_2_0.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_1",
+        "url": "game/balloon_2_1.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_2",
+        "url": "game/balloon_2_2.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_3",
+        "url": "game/balloon_2_3.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_4",
+        "url": "game/balloon_2_4.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_5",
+        "url": "game/balloon_2_5.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_6",
+        "url": "game/balloon_2_6.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_7",
+        "url": "game/balloon_2_7.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_8",
+        "url": "game/balloon_2_8.png",
+        "overwrite": false
+      },
+      {
+        "type": "image",
+        "key": "game_button_2_9",
+        "url": "game/balloon_2_9.png",
+        "overwrite": false
+      }
     ]
+  }
 }
