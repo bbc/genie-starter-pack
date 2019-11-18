@@ -1,5 +1,6 @@
 # Creating a Theme
 
+* [What is a theme?](#what-is-a-theme)
 * [What is in and out of scope for theming?](#what-is-in-and-out-of-scope-for-theming)
 * [Individual component theme specification](#individual-component-theme-specification)
 * [What are the asset requirements?](#what-are-the-asset-requirements)

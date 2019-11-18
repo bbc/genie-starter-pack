@@ -5,7 +5,7 @@ Accessibilify is a utility function that is provided by Genie which can be used 
 
 ## How do I use accessibilify?
 First, you will need to import the `accessibilify` function from GENIE. The `accessibilify` function accepts two arguments:
-- `button`: The Phaser button that will be made accessible.
+- `button`: The Gel button that will be made accessible.
 - `config`: An object that contains the configuration that will be used to create an accessible div element for the button. The config should have the following properties:
     - `id`: The ID that will be assigned to the DOM element.
     - `ariaLabel`: The ariaLabel that will be assigned to the DOM element.
@@ -19,7 +19,11 @@ export class GameScreen extends Screen {
     }
 
     create() {
-        const button = this.game.add.button(0, 0, buttonKey, () => this.navigation.next(), this);
+        const button = this.add
+            .image(0, 0, buttonKey)
+            .setOrigin(0.5)
+            .setInteractive({ useHandCursor: true })
+            .on("pointerup", () => this.navigate.next());
         const config = {
             id: "next-page-button",
             ariaLabel: "Next Page",

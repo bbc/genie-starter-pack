@@ -2,7 +2,7 @@
 
 ## What is Genie?
 
-Genie is a modular framework designed to simplify the construction of children's games. It uses [Phaser 2 CE](https://phaser.io/), an HTML5 game engine.
+Genie is a modular framework designed to simplify the construction of children's games. It uses [Phaser 3](https://phaser.io/phaser3), an HTML5 game engine.
 
 Genie provides a set of reusable components common to BBC games such as a load screen, select screen, pause, how to play, as well as an implementation of the standard BBC Games GEL UI. This means game developers can focus on creating the gameplay component, as much of the logic surrounding the game has been provided.
 

@@ -1,15 +1,15 @@
-# Signal Bus
-The signal bus provides a lightweight wrapper to [Phaser signals](https://phaser.io/docs/2.6.2/Phaser.Signal.html).
+# Event Bus
+The event bus provides a lightweight wrapper to [Phaser Events Emitter](https://photonstorm.github.io/phaser3-docs/Phaser.Events.EventEmitter.html).
 
-Rather than passing around the individual signals we can just import the message bus and listen for a named signal.
-By importing the bus any signal can be subscribed to or published.
-A signal is automatically created when the publish or subscribe methods are called if the signal doesn't exist.
+Rather than passing around the individual signals we can just import the message bus and listen for a named event.
+By importing the bus any event can be subscribed to or published.
+An event is automatically created when the publish or subscribe methods are called if the event doesn't exist.
 
 ## Examples
 
 Import to your module with the following code:
 ```javascript
-import bus from "./signal-bus.js";
+import bus from "./event-bus.js";
 ```
 
 ### Subscription example
@@ -40,19 +40,19 @@ it also takes a third optional property called **data** which can be any arbitra
 This is passed to the subscriber callbacks functions.
 
 ```javascript
-bus.publish({channel: "channelName", name: "signalName", data: [1,2,3] });
+bus.publish({channel: "channelName", name: "eventName", data: [1,2,3] });
 ```
 
-## Built in Genie signals
+## Built in Genie Events
 
 ### gel-buttons
-Genie both uses and exposes some built in signals. The channel ***gel-buttons*** is used by all elements to publish messages when any button is clicked.
+Genie both uses and exposes some built in events. The channel ***gel-buttons*** is used by all elements to publish messages when any button is clicked.
 
-Gel signals automatically add the property *game* to their message's data packet. This is a reference to the current Phaser game object.
+Gel event signals automatically add the property *game* to their message's data packet. This is a reference to the current Phaser game object.
 
 **Example of subscribing to a gel ui continue button:**
 ```javascript
-signal.bus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {/*function to call*/}})
+event.bus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {/*function to call*/}})
 ```
 
 ### genie-settings
@@ -72,21 +72,21 @@ When the game's viewport is resized a message of the format is published:
 }
 ```
 
-## Clearing up Genie signals between Screens
+## Clearing up Genie Events between Screens
 
 On navigating to a new screen, any subscriptions to the `gel-buttons` channel are automatically removed.
 
-Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up. These should be tidied up by calling `unsubscribe()` on a reference to the signal.
+Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up. These should be tidied up by calling `unsubscribe()` on a reference to the event.
 
 This can be done in a `shutdown()` method, which is called when a Phaser State is being navigated away from (see [Phaser CE docs](https://photonstorm.github.io/phaser-ce/Phaser.State.html#shutdown)).
 
 **Example of clearing up a scaler subscription:**
 ```javascript
 create() {
-	this.signal = signal.bus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
+	this.event = event.bus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
 }
 
 shutdown() {
-	this.signal.unsubscribe();
+	this.event.unsubscribe();
 }
 ```
