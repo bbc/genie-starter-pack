@@ -16,16 +16,17 @@ import bus from "./event-bus.js";
 
 The subscribe method takes a single a parameter - an object which describes the message subscription.
 
-It has 3 required properties
-***channel***: Channel names are a way to partition messages and namespace them from other messages.
-***name***: subscriptions will be fired based on a combination of **channel** and **name**.
+It has 3 required properties:  
+***channel***: Channel names are a way to partition messages and namespace them from other messages.  
+***name***: subscriptions will be fired based on a combination of **channel** and **name**.  
 ***callback***: The function to be called when a message is published to this channel / name combination.
 
-Subscribe also returns an object with unsubscribe method.
+Subscribe also returns an object with a unsubscribe method.
 
 ```javascript
 const myCallback = data => console.log(data);
-bus.subscribe({ callback: myCallback, channel: "channelName", name: "signalName" });
+const event = event.bus.subscribe({ callback: myCallback, channel: "channelName", name: "eventName" });
+event.unsubscribe(); // removes subscription
 ```
 
 ### Publishing example
@@ -33,31 +34,30 @@ bus.subscribe({ callback: myCallback, channel: "channelName", name: "signalName"
 The publish method takes a single a parameter - an object which describes a message packet.
 The message packet has two required properties:
 
-***channel***: Channel names are a way to partition messages and namespace them from other messages.
+***channel***: Channel names are a way to partition messages and namespace them from other messages.  
 ***name***: subscriptions will be fired based on a combination of **channel** and **name**.
 
-it also takes a third optional property called **data** which can be any arbitrary value or object.
+It also takes a third optional property called **data** which can be any arbitrary value or object.
 This is passed to the subscriber callbacks functions.
 
 ```javascript
-bus.publish({channel: "channelName", name: "eventName", data: [1,2,3] });
+event.bus.publish({channel: "channelName", name: "eventName", data: [1,2,3] });
 ```
 
 ## Built in Genie Events
 
 ### gel-buttons
-Genie both uses and exposes some built in events. The channel ***gel-buttons*** is used by all elements to publish messages when any button is clicked.
+Genie both uses and exposes some built in events.  
+The channel ***gel-buttons*** is used by all elements to publish messages when any button is clicked.
 
-Gel events automatically add the property *game* to their message's data packet. This is a reference to the current Phaser game object.
-
-**Example of subscribing to a gel ui continue button:**
+**Example of subscribing to a GEL UI continue button:**
 ```javascript
 event.bus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {/*function to call*/}})
 ```
 
 ### genie-settings
 
-When settings are changed a message is published to the *genie-settings* channel.
+When settings are changed a message is published to the ***genie-settings*** channel.  
 The name will be that of the setting (e.g: *audio*) and the data will be the new settings value.
 
 An additional event with no message data is published with the name *settingsClosed* when the settings page is closed.
@@ -76,11 +76,20 @@ When the game's viewport is resized a message of the format is published:
 
 On navigating to a new screen, any subscriptions to the `gel-buttons` channel are automatically removed.
 
-Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up. These should be tidied up by calling `unsubscribe()` on a reference to the event.
+Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up.  
+These should be tidied up by calling `event.unsubscribe()`.
+
+We have exposed a new event that will emit when the current screen is being navigated away from, called `onscreenexit`.  
+You can call `this.events.once` to register a one-time listener to this event, to allow cleanup between screens.
 
 **Example of clearing up a scaler subscription:**
 ```javascript
 create() {
 	this.event = event.bus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
+	this.events.once("onscreenexit", this.cleanup);
+}
+
+cleanup() {
+	this.event.unsubscribe();
 }
 ```
