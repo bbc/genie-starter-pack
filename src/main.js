@@ -1,11 +1,11 @@
 import { Home } from "../node_modules/genie/src/components/home.js";
-import { Loadscreen } from "../node_modules/genie/src/components/loadscreen.js";
 import { Select } from "../node_modules/genie/src/components/select.js";
+import { Pause } from "../node_modules/genie/src/components/overlays/pause.js";
 import { ClickProgressionGame } from "./components/click-progression-game.js";
 import { Results } from "../node_modules/genie/src/components/results.js";
 import { startup } from "../node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
-import * as signal from "../node_modules/genie/src/core/signal-bus.js";
+import * as event from "../node_modules/genie/src/core/event-bus.js";
 
 const settingsConfig = {
     pages: [
@@ -23,7 +23,7 @@ const settingsConfig = {
     ],
 };
 
-signal.bus.subscribe({
+event.bus.subscribe({
     channel: settingsChannel,
     name: "custom1",
     callback: value => {
@@ -31,60 +31,63 @@ signal.bus.subscribe({
     },
 });
 
-const navigationConfig = goToScreen => {
-    const goToHome = data => goToScreen("home", data);
-    const goToCharacterSelect = data => goToScreen("character-select", data);
-    const goTolevelSelect = data => goToScreen("level-select", data);
-    const goToGame = data => goToScreen("game", data);
-    const goToResults = data => goToScreen("results", data);
-
-    return {
-        loadscreen: {
-            state: Loadscreen,
-            routes: {
-                next: goToHome,
+const screenConfig = {
+    home: {
+        scene: Home,
+        routes: {
+            next: "character-select",
+        },
+    },
+    "character-select": {
+        scene: Select,
+        routes: {
+            next: "level-select",
+            home: "home",
+        },
+    },
+    "level-select": {
+        scene: Select,
+        routes: {
+            next: "game",
+            home: "home",
+        },
+    },
+    game: {
+        scene: ClickProgressionGame,
+        settings: {
+            physics: {
+                default: "arcade",
+                arcade: {},
             },
         },
-        home: {
-            state: Home,
-            routes: {
-                next: goToCharacterSelect
-            },
+        routes: {
+            next: "results",
+            home: "home",
+            restart: "game",
         },
-        "character-select": {
-            state: Select,
-            routes: {
-                next: goTolevelSelect,
-                home: goToHome,
-                restart: goToHome,
-            },
+    },
+    results: {
+        scene: Results,
+        routes: {
+            next: "home",
+            game: "game",
+            restart: "game",
+            home: "home",
         },
-        "level-select": {
-            state: Select,
-            routes: {
-                next: goToGame,
-                home: goToHome,
-                restart: goToHome,
-            },
+    },
+    // Overlays
+    "how-to-play": {
+        scene: Select,
+        routes: {
+            home: "home",
         },
-        game: {
-            state: ClickProgressionGame,
-            routes: {
-                next: goToResults,
-                home: goToHome,
-                restart: goToGame,
-            },
+    },
+    pause: {
+        scene: Pause,
+        routes: {
+            home: "home",
         },
-        results: {
-            state: Results,
-            routes: {
-                next: goToHome,
-                game: goToGame,
-                restart: goToGame,
-                home: goToHome,
-            },
-        }
-    };
+    },
 };
 
-startup(settingsConfig, navigationConfig);
+startup(screenConfig, settingsConfig);
