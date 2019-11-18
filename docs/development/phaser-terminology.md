@@ -4,9 +4,9 @@
 
 Genie Screens extend Phaser Scenes and are automatically used by the gameflow set up in navigation.
 
-## Signals
+## Event Emitter
 
-The default Genie Gel buttons fire Phaser signals. Signals can be subscribed to or published to using the Genie [event bus](event-bus.md)
+The default Genie Gel buttons fire Phaser events. Events can be subscribed to or published to using the Genie [event bus](event-bus.md)
 
 ## Asset packs
 
