@@ -78,15 +78,9 @@ On navigating to a new screen, any subscriptions to the `gel-buttons` channel ar
 
 Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up. These should be tidied up by calling `unsubscribe()` on a reference to the event.
 
-This can be done in a `shutdown()` method, which is called when a Phaser State is being navigated away from (see [Phaser CE docs](https://photonstorm.github.io/phaser-ce/Phaser.State.html#shutdown)).
-
 **Example of clearing up a scaler subscription:**
 ```javascript
 create() {
 	this.event = event.bus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
-}
-
-shutdown() {
-	this.event.unsubscribe();
 }
 ```
