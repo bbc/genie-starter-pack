@@ -82,6 +82,7 @@ export class ClickProgressionGame extends Screen {
         if ( button.getData("timesClicked") < 9 ) {
             button.data.values.timesClicked++;
             button.setTexture("game." + "game_button_" + this.selectedGameButton + "_" + button.getData("timesClicked"));
+            this.input.setHitArea(button);
         }
 
         const complete = this.gameButtons.every(button => button.getData("timesClicked") >= 9 );
@@ -119,7 +120,6 @@ export class ClickProgressionGame extends Screen {
         const gameButton = this.add.image(x, y, buttonImage);
         gameButton.setInteractive().on("pointerdown", () => this.gameButtonClicked(gameButton));
         gameButton.setData("timesClicked", 0);
-        ///gameButton.anchor.setTo(this.theme.gameButton.anchor.x, this.theme.gameButton.anchor.y);
 
         return gameButton
     }
