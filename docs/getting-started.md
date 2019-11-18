@@ -10,13 +10,14 @@ Genie provides a set of reusable components common to BBC games such as a load s
 
 A skeleton set-up has been included in this starter pack. To install, run `npm install` in the command line. This will pull in the Genie framework.
 
-The game sequence can then be configured by editing: `src/main.js`. Inside `main.js`, Import the desired screens and order them in the `transitions` Array. The `nextScreenName` method returns a string to indicate the name of the next screen to transition to. As this is a function, conditional logic can be included here to move to a different screen depending on the game state (e.g. a "win" screen or a "fail" screen).
+The game sequence can then be configured by editing: `src/main.js`. Inside `main.js`, Import the desired screens and add them to the `screenConfig` Object. The `routes` object returns a string to indicate the name of the next screen to transition to.
 
 New screens (including the gameplay component) should be created in the `components` folder.
 
 You can preview your game by running a server using `npm start`. It can then be viewed in a browser at http://localhost:8080/ or at the local network address printed in the console. Changes to the source will trigger a rebuild and will refresh the page on all devices currently viewing the page. This command runs the code directly without webpacking it first.
 
-To webpack the code and then run a server, use `npm start:pack`. This command will also add inline sourcemaps (when using Genie 1.0.12 or later). Please note to preview your game in IE11 you will need to webpack it first.
+To webpack the code and then run a server, use `npm start:pack`. This command will also add inline sourcemaps (when using Genie 1.0.12 or later).  
+Please note to preview your game in IE11 you will need to webpack it first.
 
 The qaMode query string may be added to the end to view the game in QA Mode. This gives additional console output, and if you press "q", you can see the layout overlay. http://localhost:8000/?qaMode=true.
 
