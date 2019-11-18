@@ -1,7 +1,7 @@
 # Event Bus
 The event bus provides a lightweight wrapper to [Phaser Events Emitter](https://photonstorm.github.io/phaser3-docs/Phaser.Events.EventEmitter.html).
 
-Rather than passing around the individual signals we can just import the message bus and listen for a named event.
+Rather than passing around the individual events we can just import the message bus and listen for a named event.
 By importing the bus any event can be subscribed to or published.
 An event is automatically created when the publish or subscribe methods are called if the event doesn't exist.
 
@@ -48,7 +48,7 @@ bus.publish({channel: "channelName", name: "eventName", data: [1,2,3] });
 ### gel-buttons
 Genie both uses and exposes some built in events. The channel ***gel-buttons*** is used by all elements to publish messages when any button is clicked.
 
-Gel event signals automatically add the property *game* to their message's data packet. This is a reference to the current Phaser game object.
+Gel events automatically add the property *game* to their message's data packet. This is a reference to the current Phaser game object.
 
 **Example of subscribing to a gel ui continue button:**
 ```javascript
@@ -60,7 +60,7 @@ event.bus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {
 When settings are changed a message is published to the *genie-settings* channel.
 The name will be that of the setting (e.g: *audio*) and the data will be the new settings value.
 
-An additional signal with no message data is published with the name *settingsClosed* when the settings page is closed.
+An additional event with no message data is published with the name *settingsClosed* when the settings page is closed.
 
 ### scaler
 When the game's viewport is resized a message of the format is published:

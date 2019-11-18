@@ -3,7 +3,7 @@
 ## What is accessibilify?
 Accessibilify is a utility function that is provided by Genie which can be used to make buttons accessible. This works by overlaying an invisible div element on the canvas that a player will then be able to tab to. 
 
-Since Phaser 3 has no concept of buttons, buttons can be constructed by adding interactable images as shown below.
+Since Phaser 3 has no concept of buttons, buttons can be constructed by adding interactable images as shown in the example below.
 
 ## How do I use accessibilify?
 First, you will need to import the `accessibilify` function from GENIE. The `accessibilify` function accepts two arguments:
