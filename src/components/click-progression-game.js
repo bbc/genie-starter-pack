@@ -80,7 +80,7 @@ export class ClickProgressionGame extends Screen {
 
     gameButtonClicked(button) {
         if ( button.getData("timesClicked") < 9 ) {
-            button.data.values.timesClicked++;
+            button.data.values.timesClicked += 1;
             button.setTexture("game." + "game_button_" + this.selectedGameButton + "_" + button.getData("timesClicked"));
             this.input.setHitArea(button);
         }
