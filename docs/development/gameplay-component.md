@@ -44,11 +44,6 @@ An example of the factory function for making gel layouts:
 
 `this.screen.setLayout(["exit", "howToPlay", "play", "audioOff", "settings"]);`
 
-Whenever a new non GEL element is added to the screen, it will need to be added to the layout manager's background in order to work correctly with the Scaler. An example:
-
-`this.scene.addToBackground(titleText);`
-
-
 ## What coding and test standards do I need to apply?
 
 We use ESLint with a slightly edited ruleset, along with Prettier. For non-gameplay screens we require that this standard is adhered to, along with unit test coverage. Prettier and ESLint plugins are available for most IDEs, or can be run from the command line.
