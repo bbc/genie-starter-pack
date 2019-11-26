@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/bbc/genie-starter-pack#readme",
   "dependencies": {
-    "genie": "git+ssh://git@github.com/bbc/genie.git#v3.0.0-gamma"
+    "genie": "git+ssh://git@github.com/bbc/genie.git#v3.0.0-epsilon"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
