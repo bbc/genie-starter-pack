@@ -1,0 +1,30 @@
+{
+    theme: {
+        "how-to-play": {
+            isOverlay: true,
+            howToPlay: true,
+            choices: [
+                {
+                    "asset": "carousel1",
+                    "accessibilityText": "Instructions on playing the game",
+                    "title": "Instructions on playing the game"
+                },
+                {
+                    "asset": "carousel2",
+                    "accessibilityText": "More on how to play",
+                    "title": "More on how to play"
+                },
+                {
+                    "asset": "carousel3",
+                    "accessibilityText": "Final instructions on playing",
+                    "title": "Final instructions on playing"
+                }
+            ],
+            panelText: [
+                { accessibilityText: "Instructions on playing the game" },
+                { accessibilityText: "More on how to play" },
+                { accessibilityText: "Final instructions on playing" },
+            ],
+        },
+    },
+}

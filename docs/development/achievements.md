@@ -2,9 +2,9 @@
 
 ## How To Enable
 Achievements are enabled and configured per theme.
-To enable the achievements system add `"achievements": true` to the game block of the theme config `themes/#####/config.json`. e.g:
+To enable the achievements system add `"achievements": true` to the game block of the theme config `themes/#####/config/config.json5`. e.g:
 
-```json
+```json5
 {
   "game": {
       "music": "loadscreen.backgroundMusicTwo",
