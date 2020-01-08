@@ -4,12 +4,6 @@ Ideally, data should not be stored. If it is stored, data must not be personal. 
 
 Data must be saved through the [GMI](gmi.md). This ensures all data access complies with BBC data policies.
 
-## Cookies/Local Storage disabled
-
-Games adhere to the BBC 'Functional' Cookie so a user can opt out of these features. Users can manage preferences here: [Manage Cookie Settings](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings).
-
-*All games must be prepared to handle this scenario.*
-
 ## Saving data
 
 ```javascript
