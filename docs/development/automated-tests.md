@@ -25,12 +25,6 @@ Changing the Id of a specific button. The `how-to-play` button for instance is p
 |The pause screen loads and displays all of the correct elements when accessed from the gameplay screen|
 |The achievements screen is accessible via  the home screen|
 |The achievements screen is accessible via the character select screen|
-|Audio settings are not saved to the GMI when functional cookies are disabled|
-|Motion settings are not saved to the GMI when functional cookies are disabled|
-|Updated Audio settings are saved to the GMI with functional cookies enabled|
-|Updated Motion settings are saved to the GMI with functional cookies enabled|
-|Custom game data is not saved to the GMI when functional cookies are disabled|
-|Updated Custom settings are saved to the GMI with functional cookies enabled|
 |There are no files in the game source code which exceed the maximum file size(10MB)|
 |Any audio file within the game source code is in both .ogg & .mp3 file formats|
 |There is a build file contained within the game source code repository|
