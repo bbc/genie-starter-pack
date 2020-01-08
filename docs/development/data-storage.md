@@ -6,10 +6,7 @@ Data must be saved through the [GMI](gmi.md). This ensures all data access compl
 
 ## Cookies/Local Storage disabled
 
-In the event a user has disabled cookies/local storage, any attempt to save data will be ignored, and any attempt to retrieve data will
-return the global settings with default values.
-
-Games also adhere to the BBC 'Functional' Cookie so a user can opt out of these features. Users can manage preferences here: [Manage Cookie Settings](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings).
+Games adhere to the BBC 'Functional' Cookie so a user can opt out of these features. Users can manage preferences here: [Manage Cookie Settings](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings).
 
 *All games must be prepared to handle this scenario.*
 
@@ -45,13 +42,3 @@ gmi.getAllSettings().motion;
 gmi.getAllSettings().subtitles;
 
 ```
-
-## Testing
-
-### CAGE
-
-Once your game is built to CAGE, you can change your 'Functional' cookie preferences at [Manage Cookie Settings](http://www.bbc.co.uk/privacy/cookies/managing/cookie-settings) to see the game behave differently with different cookie settings.
-
-### Local
-Edit your index.html so that `gmi.areCookiesAllowed()` returns true/false to observe how your game behaves.
-
