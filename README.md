@@ -10,7 +10,7 @@
 
 * [Code Restrictions](./docs/development/code-restrictions.md)
 * [Games Messaging Interface (GMI)](./docs/development/gmi.md)
-* [Using Local Storage and Cookies](./docs/development/data-storage.md)
+* [Using Local Storage](./docs/development/data-storage.md)
 * [Game Settings](./docs/development/settings.md)
 * [The Signal Bus](./docs/development/signal-bus.md)
 * [Select Screen](./docs/development/select-screen.md)
