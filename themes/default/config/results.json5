@@ -1,0 +1,99 @@
+{
+    theme: {
+        results: {
+            backdrop: {
+                key: 'results.backdrop',
+                alpha: 1,
+            }, //optional added to safe area
+            statsFormat: '', // maybe?
+            rows: [
+                {
+                    format: [
+                        {
+                            type: 'text',
+                            content: 'Results Screen',
+                            offsetX: 0,
+                            offsetY: -40,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#FFFFFF',
+                            },
+                        },
+                    ],
+                    sound: [{ key: 'soundKey', start: 500 }], //what happens with motion off?
+                    transition: 'appear', // (appear|fade|pop) look at passing generic phaser ease in
+                },
+                {
+                    format: [
+                        {
+                            type: 'text',
+                            content: 'You cracked the egg(s) with ',
+                            offsetY: -80,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#FFFFFF',
+                            },
+                        },
+                        { type: 'image', key: 'game.remaining' },
+                        {
+                            type: 'text',
+                            content: '<%= remaining %> seconds remaining',
+                            offsetY: -80,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#FFFF00',
+                            },
+                        },
+                        {
+                            type: 'text',
+                            content: '!',
+                            offsetY: -80,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#FFFFFF',
+                            },
+                        },
+                    ],
+                },
+                {
+                    format: [
+                        {
+                            type: 'text',
+                            content: 'You played with ',
+                            offsetY: -20,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#FFFFFF',
+                            },
+                        },
+                        {
+                            type: 'text',
+                            content: '<%= numberOfEggs %> eggs',
+                            offsetY: -20,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#00FF00',
+                            },
+                        },
+                        {
+                            type: 'text',
+                            content: '!',
+                            offsetY: -20,
+                            textStyle: {
+                                fontFamily: 'ReithSans',
+                                fontSize: '24px',
+                                color: '#FFFFFF',
+                            },
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+}

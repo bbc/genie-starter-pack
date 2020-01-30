@@ -48,6 +48,8 @@
                     "title": "Dark Egbert"
                 }
             ],
+            rows: 1,
+            columns: 1,
         },
     },
 }

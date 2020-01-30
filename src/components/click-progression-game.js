@@ -45,25 +45,30 @@ export class ClickProgressionGame extends Screen {
 
     create() {
         this.theme = this.context.config.theme[this.scene.key];
-        this.selectedGameButton = this.transientData["character-select"].index + 1;
 
         this.addBackground();
         this.createTimer();
-        this.add.text(this.theme.text.position.x, this.theme.text.position.y, this.theme.text.content, this.theme.text.style);
+        const gameText = this.add.text(this.theme.text.position.x, this.theme.text.position.y, this.theme.text.content, this.theme.text.style);
+        gameText.setOrigin(0.5);
 
+        const character = this.transientData["character-select"];
         const level = this.transientData["level-select"];
-
+        this.selectedGameButton = level.choice.title.match(/(\d+)/)[0];
+        this.selectedGameCharacter = character.choice.title.match(/(\d+)/)[0];
+        
         const buttonPos = this.theme.gameButton.position;
         const positions = [
-            { x: buttonPos.x, y: buttonPos.y - 210 },
-            { x: buttonPos.x + 210, y: buttonPos.y - 210 },
-            { x: buttonPos.x - 210, y: buttonPos.y -210 },
-            { x: buttonPos.x, y: buttonPos.y },
-            { x: buttonPos.x + 210, y: buttonPos.y },
-            { x: buttonPos.x - 210, y: buttonPos.y },
+            { x: buttonPos.x, y: buttonPos.y - 280 },
+            { x: buttonPos.x + 210, y: buttonPos.y - 280 },
+            { x: buttonPos.x - 210, y: buttonPos.y - 280 },
+            { x: buttonPos.x, y: buttonPos.y - 140 },
+            { x: buttonPos.x + 210, y: buttonPos.y - 140 },
+            { x: buttonPos.x - 210, y: buttonPos.y - 140 },
         ]
 
-        const buttonPositions = positions.slice(0, level.index + 1);
+        let buttonPosition = 0;
+        buttonPosition = level.choice.title.match(/(\d+)/)[0];
+        const buttonPositions = positions.slice(0, buttonPosition);
 
         this.gameButtons = buttonPositions.map(pos => this.createGameButton(pos.x, pos.y))
 
@@ -81,7 +86,7 @@ export class ClickProgressionGame extends Screen {
     gameButtonClicked(button) {
         if ( button.getData("timesClicked") < 9 ) {
             button.data.values.timesClicked += 1;
-            button.setTexture("game." + "game_button_" + this.selectedGameButton + "_" + button.getData("timesClicked"));
+            button.setTexture("game." + "game_button_" + this.selectedGameCharacter + "_" + button.getData("timesClicked"));
             this.input.setHitArea(button);
         }
 
@@ -90,18 +95,19 @@ export class ClickProgressionGame extends Screen {
         if (complete) {
             const level = this.transientData["level-select"];
             const remaining = this.getTimeLeft();
+            const numberOfEggs = level.choice.title.match(/(\d+)/)[0];
             gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[${remaining}]~LVR=[WIN]~SRC=[0]`, source: level.choice.title});
             calculateAchievements(remaining);
-
-            this.transientData.results = "Finished with " + remaining + " seconds left!";
+            this.transientData.results = { remaining, numberOfEggs };
             this.navigation.next();
         }
     }
 
     gameLost() {
         const level = this.transientData["level-select"];
+        const remaining = 0;
         gmi.sendStatsEvent("level", "complete", {metadata:`SCO=[0]~LVR=[LOSE]~SRC=[0]`, source: level.choice.title});
-        this.transientData.results = "You scored 0, game over - You lost!";
+        this.transientData.results = { remaining, numberOfEggs };
         this.navigation.next();
     }
 
@@ -111,15 +117,18 @@ export class ClickProgressionGame extends Screen {
 
     createTimer() {
         this.timerEvent = this.scene.scene.time.addEvent({delay: 15000, callback: this.gameLost, callbackScope: this });
-        this.timeLeftText = this.add.text(this.theme.timer.position.x, this.theme.timer.position.y, this.getTimeLeftString(), this.theme.timer.style);
+        const timerText = this.timeLeftText = this.add.text(this.theme.timer.position.x, this.theme.timer.position.y, this.getTimeLeftString(), this.theme.timer.style);
+        timerText.setOrigin(0.5);   
     }
 
 
     createGameButton(x, y) {
-        const buttonImage = "game." + "game_button_" + this.selectedGameButton + "_0";
+        const buttonImage = "game." + "game_button_" + this.selectedGameCharacter + "_0";
+        console.log("buttonImage", buttonImage);
         const gameButton = this.add.image(x, y, buttonImage);
         gameButton.setInteractive().on("pointerdown", () => this.gameButtonClicked(gameButton));
         gameButton.setData("timesClicked", 0);
+        gameButton.setOrigin(0.5);
 
         return gameButton
     }

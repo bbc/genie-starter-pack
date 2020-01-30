@@ -2,7 +2,8 @@ import { Home } from "../node_modules/genie/src/components/home.js";
 import { Select } from "../node_modules/genie/src/components/select.js";
 import { Pause } from "../node_modules/genie/src/components/overlays/pause.js";
 import { ClickProgressionGame } from "./components/click-progression-game.js";
-import { Results } from "../node_modules/genie/src/components/results.js";
+import { Results } from "../node_modules/genie/src/components/results/results-screen.js";
+import { eventBus } from "../node_modules/genie/src/core/event-bus.js";
 import { startup } from "../node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
 import * as event from "../node_modules/genie/src/core/event-bus.js";
@@ -23,11 +24,11 @@ const settingsConfig = {
     ],
 };
 
-event.bus.subscribe({
+eventBus.subscribe({
     channel: settingsChannel,
     name: "custom1",
     callback: value => {
-        console.log("Custom 1 setting changed to " + value);
+        console.log("Custom 1 setting changed to " + value); // eslint-disable-line no-console
     },
 });
 
