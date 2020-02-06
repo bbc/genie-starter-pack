@@ -68,7 +68,7 @@ You may also add an optional backdrop object, set an alpha on the whole row, add
     alpha: 0.5,
     offsetY: -20,
     offsetX: 0
-    },
+ },
  alpha: 1, //optional
  transition: {}, // optional phaser tween config object here,
  audio: { key: 'results.woosh', delay: 0 }, // optional row audio
