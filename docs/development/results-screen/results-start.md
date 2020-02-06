@@ -78,9 +78,9 @@ To learn more on how to configure the objects in the format array, see the "Resu
 
 ## Results Object Types
 
-* [Text](./docs/results-screen/results-text.md)
-* [Sprite](./docs/results-screen/results-sprite.md)
-* [Countup](./docs/results-screen/results-countup.md)
+* [Text](./results-text.md)
+* [Sprite](./results-sprite.md)
+* [Countup](./results-countup.md)
 
 ## Frequently Asked Questions
 
