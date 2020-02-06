@@ -42,7 +42,7 @@ Optionally, you can also add a backdrop to each row, this does not have to be th
 Each row is defined in the array of rows, and the central area backdrop is defined as a backdrop object in the results config file.
 
 **Results config file:**
-```json
+```json5
 {
     theme: {
         results: {
@@ -61,7 +61,7 @@ Within each row object, there is a format array, this is an array of text/sprite
 You may also add an optional backdrop object, set an alpha on the whole row, add a phaser tween transition for the row or add audio to be played.
 
 **Row object:**
-```json
+```json5
  format: [ResultsText/Sprite/Countup object],
  backdrop: { //optional backdrop
     key: 'results.row-backdrop-1',
