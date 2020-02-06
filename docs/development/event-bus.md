@@ -9,7 +9,7 @@ An event is automatically created when the publish or subscribe methods are call
 
 Import to your module with the following code:
 ```javascript
-import { eventBus } from "../../core/event-bus.js";
+import { eventBus } from "../../node_modules/genie/src/core/event-bus.js";
 ```
 
 ### Subscription example
