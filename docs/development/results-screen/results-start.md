@@ -62,16 +62,18 @@ You may also add an optional backdrop object, set an alpha on the whole row, add
 
 **Row object:**
 ```json5
- format: [ResultsText/Sprite/Countup object],
- backdrop: { //optional backdrop
-    key: 'results.row-backdrop-1',
-    alpha: 0.5,
-    offsetY: -20,
-    offsetX: 0
- },
- alpha: 1, //optional
- transition: {}, // optional phaser tween config object here,
- audio: { key: 'results.woosh', delay: 0 }, // optional row audio
+{
+    format: [ResultsText/Sprite/Countup object],
+    backdrop: { //optional backdrop
+        key: 'results.row-backdrop-1',
+        alpha: 0.5,
+        offsetY: -20,
+        offsetX: 0
+    },
+    alpha: 1, //optional
+    transition: {}, // optional phaser tween config object here,
+    audio: { key: 'results.woosh', delay: 0 }, // optional audio
+}
 ```
 
 To learn more on how to configure the objects in the format array, see the "Results Object Types" documentation below.
@@ -82,5 +84,21 @@ To learn more on how to configure the objects in the format array, see the "Resu
 * [Sprite](./results-sprite.md)
 * [Countup](./results-countup.md)
 
+## Row Transitions and Audio
+
+* [Row Transitions](./results-transitions.md)
+* [Row Audio](./results-audio.md)
+
 ## Frequently Asked Questions
 
+#### How do I make all of the rows transition in at the same time?  
+You can set all of the delays on the Phaser Tween configuration object to be the same. Then each row will transition in at the same time. All delays are from when the screen is created.
+
+#### How do I create Pass and Fail states for my Results Screen?  
+Create two results screens and add these to the game flow in `main.js`. Then all you need to do is have your game navigate the user to either the pass or the fail screen.
+
+#### Can I use more than 4 rows for my Results Screen?
+It is not recommended to use more than 4 rows in the results screen, due to the fact text sizes would need to be made smaller and this may have an impact on readibility on smaller sized devices.
+
+#### Do I need to change the offsets on each Results row object to position them?
+Nope, by default, each object will be put alongside the previous object. If you require more space between objects, or wish to position them a bit differently, set x and y offsets on each of the objects appropriately.
