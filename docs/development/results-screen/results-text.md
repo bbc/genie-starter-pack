@@ -6,7 +6,7 @@ Set the objects type to "text" to create a results text object.
 
 | Name | Type | Default | Description |
 |------|------|----------|-------------|
-| content | string | "" | The text to be displayed - can be a string template. |
+| content | string \| template | "" | The text to be displayed - can be a string template. |
 | offsetX | integer | 0 | The x offset for this object. |
 | offsetY | integer | 0 | The y offset for this object. |
 | textStyle | [Phaser TextStyle](https://photonstorm.github.io/phaser3-docs/Phaser.Types.GameObjects.Text.html#.TextStyle) | optional | The text style config object. |
