@@ -14,6 +14,7 @@
 * [Game Settings](./docs/development/settings.md)
 * [The Signal Bus](./docs/development/signal-bus.md)
 * [Select Screen](./docs/development/select-screen.md)
+* [Results Screen](./docs/development/results-screen/results-start.md)
 * [Settings](./docs/development/settings.md)
 * [Accessibilify](./docs/development/accessibilify.md)
 * [Brim](./docs/development/brim.md)

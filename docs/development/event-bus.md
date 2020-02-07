@@ -9,7 +9,7 @@ An event is automatically created when the publish or subscribe methods are call
 
 Import to your module with the following code:
 ```javascript
-import bus from "./event-bus.js";
+import { eventBus } from "../../node_modules/genie/src/core/event-bus.js";
 ```
 
 ### Subscription example
@@ -25,7 +25,7 @@ Subscribe also returns an object with a unsubscribe method.
 
 ```javascript
 const myCallback = data => console.log(data);
-const event = event.bus.subscribe({ callback: myCallback, channel: "channelName", name: "eventName" });
+const event = eventBus.subscribe({ callback: myCallback, channel: "channelName", name: "eventName" });
 event.unsubscribe(); // removes subscription
 ```
 
@@ -41,7 +41,7 @@ It also takes a third optional property called **data** which can be any arbitra
 This is passed to the subscriber callbacks functions.
 
 ```javascript
-event.bus.publish({channel: "channelName", name: "eventName", data: [1,2,3] });
+eventBus.publish({channel: "channelName", name: "eventName", data: [1,2,3] });
 ```
 
 ## Built in Genie Events
@@ -52,7 +52,7 @@ The channel ***gel-buttons*** is used by all elements to publish messages when a
 
 **Example of subscribing to a GEL UI continue button:**
 ```javascript
-event.bus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {/*function to call*/}})
+eventBus.subscribe({channel: "gel-buttons", name: "continue", callback: () => {/*function to call*/}})
 ```
 
 ### genie-settings
@@ -62,9 +62,8 @@ The name will be that of the setting (e.g: *audio*) and the data will be the new
 
 An additional event with no message data is published with the name *settingsClosed* when the settings page is closed.
 
-### scaler
-When the game's viewport is resized a message of the format is published:
-
+### Scaler
+You can subscribe to the eventBus with the following channel and name to add a callback to the resize event:
 ```javascript
 {
 	"channel" : "scaler",
@@ -79,14 +78,14 @@ On navigating to a new screen, any subscriptions to the `gel-buttons` channel ar
 Any subscriptions to the `scaler` channel, or any other custom channels, are not automatically cleared up.  
 These should be tidied up by calling `event.unsubscribe()`.
 
-We have exposed a new event that will emit when the current screen is being navigated away from, called `onscreenexit`.  
+When the current screen is being navigated away from, a `shutdown` event is fired.  
 You can call `this.events.once` to register a one-time listener to this event, to allow cleanup between screens.
 
 **Example of clearing up a scaler subscription:**
 ```javascript
 create() {
-	this.event = event.bus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
-	this.events.once("onscreenexit", this.cleanup);
+	this.event = eventBus.subscribe({channel: "scaler", name: "sizeChange", callback: () => {/*function to call*/}})
+	this.events.once("shutdown", this.cleanup);
 }
 
 cleanup() {
