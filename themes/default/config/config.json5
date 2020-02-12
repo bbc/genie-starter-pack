@@ -3,45 +3,6 @@
         game: {
             music: "loader.backgroundMusicTwo",
             achievements: true, //enable or disable achievements for this theme
-            "text": {
-                "content": "Click eggs to hatch them!",
-                "style": {
-                    "font": "40px ReithSans",
-                    "fontWeight": "bold",
-                    "fill": "#FFFFFF"
-                },
-                "position": { "x": 160, "y": 220 }
-            },
-            "timer": {
-                "style": {
-                    "font": "30px ReithSans",
-                    "fontWeight": "bold",
-                    "fill": "#FFFFFF"
-                },
-                "position": { "x": -270, "y": 230 }
-            },
-            "gameButton": {
-                "position": { "x": -5, "y": 200 },
-                "anchor" : { "x": 0.5, "y": 1 }
-            }
-        },
-        results: {
-            backgroundAnimation: "",
-            resultText: {
-                "style": {
-                    "font": "bold 40px ReithSans",
-                    "align": "center",
-                    "fill": "#686868",
-                    "boundsAlignH": "center",
-                    "fontWeight": "bold"
-                },
-            },
-            "button-overrides": {
-                achievements: {
-                    group: "middleCenter",
-                    shiftY: 120,
-                },
-            },
         },
         pause: {
             isOverlay: true,

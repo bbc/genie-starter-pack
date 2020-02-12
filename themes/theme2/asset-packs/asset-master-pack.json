@@ -1,0 +1,75 @@
+{
+    "home": {
+        "prefix": "home.",
+        "files": [
+            {
+                "type": "image",
+                "key": "title",
+                "url": "shared/title.png",
+                "overwrite": false
+            },
+            {
+                "type": "image",
+                "key": "background",
+                "url": "shared/background.png",
+                "overwrite": false
+            }
+        ]
+    },
+    "results": {
+        "prefix": "results.",
+        "files": [
+            {
+                "type": "image",
+                "key": "background",
+                "url": "shared/background.png",
+                "overwrite": false
+            },
+            {
+                "type": "image",
+                "key": "title",
+                "url": "shared/title.png",
+                "overwrite": false
+            },
+            {
+                "type": "image",
+                "key": "backdrop",
+                "url": "results/backdrop-fill.png",
+                "overwrite": false
+            }
+        ]
+    },
+    "pause": {
+        "prefix": "pause.",
+        "files": [
+            {
+                "type": "image",
+                "key": "pauseBackground",
+                "url": "pause/pause-background.png",
+                "overwrite": false
+            }
+        ]
+    },
+    "examples": {
+        "prefix": "examples_",
+        "files": [
+            {
+                "type": "spine",
+                "key": "spine_owl",
+                "jsonURL": "examples/spine/owl/export/owl-pro.json",
+                "atlasURL": "examples/spine/owl/export/owl-pma.atlas"
+            },
+            {
+                "type": "spritesheet",
+                "key": "sprite",
+                "url": "examples/sprite/sprite-anim.png",
+                "frameConfig": {
+                    "frameWidth": 42,
+                    "frameHeight": 66,
+                    "margin": 0,
+                    "spacing": 8
+                }
+            }
+        ]
+    }
+}

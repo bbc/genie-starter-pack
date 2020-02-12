@@ -1,0 +1,32 @@
+{
+    theme: {
+        "level-select": {
+            music: "loader.backgroundMusic",
+            animations: [
+                {
+                    key: "examples_sprite",
+                    x: -400,
+                    y: -100,
+                    frames: { key: "example_sprite_animation", start: 0, end: 7, default: 0, repeat: -1, rate: 10 },
+                },
+            ],
+            choices: [
+                {
+                    asset: "carousel1",
+                    accessibilityText: "Level 1",
+                    title: "Test Level 1",
+                },
+                {
+                    asset: "carousel2",
+                    accessibilityText: "Level 2",
+                    title: "Test Level 2",
+                },
+                {
+                    asset: "carousel3",
+                    accessibilityText: "Level 3",
+                    title: "Test Level 3",
+                },
+            ],
+        },
+    },
+}

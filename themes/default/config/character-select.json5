@@ -4,14 +4,14 @@
             music: "loader.backgroundMusic",
             title: {
                 image: {
-                    imageId: "title",
+                    imageId: "",
                     xOffset: 0,
                     yOffset: 0,
                 },
                 text: {
-                    value: "",
-                    xOffset: 0,
-                    yOffset: 0,
+                    value: "Title",
+                    xOffset: -60,
+                    yOffset: -20,
                     styles: {
                         fontSize: "24px",
                     },
@@ -25,29 +25,117 @@
                     yOffset: 0,
                 },
                 text: {
-                    value: "",
+                    value: "Sub-Title",
                     xOffset: 0,
-                    yOffset: 0,
+                    yOffset: 80,
                     styles: {
-                        fontSize: "",
-                        color: "",
-                        align: "",
+                        fontSize: "16px",
                     },
                 },
-                visible: false,
+                visible: true,
+            },
+            storageKey: "characters",
+            states: {
+                locked: {
+                    asset: "suzytoo",         //key of sprite to set for. Renders same scale as base sprite so should be the same size.
+                    overlayAsset: "character-select.lock",
+                    suffix: "locked",       //appended to aria label of accessibility div
+                    x: 55,
+                    y: 60,
+                    properties: {           //phaser properties assigned to the base sprite
+                        alpha: 0.25,
+                        tint: 0xff0000,
+                    },
+                    enabled: false,         //enable or disable touch input on this state - default true
+                },
+                complete: { overlayAsset: "character-select.complete", x: 55, y: 60, suffix: "completed"},
             },
             choices: [
                 {
-                    "asset": "carousel_1",
-                    "accessibilityText": "Character 1",
-                    "title": "Egbert"
+                    id: "mary",
+                    asset: "mary",
+                    accessibilityText: "Mary",
+                    title: "Mary",
+                    state: "complete"
                 },
                 {
-                    "asset": "carousel_2",
-                    "accessibilityText": "Character 2",
-                    "title": "Dark Egbert"
+                    id: "kyle",
+                    asset: "kyle",
+                    accessibilityText: "Kyle",
+                    title: "Kyle",
+                },
+                {
+                    id: "suzy",
+                    asset: "suzy",
+                    accessibilityText: "Suzy",
+                    title: "Suzy",
+                },
+                {
+                    id: "greg",
+                    asset: "greg",
+                    accessibilityText: "Greg",
+                    title: "Greg",
+                },
+                {
+                    id: "ange",
+                    asset: "ange",
+                    accessibilityText: "Ange",
+                    title: "Ange",
+                },
+                {
+                    id: "phil",
+                    asset: "phil",
+                    accessibilityText: "Phil",
+                    title: "Phil",
+                },
+                {
+                    id: "mike",
+                    asset: "mike",
+                    accessibilityText: "Mike",
+                    title: "Mike",
+                },
+                {
+                    id: "suzytoo",
+                    asset: "suzytoo",
+                    accessibilityText: "Suzy Too",
+                    title: "Suzy Too",
+                    state: "locked",
+                },
+                {
+                    id: "timmy",
+                    asset: "timmy",
+                    accessibilityText: "Timmy",
+                    title: "Timmy",
+                    state: "locked",
+                },
+                {
+                    id: "elliot",
+                    asset: "elliot",
+                    accessibilityText: "Elliot",
+                    title: "Elliot",
+                    state: "locked",
                 }
+//                {
+//                    id: "char1",                        //Must be unique
+//                    asset: "char1",                     //Phaser asset key
+//                    accessibilityText: "Character 1",
+//                    title: "Liron Man",
+//                    anim: {
+//                        key: "character-select.char1",
+//                        frames: 18,
+//                        frameRate: 6,
+//                        yoyo: true,
+//                        repeat: -1,
+//                    },
+//                    state: "locked",
+//                },
+
             ],
+            rows: 2,
+            columns: 3,
+            ease: "Cubic.easeInOut",
+            duration: 500,
+            align: "left",
         },
     },
 }

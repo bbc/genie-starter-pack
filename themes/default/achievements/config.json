@@ -1,68 +1,67 @@
 [
     {
-        "key": "first_win",
-        "name": "Just Getting Started",
-        "description": "You managed to crack your first egg in time.",
-        "points": 100,
-        "position": "bottom"
+        "key": "achievement_1",
+        "name": "Default Achievement 1",
+        "description": "Default achievement 1",
+        "points": 100
     },
     {
-        "key": "many_wins",
-        "name": "Cracking Crazy",
-        "description": "Cracked 4 Eggs",
-        "points": 100,
-        "maxProgress": 4,
-        "position": "bottom"
+        "key": "achievement_2",
+        "name": "Default Achievement 2",
+        "description": "Default achievement 2",
+        "points": 100
     },
     {
-        "key": "many_wins_2",
-        "name": "Cracking Crazy Plus",
-        "description": "Cracked 8 Eggs",
-        "points": 100,
-        "maxProgress": 8,
-        "position": "bottom"
+        "key": "achievement_3",
+        "name": "Default Achievement 3",
+        "description": "Default achievement 3",
+        "points": 100
     },
     {
-        "key": "many_wins_3",
-        "name": "Cracking Crazy Ultra",
-        "description": "Cracked 12 Eggs",
-        "points": 100,
-        "maxProgress": 12,
-        "position": "bottom"
+        "key": "achievement_4",
+        "name": "Default Achievement 4",
+        "description": "Default achievement 4",
+        "points": 100
     },
     {
-        "key": "fast_4",
-        "name": "Egg Race",
-        "description": "You cracked an egg with 4 seconds left",
-        "points": 100,
-        "position": "bottom"
+        "key": "achievement_5",
+        "name": "Default Achievement 5",
+        "description": "Default achievement 5",
+        "points": 100
     },
     {
-        "key": "fast_6",
-        "name": "Get a Yolk On",
-        "description": "You cracked an egg with 6 seconds left",
+        "key": "achievement_6",
+        "name": "Default Achievement 6",
+        "description": "Default achievement 6 has a maxProgress of 5",
         "points": 100,
-        "position": "bottom"
+        "maxProgress": 5
     },
     {
-        "key": "fast_8",
-        "name": "Scrambled Egg",
-        "description": "You cracked an egg with 8 seconds left",
+        "key": "achievement_7",
+        "name": "Default Achievement 7",
+        "description": "Default achievement 7 has a maxProgress of 25",
         "points": 100,
-        "position": "bottom"
+        "maxProgress": 25
     },
     {
-        "key": "fast_10",
-        "name": "Poached Egg",
-        "description": "You cracked an egg with 10 seconds left",
+        "key": "achievement_8",
+        "name": "Default Achievement 8",
+        "description": "Default achievement 8 has a maxProgress of 50",
         "points": 100,
-        "position": "bottom"
+        "maxProgress": 50
     },
     {
-        "key": "fast_12",
-        "name": "Burnt Egg",
-        "description": "You cracked an egg with 12 seconds left",
+        "key": "achievement_9",
+        "name": "Default Achievement 9",
+        "description": "Default achievement 9 has a maxProgress of 75",
         "points": 100,
-        "position": "bottom"
+        "maxProgress": 75
+    },
+    {
+        "key": "achievement_10",
+        "name": "Default Achievement 10",
+        "description": "Default achievement 10 has a maxProgress of 100",
+        "points": 100,
+        "maxProgress": 100
     }
 ]
