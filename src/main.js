@@ -1,11 +1,13 @@
 import { Home } from "../node_modules/genie/src/components/home.js";
-import { Select } from "../node_modules/genie/src/components/select.js";
+import { Select } from "../node_modules/genie/src/components/select/select-screen.js";
+import { HowToPlay } from "../node_modules/genie/src/components/how-to-play.js";
 import { Pause } from "../node_modules/genie/src/components/overlays/pause.js";
-import { ClickProgressionGame } from "./components/click-progression-game.js";
-import { Results } from "../node_modules/genie/src/components/results.js";
+import { Game } from "../node_modules/genie/src/components/game.js"; // Change this to "./components/game.js" to point at the placeholder game file.
+import { Results } from "../node_modules/genie/src/components/results/results-screen.js";
 import { startup } from "../node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
-import * as event from "../node_modules/genie/src/core/event-bus.js";
+import { eventBus } from "../node_modules/genie/src/core/event-bus.js";
+import "../node_modules/genie/lib/SpinePlugin.js"; //CAN BE REMOVED IF NOT USING SPINE
 
 const settingsConfig = {
     pages: [
@@ -23,7 +25,7 @@ const settingsConfig = {
     ],
 };
 
-event.bus.subscribe({
+eventBus.subscribe({
     channel: settingsChannel,
     name: "custom1",
     callback: value => {
@@ -53,7 +55,7 @@ const screenConfig = {
         },
     },
     game: {
-        scene: ClickProgressionGame,
+        scene: Game,
         settings: {
             physics: {
                 default: "arcade",
@@ -69,15 +71,14 @@ const screenConfig = {
     results: {
         scene: Results,
         routes: {
-            next: "home",
-            game: "game",
+            continue: "level-select",
             restart: "game",
             home: "home",
         },
     },
     // Overlays
     "how-to-play": {
-        scene: Select,
+        scene: HowToPlay,
         routes: {
             home: "home",
         },
