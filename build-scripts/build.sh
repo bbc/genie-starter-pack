@@ -4,3 +4,4 @@ set -e
 npm install
 npm run build
 cp -r themes output/themes
+cp -r debug output/debug
