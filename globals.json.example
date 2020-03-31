@@ -1,3 +1,7 @@
-{
-    "PhaserSpine": "node_modules/@orange-games/phaser-spine/build/phaser-spine.js"
-}
+[
+  {
+    "moduleVar": "EasyStar",
+    "npmName": "easystarjs",
+    "url": "node_modules/easystarjs/bin/easystar-0.4.3.min.js"
+  }
+]
