@@ -1,8 +1,32 @@
 {
     theme: {
-        "character-select": {
-            columns: 3, // Number of choices to show horizontally per page. Can be 1 - 4.
-            rows: 2, // Number of choice rows to show per page. Can be either 1 or 2. When columns is 4 this is fixed to 1 row.
+        "select-1": {
+            debugLabels: [
+                {
+                    x: -390,
+                    y: -190,
+                    text: "With 1 item visible tabbing automatically advances the display\n\
+Standard behaviour of the accessible DOM is not altered.",
+                },
+                {
+                    x: 190,
+                    y: 150,
+                    text: "The system resets\n\
+when the last item\n\
+is tabbed off.",
+                },
+                {
+                    x: -320,
+                    y: 210,
+                    text: "A continue button is\n\
+added automatically\n\
+and linked to item\n\
+to signal clickability.",
+                },
+            ],
+            assetPrefix: "character-select",
+            columns: 1, // Number of choices to show horizontally per page. Can be 1 - 4.
+            rows: 1, // Number of choice rows to show per page. Can be either 1 or 2. When columns is 4 this is fixed to 1 row.
             ease: "Cubic.easeInOut", // Pagination transition type
             duration: 500, // Pagination transition duration
             align: "center", // Alignment for any remaining choices in the last row
@@ -54,7 +78,8 @@
             // Optional - provide if you want title/subtitle text to appear over each choice
             choicesStyling: {
                 default: {
-                    title: { // Styling for choice title, required to show title on choices.
+                    title: {
+                        // Styling for choice title, required to show title on choices.
                         style: {
                             fontFamily: "ReithSans",
                             fontSize: "19px",
@@ -62,14 +87,16 @@
                             backgroundColor: "#fff",
                             fixedWidth: 75, // Text will be clipped inside this width.
                             align: "center", // Aligns the text within the fixed width.
-                            padding: { // Padding around the text will show a 'block' when combined with background colour.
+                            padding: {
+                                // Padding around the text will show a 'block' when combined with background colour.
                                 left: 6,
                                 right: 6,
                                 top: 2,
                                 bottom: 2,
                             },
                         },
-                        position: { // Required if title is being shown.
+                        position: {
+                            // Required if title is being shown.
                             x: 0, // 0 is centre of asset. These values scale with and are positioned with the asset so should be calculated based off the asset pixels.
                             y: 53,
                         },
@@ -118,7 +145,7 @@
                     ariaLabel: "Kyle",
                     title: "Kyle",
                     subtitle: "Has a mohawk", // optional - for text overlay only
-                    state: "complete",
+                    state: "locked",
                 },
                 {
                     id: "suzy",
@@ -126,6 +153,7 @@
                     ariaLabel: "Suzy",
                     title: "Suzy",
                     subtitle: "Can tapdance", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "greg",
@@ -133,6 +161,7 @@
                     ariaLabel: "Greg",
                     title: "Greg",
                     subtitle: "Is a geography teacher", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "ezinma",
@@ -140,6 +169,7 @@
                     ariaLabel: "Ezinma",
                     title: "Ezinma",
                     subtitle: "Likes snowboarding", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "phil",
@@ -147,6 +177,7 @@
                     ariaLabel: "Phil",
                     title: "Phil",
                     subtitle: "Wears a baseball cap", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "mike",
@@ -154,45 +185,32 @@
                     ariaLabel: "Mike",
                     title: "Mike",
                     subtitle: "Also known as Ant", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "debby",
                     key: "debby",
                     ariaLabel: "Debbeh",
                     title: "Debbeh",
-                    state: "locked",
                     subtitle: "Has a twin called Suzy", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "timmy",
                     key: "timmy",
                     ariaLabel: "Timmy",
                     title: "Timmy",
-                    state: "locked",
                     subtitle: "Is the youngest", // optional - for text overlay only
+                    state: "locked",
                 },
                 {
                     id: "elliot",
                     key: "elliot",
                     ariaLabel: "Elliot",
                     title: "Elliot",
-                    state: "locked",
                     subtitle: "Likes astrophysics", // optional - for text overlay only
+                    state: "locked",
                 },
-                //                {
-                //                    id: "char1",                        //Must be unique
-                //                    asset: "char1",                     //Phaser asset key
-                //                    accessibilityText: "Character 1",
-                //                    title: "Liron Man",
-                //                    anim: {
-                //                        key: "character-select.char1",
-                //                        frames: 18,
-                //                        frameRate: 6,
-                //                        yoyo: true,
-                //                        repeat: -1,
-                //                    },
-                //                    state: "locked",
-                //                },
             ],
         },
     },
