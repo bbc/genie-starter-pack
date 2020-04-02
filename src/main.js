@@ -2,7 +2,7 @@ import { Home } from "../node_modules/genie/src/components/home.js";
 import { Select } from "../node_modules/genie/src/components/select/select-screen.js";
 import { HowToPlay } from "../node_modules/genie/src/components/how-to-play.js";
 import { Pause } from "../node_modules/genie/src/components/overlays/pause.js";
-import { Game } from "../node_modules/genie/src/components/game.js"; // Change this to "./components/game.js" to point at the placeholder game file.
+import { Game } from "./components/game.js";
 import { Results } from "../node_modules/genie/src/components/results/results-screen.js";
 import { startup } from "../node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
