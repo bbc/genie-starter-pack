@@ -9,7 +9,8 @@ import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
 import { eventBus } from "../node_modules/genie/src/core/event-bus.js";
 import "../node_modules/genie/lib/SpinePlugin.js"; //CAN BE REMOVED IF NOT USING SPINE
 
-const settingsConfig = {
+// Setup for BBC settings control
+const settings = {
     pages: [
         {
             title: "Custom Settings",
@@ -25,6 +26,7 @@ const settingsConfig = {
     ],
 };
 
+// Example of responding to custom game settings
 eventBus.subscribe({
     channel: settingsChannel,
     name: "custom1",
@@ -33,7 +35,12 @@ eventBus.subscribe({
     },
 });
 
-const screenConfig = {
+// Additional game options can be passed to phaser here
+const gameOptions = {
+    //pixelArt: true,
+};
+
+const screens = {
     home: {
         scene: Home,
         routes: {
@@ -95,4 +102,4 @@ const screenConfig = {
     },
 };
 
-startup(screenConfig, settingsConfig);
+startup({ screens, settings, gameOptions });
