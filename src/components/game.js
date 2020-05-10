@@ -1,4 +1,4 @@
-import { Screen } from "../../node_modules/genie/src/core/screen.js";
+import { Screen } from "/node_modules/genie/src/core/screen.js";
 
 //DELETE THE LINE BELOW AND AND UNCOMMENT THE CLASS AFTERWARDS TO START!
 export { Game as Game } from "../../node_modules/genie/src/components/game.js";
