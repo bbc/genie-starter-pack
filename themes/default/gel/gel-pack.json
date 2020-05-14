@@ -156,6 +156,18 @@
             },
             {
                 "type": "spritesheet",
+                "key": "skip",
+                "url": "gel/desktop/skip.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "frameMax": 2,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
+            {
+                "type": "spritesheet",
                 "key": "continue",
                 "url": "gel/desktop/continue.png",
                 "frameConfig": {
@@ -170,6 +182,18 @@
                 "type": "spritesheet",
                 "key": "restart",
                 "url": "gel/desktop/restart.png",
+                "frameConfig": {
+                    "frameWidth": 224,
+                    "frameHeight": 64,
+                    "frameMax": 2,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "play-again",
+                "url": "gel/desktop/play-again.png",
                 "frameConfig": {
                     "frameWidth": 224,
                     "frameHeight": 64,
@@ -206,6 +230,18 @@
                 "type": "spritesheet",
                 "key": "replay",
                 "url": "gel/desktop/replay.png",
+                "frameConfig": {
+                    "frameWidth": 120,
+                    "frameHeight": 120,
+                    "frameMax": 2,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "levels",
+                "url": "gel/desktop/levels.png",
                 "frameConfig": {
                     "frameWidth": 120,
                     "frameHeight": 120,
@@ -368,6 +404,18 @@
             },
             {
                 "type": "spritesheet",
+                "key": "skip",
+                "url": "gel/mobile/skip.png",
+                "frameConfig": {
+                    "frameWidth": 42,
+                    "frameHeight": 42,
+                    "frameMax": 2,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
+            {
+                "type": "spritesheet",
                 "key": "continue",
                 "url": "gel/mobile/continue.png",
                 "frameConfig": {
@@ -382,6 +430,18 @@
                 "type": "spritesheet",
                 "key": "restart",
                 "url": "gel/mobile/restart.png",
+                "frameConfig": {
+                    "frameWidth": 152,
+                    "frameHeight": 42,
+                    "frameMax": 2,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "play-again",
+                "url": "gel/mobile/play-again.png",
                 "frameConfig": {
                     "frameWidth": 152,
                     "frameHeight": 42,
@@ -418,6 +478,18 @@
                 "type": "spritesheet",
                 "key": "replay",
                 "url": "gel/mobile/replay.png",
+                "frameConfig": {
+                    "frameWidth": 55,
+                    "frameHeight": 55,
+                    "frameMax": 2,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "levels",
+                "url": "gel/mobile/levels.png",
                 "frameConfig": {
                     "frameWidth": 55,
                     "frameHeight": 55,
