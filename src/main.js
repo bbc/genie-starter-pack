@@ -4,6 +4,7 @@ import { HowToPlay } from "/node_modules/genie/src/components/how-to-play.js";
 import { Pause } from "/node_modules/genie/src/components/overlays/pause.js";
 import { Game } from "./components/game.js";
 import { Results } from "/node_modules/genie/src/components/results/results-screen.js";
+import { Narrative } from "/node_modules/genie/src/components/narrative.js";
 import { startup } from "/node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "/node_modules/genie/src/core/settings.js";
 import { eventBus } from "/node_modules/genie/src/core/event-bus.js";
@@ -47,8 +48,14 @@ const screens = {
             debug: "debug",
             //Example of custom routing function
             next: scene => {
-                scene.navigate("character-select");
+                scene.navigate("narrative");
             },
+        },
+    },
+    narrative: {
+        scene: Narrative,
+        routes: {
+            next: "character-select",
         },
     },
     "character-select": {
