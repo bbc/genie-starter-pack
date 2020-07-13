@@ -1,13 +1,14 @@
-import { Home } from "../node_modules/genie/src/components/home.js";
-import { Select } from "../node_modules/genie/src/components/select/select-screen.js";
-import { HowToPlay } from "../node_modules/genie/src/components/how-to-play.js";
-import { Pause } from "../node_modules/genie/src/components/overlays/pause.js";
+import { Home } from "/node_modules/genie/src/components/home.js";
+import { Select } from "/node_modules/genie/src/components/select/select-screen.js";
+import { HowToPlay } from "/node_modules/genie/src/components/how-to-play.js";
+import { Pause } from "/node_modules/genie/src/components/overlays/pause.js";
 import { Game } from "./components/game.js";
-import { Results } from "../node_modules/genie/src/components/results/results-screen.js";
-import { startup } from "../node_modules/genie/src/core/startup.js";
-import { settingsChannel } from "../node_modules/genie/src/core/settings.js";
-import { eventBus } from "../node_modules/genie/src/core/event-bus.js";
-import "../node_modules/genie/lib/SpinePlugin.js"; //CAN BE REMOVED IF NOT USING SPINE
+import { Results } from "/node_modules/genie/src/components/results/results-screen.js";
+import { Narrative } from "/node_modules/genie/src/components/narrative.js";
+import { startup } from "/node_modules/genie/src/core/startup.js";
+import { settingsChannel } from "/node_modules/genie/src/core/settings.js";
+import { eventBus } from "/node_modules/genie/src/core/event-bus.js";
+import "/node_modules/genie/lib/SpinePlugin.min.js"; //CAN BE REMOVED IF NOT USING SPINE
 
 // Setup for BBC settings control
 const settings = {
@@ -47,8 +48,14 @@ const screens = {
             debug: "debug",
             //Example of custom routing function
             next: scene => {
-                scene.navigate("character-select");
+                scene.navigate("narrative");
             },
+        },
+    },
+    narrative: {
+        scene: Narrative,
+        routes: {
+            next: "character-select",
         },
     },
     "character-select": {
@@ -98,6 +105,7 @@ const screens = {
         scene: Pause,
         routes: {
             home: "home",
+            select: "character-select",
         },
     },
 };

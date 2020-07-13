@@ -64,9 +64,8 @@ You may also add an optional backdrop object, set an alpha on the whole row, add
 ```json5
 {
     format: [ResultsText/Sprite/Countup object],
-    backdrop: { //optional backdrop
+    backdrop: { //optional row backdrop
         key: 'results.row-backdrop-1',
-        alpha: 0.5,
         offsetY: -20,
         offsetX: 0
     },
@@ -81,6 +80,7 @@ To learn more on how to configure the objects in the format array, see the "Resu
 ## Results Object Types
 
 * [Text](./results-text.md)
+* [BitmapText](./results-bitmaptext.md)
 * [Sprite](./results-sprite.md)
 * [Countup](./results-countup.md)
 
@@ -92,6 +92,15 @@ To learn more on how to configure the objects in the format array, see the "Resu
 ## Row Particles
 
 * [Row Particles](./results-particles.md)
+
+## 'Restart' button for a complete game
+
+When a game is determined to be in a complete state, the restart button should be replaced with a 'Play again' button.
+This is done by setting the data in your game component:  
+ 
+`this.transientData.results.gameComplete = true;`
+
+The user can be sent to the appropriate screen for a complete game using the routes API.
 
 ## Frequently Asked Questions
 

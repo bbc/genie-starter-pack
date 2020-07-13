@@ -1,6 +1,4 @@
 {
-    theme: {
-        "results-10-sec": {
             debugLabels: [
                 {
                     x: -390,
@@ -9,13 +7,9 @@
                 },
             ],
             assetPrefix: "results",
-            furniture: [
-                {
-                    key: "home.background",
-                    x: 0,
-                    y: 0,
-                },
-            ],
+            background: {
+                items: [{ key: "home.background", x: 0, y: 0 }],
+            },
             backdrop: {
                 // Optional central area backdrop.
                 key: "results.backdrop", // Asset key.
@@ -98,7 +92,6 @@
                     backdrop: {
                         // Optional row backdrop
                         key: "results.row-backdrop-1", // asset key
-                        alpha: 0,
                         offsetY: -20,
                     },
                     alpha: 1, // Set the alpha on the whole row
@@ -176,7 +169,6 @@
                     ],
                     backdrop: {
                         key: "results.row-backdrop-2",
-                        alpha: 0,
                         offsetY: -20,
                     },
                     alpha: 0,
@@ -250,7 +242,6 @@
                     ],
                     backdrop: {
                         key: "results.row-backdrop-3",
-                        alpha: 0,
                         offsetY: -20,
                     },
                     alpha: 0,
@@ -264,6 +255,4 @@
                     audio: { key: "results.boing", delay: 5500 },
                 },
             ],
-        },
-    },
 }
