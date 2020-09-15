@@ -29,6 +29,11 @@
             },
             {
                 "type": "json5",
+                "key": "debug-results-conditional-assets",
+                "url": "../../debug/examples/results-conditional-assets.json5"
+            },
+            {
+                "type": "json5",
                 "key": "debug-results-10-sec",
                 "url": "../../debug/examples/results-10-sec.json5"
             },
@@ -109,7 +114,6 @@
                 "key": "spray",
                 "url": "../../debug/assets/particles/spray.json"
             },
-
             {
                 "type": "image",
                 "key": "rockpool",
@@ -149,6 +153,16 @@
                 "type": "audio",
                 "key": "dialogue5",
                 "url": "../../debug/assets/narrative/dialogue_5.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "results_0",
+                "url": "../../debug/assets/audio/results_0.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "results_1",
+                "url": "../../debug/assets/audio/results_1.mp4"
             },
             {
                 "type": "particles",
@@ -197,6 +211,26 @@
                     "margin": 0,
                     "spacing": 8
                 }
+            },
+            {
+                "type": "image",
+                "key": "stars_0",
+                "url": "../../debug/assets/sprite/stars_0.png"
+            },
+            {
+                "type": "image",
+                "key": "stars_1",
+                "url": "../../debug/assets/sprite/stars_1.png"
+            },            
+            {
+                "type": "image",
+                "key": "stars_2",
+                "url": "../../debug/assets/sprite/stars_2.png"
+            },            
+            {
+                "type": "image",
+                "key": "stars_3",
+                "url": "../../debug/assets/sprite/stars_3.png"
             },
             {
                 "key": "uiFont",
