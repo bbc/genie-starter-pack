@@ -29,6 +29,11 @@
             },
             {
                 "type": "json5",
+                "key": "debug-results-conditional-assets",
+                "url": "../../debug/examples/results-conditional-assets.json5"
+            },
+            {
+                "type": "json5",
                 "key": "debug-results-10-sec",
                 "url": "../../debug/examples/results-10-sec.json5"
             },
@@ -56,6 +61,26 @@
                 "type": "json5",
                 "key": "debug-narrative",
                 "url": "../../debug/examples/narrative.json5"
+            },
+            {
+                "type": "json5",
+                "key": "debug-shop",
+                "url": "../../debug/examples/shop.json5"
+            },
+            {
+                "type": "json5",
+                "key": "debug-shop-demo",
+                "url": "../../debug/examples/shop-demo.json5"
+            },
+            {
+                "type": "json5",
+                "key": "debug-shop-demo-game",
+                "url": "../../debug/examples/shop-demo-game.json5"
+            },
+            {
+                "type": "json5",
+                "key": "debug-shop-demo-shop",
+                "url": "../../debug/examples/shop-demo-shop.json5"
             }
         ]
     },
@@ -109,7 +134,6 @@
                 "key": "spray",
                 "url": "../../debug/assets/particles/spray.json"
             },
-
             {
                 "type": "image",
                 "key": "rockpool",
@@ -149,6 +173,16 @@
                 "type": "audio",
                 "key": "dialogue5",
                 "url": "../../debug/assets/narrative/dialogue_5.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "results_0",
+                "url": "../../debug/assets/audio/results_0.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "results_1",
+                "url": "../../debug/assets/audio/results_1.mp4"
             },
             {
                 "type": "particles",
@@ -199,6 +233,26 @@
                 }
             },
             {
+                "type": "image",
+                "key": "stars_0",
+                "url": "../../debug/assets/sprite/stars_0.png"
+            },
+            {
+                "type": "image",
+                "key": "stars_1",
+                "url": "../../debug/assets/sprite/stars_1.png"
+            },
+            {
+                "type": "image",
+                "key": "stars_2",
+                "url": "../../debug/assets/sprite/stars_2.png"
+            },
+            {
+                "type": "image",
+                "key": "stars_3",
+                "url": "../../debug/assets/sprite/stars_3.png"
+            },
+            {
                 "key": "uiFont",
                 "type": "bitmapFont",
                 "textureURL": "../../debug/assets/bitmaptext/uifont.png",
@@ -236,6 +290,150 @@
                     "frameMax": 2,
                     "margin": 0,
                     "spacing": 4
+                }
+            }
+        ]
+    },
+    "shopDemo": {
+        "prefix": "shopDemo.",
+        "files": [
+            {
+                "type": "audio",
+                "key": "coinGet",
+                "url": "../../debug/assets/shop-demo/coin_get.wav"
+            },
+            {
+                "type": "audio",
+                "key": "whiff",
+                "url": "../../debug/assets/shop-demo/whiff.wav"
+            },
+            {
+                "type": "audio",
+                "key": "hit",
+                "url": "../../debug/assets/shop-demo/hit.wav"
+            },
+            {
+                "type": "image",
+                "key": "background",
+                "url": "../../debug/assets/shop-demo/background.jpg"
+            },
+            {
+                "type": "image",
+                "key": "tree1",
+                "url": "../../debug/assets/shop-demo/tree1.png"
+            },
+            {
+                "type": "image",
+                "key": "tree2",
+                "url": "../../debug/assets/shop-demo/tree2.png"
+            },
+            {
+                "type": "image",
+                "key": "ironHatIcon",
+                "url": "../../debug/assets/shop-demo/invent-helm-default.png"
+            },
+            {
+                "type": "image",
+                "key": "greenHatIcon",
+                "url": "../../debug/assets/shop-demo/invent-helm-green.png"
+            },
+            {
+                "type": "image",
+                "key": "redHatIcon",
+                "url": "../../debug/assets/shop-demo/invent-helm-red.png"
+            },
+            {
+                "type": "image",
+                "key": "purpleHatIcon",
+                "url": "../../debug/assets/shop-demo/invent-helm-purple.png"
+            },
+            {
+                "type": "image",
+                "key": "goldHatIcon",
+                "url": "../../debug/assets/shop-demo/invent-helm-gold.png"
+            },
+            {
+                "type": "spritesheet",
+                "key": "ironHat",
+                "url": "../../debug/assets/shop-demo/dwarf_sprite.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "frameMax": 24,
+                    "margin": 0,
+                    "spacing": 0
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "redHat",
+                "url": "../../debug/assets/shop-demo/dwarf_sprite_red.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "frameMax": 24,
+                    "margin": 0,
+                    "spacing": 0
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "greenHat",
+                "url": "../../debug/assets/shop-demo/dwarf_sprite_green.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "frameMax": 24,
+                    "margin": 0,
+                    "spacing": 0
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "purpleHat",
+                "url": "../../debug/assets/shop-demo/dwarf_sprite_purple.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "frameMax": 24,
+                    "margin": 0,
+                    "spacing": 0
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "goldHat",
+                "url": "../../debug/assets/shop-demo/dwarf_sprite_gold.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "frameMax": 24,
+                    "margin": 0,
+                    "spacing": 0
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "coin",
+                "url": "../../debug/assets/shop-demo/coin.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "frameMax": 8,
+                    "margin": 0,
+                    "spacing": 0
+                }
+            },
+            {
+                "type": "spritesheet",
+                "key": "coinPop",
+                "url": "../../debug/assets/shop-demo/pop.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "frameMax": 6,
+                    "margin": 0,
+                    "spacing": 0
                 }
             }
         ]

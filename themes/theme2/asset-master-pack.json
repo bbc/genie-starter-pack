@@ -1,23 +1,66 @@
 {
-    "examples": {
-        "prefix": "examples_",
+    "rotation": {
+        "prefix": "rotation.",
         "files": [
             {
-                "type": "spine",
-                "key": "spine_owl",
-                "jsonURL": "examples/spine/owl/export/owl-pro.json",
-                "atlasURL": "examples/spine/owl/export/owl-pma.atlas"
+                "type": "image",
+                "key": "basicSprite",
+                "url": "game/basic-sprite.png"
+            }
+        ]
+    },
+    "collision": {
+        "prefix": "collision.",
+        "files": [
+            {
+                "type": "image",
+                "key": "basicSprite",
+                "url": "game/basic-sprite.png"
+            }
+        ]
+    },
+    "fps": {
+        "prefix": "fps.",
+        "files": [
+            {
+                "type": "image",
+                "key": "basicSprite",
+                "url": "game/basic-sprite.png"
+            }
+        ]
+    },
+    "tweening": {
+        "prefix": "tweening.",
+        "files": [
+            {
+                "type": "image",
+                "key": "basicSprite",
+                "url": "game/basic-sprite.png"
+            }
+        ]
+    },
+    "tiled": {
+        "prefix": "tiled.",
+        "files": [
+            {
+                "type": "image",
+                "key": "basicSprite",
+                "url": "game/basic-sprite.png"
             },
             {
-                "type": "spritesheet",
-                "key": "sprite",
-                "url": "examples/sprite/sprite-anim.png",
-                "frameConfig": {
-                    "frameWidth": 42,
-                    "frameHeight": 66,
-                    "margin": 0,
-                    "spacing": 8
-                }
+                "type": "image",
+                "key": "grassTile",
+                "url": "game/grass-tile.png"
+            }
+        ]
+    },
+    "spriteGroup": {
+        "prefix": "sprite-group.",
+        "files": [
+            {
+                "type": "image",
+                "key": "basicSprite",
+                "url": "game/basic-sprite.png"
             }
         ]
     }
