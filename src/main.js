@@ -8,7 +8,12 @@ import { Narrative } from "/node_modules/genie/src/components/narrative.js";
 import { startup } from "/node_modules/genie/src/core/startup.js";
 import { settingsChannel } from "/node_modules/genie/src/core/settings.js";
 import { eventBus } from "/node_modules/genie/src/core/event-bus.js";
-import "/node_modules/genie/lib/SpinePlugin.min.js"; //CAN BE REMOVED IF NOT USING SPINE
+/*
+    IMPORTANT NOTE FOR AGENCIES
+
+    Do not arbitrarily change the above built in Genie screens for copies with your own modifications
+    without prior consent from a BBC project manager
+*/
 
 // Setup for BBC settings control
 const settings = {
