@@ -1,0 +1,52 @@
+{
+    music: "home.backgroundMusic",
+    background: {
+        items: [{ key: "shop-menu.magicShop", x: 0, y: 0 }],
+    },
+    styleDefaults: {
+        fontFamily: "ReithSans",
+        fontSize: "24px",
+        resolution: 2,
+        align: "center",
+    },
+    title: {
+        text: "Shop",
+        style: {
+            fontFamily: "ReithSerif",
+            fontStyle: "bold",
+            fontSize: "32px",
+            color: "#4A381F"
+        },
+        backgroundKey: "shop-menu.titleBackground",
+    },
+    subtitle: {
+        text: "<%= balance %>",
+        style: {
+            fontFamily: "ReithSerif",
+            fontSize: "24px",
+        },
+        backgroundKey: "shop-menu.balanceBackground",
+        icon : {
+            key: "shop-menu.balanceIcon",
+        },
+    },
+    collection: ["shop-items", "inventory"],
+    shopConfig: {
+        shopCollections: {
+            shop: "shop-items",
+            manage: "inventory",
+        },
+        balance: "coin",
+        slots: { // Create slots for equippable items and set the maximum amount equippable per slot.
+            helmet: { max: 1 },
+            shield: { max: 1 },
+        },
+    },
+    menu: {
+        buttonsRight: true,
+        buttons: {
+            key: "shop-menu.button",
+            styles: { fontStyle: "bold", fontSize: "16px" },
+        },
+    },
+}

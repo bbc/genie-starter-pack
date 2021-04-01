@@ -14,7 +14,7 @@ The game sequence can then be configured by editing: `src/main.js`. Inside `main
 
 New screens (including the gameplay component) should be created in the `components` folder.
 
-You can preview your game by running a server using `npm start`. It can then be viewed in a browser at http://localhost:8000/ or at the local network address printed in the console. Changes to the source will require a refresh of the page on all devices currently viewing the page. This command runs the code directly without webpacking it first.
+You can preview your game by running a server using `npm start`. It can then be viewed in a browser at http://localhost:9000/ or at the local network address printed in the console. Changes to the source will require a refresh of the page on all devices currently viewing the page. This command runs the code directly without webpacking it first.
 
 To webpack the code and then run a server, use `npm start:pack`. This command will also add inline sourcemaps (when using Genie 1.0.12 or later).  
 Please note to preview your game in IE11 and Safari, you will need to use this command.
@@ -23,7 +23,7 @@ To build your game using Webpack, use `npm run build`.
 
 ## QA and Debug
 
-The debug query string may be added to the end to view the game in debug Mode. This enabled toggle buttons for graphical overlays and gives additional console output http://localhost:8000/?debug=true.
+The debug query string may be added to the end to view the game in debug Mode. This enabled toggle buttons for graphical overlays and gives additional console output http://localhost:9000/?debug=true.
 
 These debug buttons are available:
 - Q : layout overlay
@@ -35,12 +35,11 @@ These debug buttons are available:
 ## ES6 Modules
 
 Code should be packaged as ES6 modules.
-See `src\click-progression-game.js` as an example starting point for a game.
+See `src\main.js` as an example starting point for a game.
 
 ## Global Script
 
 Any required global scripts (tools / libs etc) should be loaded via the `globals.json` file in the root.
-See `globals.json.example` for how this works.
 
 They can be loaded from `node_modules` folder or otherwise should be placed in a `vendor` folder.
 

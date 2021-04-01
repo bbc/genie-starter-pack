@@ -1,0 +1,174 @@
+{
+    assetPrefix: "debug-shop", // used for debug screens
+    music: "home.backgroundMusic",
+    background: {
+        items: [{ key: "debug-shop.magicShop", x: 0, y: 0 }],
+    },
+    styleDefaults: {
+        fontFamily: "ReithSans",
+        fontSize: "24px",
+        resolution: 2,
+        align: "center",
+    },
+    title: {
+        text: "<%= title %>",
+        style: {
+            fontFamily: "ReithSerif",
+            fontStyle: "bold",
+            fontSize: "32px",
+            color: "#4A381F"
+        },
+        backgroundKey: "debug-shop-list.titleBackground",
+    },
+    subtitle: {
+        text: "<%= balance %>",
+        style: {
+            fontFamily: "ReithSerif",
+            fontSize: "24px",
+        },
+        backgroundKey: "debug-shop.balanceBackground",
+        icon : {
+            key: "debug-shop.balanceIcon",
+        },
+    },
+    listPadding: {
+        x: 18.86,
+        y: 18.86,
+        outerPadFactor: 1,
+    },
+    backgrounds: {
+        shop: { key: "background", columns: [20, null, 20], rows: [20, null, 20] },
+        manage: { key: "background", columns: [20, null, 20], rows: [20, null, 20] },
+    },
+    states: { locked: { properties: { alpha: 0.5, tint: 0xaaaaaa }, disabled: true } },
+    overlay: {
+        items: [
+            {
+                type: "image",
+                name: "itemIcon",
+                assetKey: "${icon}",
+                position: { align: "left", offsetX: 35, offsetY: 0 },
+                size: 76,
+                inheritProperties: true,
+            },
+            {
+                type: "text",
+                name: "itemName",
+                value: "${title}",
+                position: { align: "left", offsetX: 80, offsetY: -18 },
+                styles: { fontSize: "16px", fontStyle: "bold" },
+            },
+        ],
+        options: {
+            shop: [
+                {
+                    type: "text",
+                    name: "currencyAmount",
+                    value: "${price}",
+                    position: { align: "right", offsetX: -46, offsetY: -7 },
+                    styles: { fontSize: "14px" },
+                    showWhen: ["available"],
+                },
+                {
+                    type: "image",
+                    name: "currency",
+                    assetKey: "debug-shop.currency",
+                    position: { align: "right", offsetX: -68, offsetY: 0 },
+                    showWhen: ["available"],
+                },
+                {
+                    type: "image",
+                    name: "lock",
+                    assetKey: "debug-shop.lockIcon",
+                    position: { align: "left", offsetX: 56, offsetY: 20 },
+                    showWhen: ["locked"],
+                },
+                {
+                    type: "text",
+                    name: "unlockHint",
+                    value: "${hint}",
+                    position: { align: "left", offsetX: 80, offsetY: 4 },
+                    styles: { fontSize: "14px" },
+                    showWhen: ["locked"],
+                },
+                {
+                    type: "text",
+                    name: "purchased",
+                    value: "Purchased",
+                    position: { align: "right", offsetX: -108, offsetY: -10 },
+                    styles: { fontSize: "16px", align: "right" },
+                    showWhen: ["unavailable"],
+                },
+                {
+                    type: "text",
+                    name: "subtitle",
+                    value: "${subtitle}",
+                    position: { align: "left", offsetX: 80, offsetY: 4 },
+                    styles: { fontSize: "12px" },
+                    showWhen: ["equippable", "unlocked"],
+                },
+                {
+                    type: "text",
+                    name: "itemStockLevel",
+                    value: "${qty} in stock",
+                    position: { align: "left", offsetX: 80, offsetY: 4 },
+                    styles: { fontSize: "12px" },
+                    showWhen: ["consumable"],
+                },
+            ],
+            manage: [
+                {
+                    type: "image",
+                    name: "itemIcon",
+                    assetKey: "${icon}",
+                    position: { align: "left", offsetX: 35, offsetY: 0 },
+                    size: 76,
+                },
+                {
+                    type: "text",
+                    name: "equip",
+                    value: "Equip",
+                    position: { align: "right", offsetX: -76, offsetY: -10 },
+                    styles: { fontSize: "16px", align: "right" },
+                    showWhen: ["cta", "equippable"],
+                },
+                {
+                    type: "text",
+                    name: "subtitle",
+                    value: "${subtitle}",
+                    position: { align: "left", offsetX: 80, offsetY: 4 },
+                    styles: { fontSize: "12px" },
+                    showWhen: ["equippable"],
+                },
+                {
+                    type: "text",
+                    name: "equipped",
+                    value: "Equipped",
+                    position: { align: "right", offsetX: -96, offsetY: -10 },
+                    styles: { fontSize: "16px", align: "right" },
+                    showWhen: ["actioned", "equippable"],
+                },
+                {
+                    type: "text",
+                    name: "itemStockLevel",
+                    value: "${qty} in inventory",
+                    position: { align: "left", offsetX: 80, offsetY: 4 },
+                    styles: { fontSize: "12px" },
+                    showWhen: ["consumable"],
+                },
+            ],
+        },
+    },
+    emptyList: {
+        shop: {
+            value: "Nothing to buy",
+            position: { offsetX: 0, offsetY: 0 },
+            styles: { fontSize: "24px" },
+        },
+        manage: {
+            value: "You have no equippables",
+            position: { offsetX: 0, offsetY: 0 },
+            styles: { fontSize: "24px" },
+        }
+    }
+}

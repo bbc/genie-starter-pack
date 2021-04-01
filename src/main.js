@@ -1,5 +1,6 @@
 import { Home } from "/node_modules/genie/src/components/home.js";
 import { Select } from "/node_modules/genie/src/components/select/select-screen.js";
+import { Shop } from "/node_modules/genie/src/components/shop/shop.js";
 import { HowToPlay } from "/node_modules/genie/src/components/how-to-play.js";
 import { Pause } from "/node_modules/genie/src/components/overlays/pause.js";
 import { Game } from "./components/game.js";
@@ -100,6 +101,9 @@ const screens = {
         },
     },
     // Overlays
+    shop: {
+        scene: Shop,
+    },
     "how-to-play": {
         scene: HowToPlay,
         routes: {

@@ -1,0 +1,65 @@
+{
+    assetPrefix: "debug-shop-confirm", // used for debug screens
+    music: "home.backgroundMusic",
+    background: {
+        items: [{ key: "debug-shop.magicShop", x: 0, y: 0 }],
+    },
+    title: {
+        text: "<%= action %>",
+        style: {
+            fontFamily: "ReithSerif",
+            fontStyle: "bold",
+            fontSize: "32px",
+            color: "#4A381F"
+        },
+        backgroundKey: "debug-shop-confirm.titleBackground",
+    },
+    subtitle: {
+        text: "<%= balance %>",
+        style: {
+            fontFamily: "ReithSerif",
+            fontSize: "24px",
+        },
+        backgroundKey: "debug-shop.balanceBackground",
+        icon: {
+            key: "debug-shop.balanceIcon",
+        },
+    },
+    styleDefaults: {
+        fontFamily: "ReithSans",
+        fontSize: "24px",
+        resolution: 2,
+        align: "center",
+    },
+    confirm: {
+        audio: {
+            buy: "buy",
+            equip: "equip",
+            unequip: "unequip",
+            use: "use",
+        },
+        buttons: {
+            buttonsRight: true,
+            key: "debug-shop.button",
+            cancelKey: "debug-shop.buttonCancel",
+            styles: { fontStyle: "bold", fontSize: "16px" },
+        },
+        background: "halfViewBackground",
+        itemBackground: "itemBackground",
+        detailView: true,
+        prompt: {
+            buy: {
+                legal: "Purchase this item?",
+                illegal: "You can't afford this.",
+                unavailable: "You already own this.",
+            },
+            equip: { legal: "Equip this item?", illegal: "Cannot equip this." },
+            unequip: "Unequip this item?",
+            use: "Use this item?",
+            styles: { fontStyle: "bold", fontSize: "20px" },
+        },
+        title: { styles: { fontStyle: "bold" } },
+        subtitle: { styles: { color: "#bd6", fontSize: "22px", fontStyle: "bold" } },
+        description: { styles: { fontStyle: "italic", lineSpacing: 5, fontSize: "20px" }, padding: 30 },
+    },
+}

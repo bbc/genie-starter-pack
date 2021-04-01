@@ -1,7 +1,6 @@
 # BBC Games - Genie Starter Pack
 
 * [Genie - Getting Started](./docs/getting-started.md)
-* [Genie Component Delivery Definitions](./docs/genie-component-delivery-definitions.md)
 * [Developing a Gameplay Component](./docs/development/gameplay-component.md)
 * [Creating a Theme](./docs/theming.md)
 * [Tech Review Tool](./docs/tech-review-tool.md)
