@@ -310,7 +310,7 @@
             {
                 "type": "image",
                 "key": "titleBackground",
-                "url": "../../debug/assets/shop/title_background.png"
+                "url": "../../debug/assets/shop/title-background.png"
             }
         ]
     },
@@ -320,7 +320,7 @@
             {
                 "type": "image",
                 "key": "titleBackground",
-                "url": "../../debug/assets/shop/title_background.png"
+                "url": "../../debug/assets/shop/title-background.png"
             }
         ]
     },
@@ -330,12 +330,52 @@
             {
                 "type": "image",
                 "key": "titleBackground",
-                "url": "../../debug/assets/shop/title_background.png"
+                "url": "../../debug/assets/shop/title-background.png"
             },
             {
                 "type": "image",
                 "key": "currencyIcon",
                 "url": "../../debug/assets/shop/currency.png"
+            },
+            {
+                "type": "image",
+                "key": "halfViewBackground",
+                "url": "../../debug/assets/shop/half-panel.png"
+            },
+            {
+                "type": "image",
+                "key": "halfViewBackgroundPlain",
+                "url": "../../debug/assets/shop/half-panel-plain.png"
+            },
+            {
+                "type": "image",
+                "key": "itemBackground",
+                "url": "../../debug/assets/shop/item-background.png"
+            },
+            {
+                "type": "image",
+                "key": "itemBackgroundLarge",
+                "url": "../../debug/assets/shop/item-background-large.png"
+            },
+            {
+                "type": "audio",
+                "key": "buy",
+                "url": "../../debug/assets/shop/till.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "equip",
+                "url": "../../debug/assets/shop/equip.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "unequip",
+                "url": "../../debug/assets/shop/unequip.mp4"
+            },
+            {
+                "type": "audio",
+                "key": "use",
+                "url": "../../debug/assets/shop/use.mp4"
             }
         ]
     },
@@ -345,27 +385,27 @@
             {
                 "type": "image",
                 "key": "magicShop",
-                "url": "../../debug/assets/shop/magic_shop_bg.png"
+                "url": "../../debug/assets/shop/magic-shop-bg.png"
             },
             {
                 "type": "image",
                 "key": "background",
-                "url": "../../debug/assets/shop/wood_panel.png"
+                "url": "../../debug/assets/shop/wood-panel.png"
             },
             {
                 "type": "image",
                 "key": "itemViewBackground",
-                "url": "../../debug/assets/shop/item_panel.png"
+                "url": "../../debug/assets/shop/item-panel.png"
             },
             {
                 "type": "image",
                 "key": "halfViewBackground",
-                "url": "../../debug/assets/shop/half_panel.png"
+                "url": "../../debug/assets/shop/half-panel.png"
             },
             {
                 "type": "image",
                 "key": "background",
-                "url": "../../debug/assets/shop/wood_panel.png"
+                "url": "../../debug/assets/shop/wood-panel.png"
             },
             {
                 "type": "image",
@@ -380,32 +420,32 @@
             {
                 "type": "image",
                 "key": "balanceBackground",
-                "url": "../../debug/assets/shop/balance_background.png"
+                "url": "../../debug/assets/shop/balance-background.png"
             },
             {
                 "type": "image",
                 "key": "balanceIcon",
-                "url": "../../debug/assets/shop/balance_icon.png"
+                "url": "../../debug/assets/shop/balance-icon.png"
             },
             {
                 "type": "image",
                 "key": "titleBackground",
-                "url": "../../debug/assets/shop/title_background.png"
+                "url": "../../debug/assets/shop/title-background.png"
             },
             {
                 "type": "image",
                 "key": "menuButtonIcon",
-                "url": "../../debug/assets/shop/menu_button_icon.png"
+                "url": "../../debug/assets/shop/menu-button-icon.png"
             },
             {
                 "type": "image",
                 "key": "lockIcon",
-                "url": "../../debug/assets/shop/lock_icon.png"
+                "url": "../../debug/assets/shop/lock-icon.png"
             },
             {
                 "type": "spritesheet",
-                "key": "menuButtonBackground",
-                "url": "../../debug/assets/shop/green_button.png",
+                "key": "button",
+                "url": "../../debug/assets/shop/green-button.png",
                 "frameConfig": {
                     "frameWidth": 113,
                     "frameHeight": 42,
@@ -414,11 +454,22 @@
                     "spacing": 4
                 }
             },
-
+            {
+                "type": "spritesheet",
+                "key": "buttonCancel",
+                "url": "../../debug/assets/shop/red-button.png",
+                "frameConfig": {
+                    "frameWidth": 113,
+                    "frameHeight": 42,
+                    "frameMax": 1,
+                    "margin": 0,
+                    "spacing": 4
+                }
+            },
             {
                 "type": "spritesheet",
                 "key": "itemBackground",
-                "url": "../../debug/assets/shop/item_block.png",
+                "url": "../../debug/assets/shop/item-block.png",
                 "frameConfig": {
                     "frameWidth": 378,
                     "frameHeight": 64,
@@ -442,7 +493,7 @@
             {
                 "type": "spritesheet",
                 "key": "currency",
-                "url": "../../debug/assets/shop/currency_small.png",
+                "url": "../../debug/assets/shop/currency-small.png",
                 "frameConfig": {
                     "frameWidth": 31,
                     "frameHeight": 24,

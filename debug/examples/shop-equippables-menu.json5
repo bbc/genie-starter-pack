@@ -13,15 +13,17 @@
     title: {
         text: "Shop",
         style: {
+            fontFamily: "ReithSerif",
             fontStyle: "bold",
             fontSize: "32px",
+            color: "#4A381F"
         },
         backgroundKey: "debug-shop-menu.titleBackground",
     },
     subtitle: {
         text: "<%= balance %>",
         style: {
-            fontFamily: "ReithSans",
+            fontFamily: "ReithSerif",
             fontSize: "24px",
         },
         backgroundKey: "debug-shop.balanceBackground",
@@ -45,7 +47,7 @@
     menu: {
         buttonsRight: true,
         buttons: {
-            key: "debug-shop.menuButtonBackground",
+            key: "debug-shop.button",
             styles: { fontStyle: "bold", fontSize: "16px" },
         },
     },

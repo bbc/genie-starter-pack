@@ -7,15 +7,17 @@
     title: {
         text: "<%= action %>",
         style: {
+            fontFamily: "ReithSerif",
             fontStyle: "bold",
             fontSize: "32px",
+            color: "#4A381F"
         },
         backgroundKey: "debug-shop-confirm.titleBackground",
     },
     subtitle: {
         text: "<%= balance %>",
         style: {
-            fontFamily: "ReithSans",
+            fontFamily: "ReithSerif",
             fontSize: "24px",
         },
         backgroundKey: "debug-shop.balanceBackground",
@@ -30,26 +32,34 @@
         align: "center",
     },
     confirm: {
+        audio: {
+            buy: "buy",
+            equip: "equip",
+            unequip: "unequip",
+            use: "use"
+        },
         buttons: {
             buttonsRight: true,
-            key: "debug-shop.menuButtonBackground",
+            key: "debug-shop.button",
+            cancelKey: "debug-shop.buttonCancel",
             styles: { fontStyle: "bold", fontSize: "16px" },
         },
-        background: "debug-shop.halfViewBackground",
-        detailView: true,
+        background: "halfViewBackgroundPlain",
+        itemBackground: "itemBackgroundLarge",
+        detailView: false,
         prompt: {
             buy: {
                 legal: "Purchase this item?",
                 illegal: "You can't afford this.",
                 unavailable: "You already own this.",
             },
-            equip: { legal: "Do you want to \nequip this item?", illegal: "You cannot equip\nthis item." },
-            unequip: "Do you want to \nunequip this item?",
-            use: "Do you want to use\nthis item?",
+            equip: { legal: "Equip this item?", illegal: "Cannot equip this." },
+            unequip: "Unequip this item?",
+            use: "Use this item?",
             styles: { fontStyle: "bold" },
         },
         title: { styles: { fontStyle: "bold" } },
-        detail: { styles: { color: "#bd6", fontStyle: "bold" } },
-        description: { styles: { fontStyle: "italic", lineSpacing: 5 } },
+        subtitle: { styles: { color: "#bd6", fontSize: "22px", fontStyle: "bold" } },
+        description: { styles: { fontStyle: "italic", lineSpacing: 5, fontSize: "20px" }, padding: 30 }
     },
 }
