@@ -9,6 +9,11 @@
             },
             {
                 "type": "image",
+                "key": "shopKeeper",
+                "url": "shop-menu/assets/shopkeeper.png"
+            },
+            {
+                "type": "image",
                 "key": "balanceBackground",
                 "url": "shop-menu/assets/balance-background.png"
             },
@@ -27,11 +32,11 @@
                 "key": "button",
                 "url": "shop-menu/assets/green-button.png",
                 "frameConfig": {
-                    "frameWidth": 113,
-                    "frameHeight": 42,
+                    "frameWidth": 170,
+                    "frameHeight": 64,
                     "frameMax": 1,
                     "margin": 0,
-                    "spacing": 4
+                    "spacing": 5
                 }
             },
             {
@@ -39,11 +44,11 @@
                 "key": "buttonCancel",
                 "url": "shop-menu/assets/red-button.png",
                 "frameConfig": {
-                    "frameWidth": 113,
-                    "frameHeight": 42,
+                    "frameWidth": 170,
+                    "frameHeight": 64,
                     "frameMax": 1,
                     "margin": 0,
-                    "spacing": 4
+                    "spacing": 5
                 }
             }
         ]

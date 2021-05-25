@@ -2,32 +2,35 @@
     assetPrefix: "debug-shop-menu", // used for debug screens
     music: "home.backgroundMusic",
     background: {
-        items: [{ key: "debug-shop.magicShop", x: 0, y: 0 }],
+        items: [
+            { key: "debug-shop.magicShop", x: 0, y: 0 },
+            { key: "debug-shop-menu.shopKeeper", x: -135, y: 14 },
+            {
+                text: "Welcome to my store!\nHow can I be of service?",
+                x: -235,
+                y: -243,
+                style: {
+                    fontFamily: '"ReithSerif"',
+                    fontSize: 24,
+                    resolution: 2,
+                },
+            },
+        ],
     },
     styleDefaults: {
-        fontFamily: "ReithSans",
+        fontFamily: "ReithSerif",
         fontSize: "24px",
         resolution: 2,
         align: "center",
-    },
-    title: {
-        text: "Shop",
-        style: {
-            fontFamily: "ReithSerif",
-            fontStyle: "bold",
-            fontSize: "32px",
-            color: "#4A381F"
-        },
-        backgroundKey: "debug-shop-menu.titleBackground",
     },
     subtitle: {
         text: "<%= balance %>",
         style: {
             fontFamily: "ReithSerif",
-            fontSize: "24px",
+            fontSize: "26px",
         },
         backgroundKey: "debug-shop.balanceBackground",
-        icon : {
+        icon: {
             key: "debug-shop.balanceIcon",
         },
     },
