@@ -91,6 +91,11 @@
                 "type": "json5",
                 "key": "debug-shop-equippables-confirm",
                 "url": "../../debug/examples/shop-equippables-confirm.json5"
+            },
+            {
+                "type": "json5",
+                "key": "debug-dom-text",
+                "url": "../../debug/examples/dom-text.json5"
             }
         ]
     },
@@ -311,6 +316,11 @@
                 "type": "image",
                 "key": "titleBackground",
                 "url": "../../debug/assets/shop/title-background.png"
+            },
+            {
+                "type": "image",
+                "key": "shopKeeper",
+                "url": "../../debug/assets/shop/shopkeeper.png"
             }
         ]
     },
@@ -321,6 +331,16 @@
                 "type": "image",
                 "key": "titleBackground",
                 "url": "../../debug/assets/shop/title-background.png"
+            },
+            {
+                "type": "image",
+                "key": "listCoverTop",
+                "url": "../../debug/assets/shop/list-cover-top.png"
+            },
+            {
+                "type": "image",
+                "key": "listCoverBottom",
+                "url": "../../debug/assets/shop/list-cover-bottom.png"
             }
         ]
     },
@@ -344,8 +364,8 @@
             },
             {
                 "type": "image",
-                "key": "halfViewBackgroundPlain",
-                "url": "../../debug/assets/shop/half-panel-plain.png"
+                "key": "basicBackground",
+                "url": "../../debug/assets/shop/panel-basic.png"
             },
             {
                 "type": "image",

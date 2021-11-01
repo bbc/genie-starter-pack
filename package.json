@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/bbc/genie-starter-pack#readme",
   "dependencies": {
-    "genie": "github:bbc/genie.git#v3.12.0"
+    "genie": "github:bbc/genie#v3.12.0"
   },
   "devDependencies": {
     "@webpack-cli/serve": "^1.3.1",
